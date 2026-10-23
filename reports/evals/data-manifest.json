@@ -1,0 +1,95 @@
+{
+  "config": {
+    "name": "sft-small-evals",
+    "seed": 42,
+    "examples_per_task": 16,
+    "batch_size": 2,
+    "max_new_tokens": 1024,
+    "max_context": 4096,
+    "do_sample": false,
+    "datasets": [
+      {
+        "name": "gsm8k",
+        "repo_id": "openai/gsm8k",
+        "revision": "740312add88f781978c0658806c59bc2815b9866",
+        "file": "main/test-00000-of-00001.parquet",
+        "split": "test",
+        "local_file": "gsm8k-test.parquet",
+        "sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+        "bytes": 419088
+      },
+      {
+        "name": "ifeval",
+        "repo_id": "HuggingFaceH4/ifeval",
+        "revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+        "file": "ifeval_input_data.jsonl",
+        "split": "train (the benchmark evaluation split)",
+        "local_file": "ifeval.jsonl",
+        "git_blob": "7c875005c09550bc3fd94c7f42867f78490bc554",
+        "sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2",
+        "bytes": 207111
+      }
+    ],
+    "olmes": {
+      "repo": "https://github.com/allenai/olmes",
+      "revision": "5a51f502d463b8cdc4a2dcad7d7096c41ff1197e",
+      "files": {
+        "oe_eval/__init__.py": "4466ba72645ddde5f8f4dc286eb8602c4197d2d194f0bbe61aa6f36c757b7743",
+        "oe_eval/version.py": "3a4876cadb756d6c5a43a07bcbaf8d8f7fb4a5d927c7157f06dbcfff3d253ae8",
+        "oe_eval/models/output_processors.py": "6faae28381ef4d0c9a5ac8659f0fc0d0949cca645f75162b9dc5460fd53b028d",
+        "oe_eval/dependencies/ifeval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "oe_eval/dependencies/ifeval/instructions.py": "215f8f148551aa316e812d88c854bf3b9d3cc994be00ff85465317e11519fae8",
+        "oe_eval/dependencies/ifeval/instructions_util.py": "a0292d4d4e0072dd83df49e24e217d67a8cf7e3d44d02bbc0863cbdcb2a014c8",
+        "oe_eval/dependencies/ifeval/instructions_registry.py": "41fa28ff96f82c915eb0275adb82dbab035b24bcf29b5d174a52bed26427dd72"
+      }
+    },
+    "gsm8k_prompt": "Solve the following grade school math word problem:\n{question}\n\nShow your work and conclude with \"Therefore, the final answer is \\boxed{{answer}}.\" where answer is just the final number that solves the problem. E.g., if the answer is 6, conclude with \"Therefore, the final answer is \\boxed{{6}}.\""
+  },
+  "cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+  "training_sha256": "ce932e892689499b48f3bf521637af19cd092b25e9de981086629bea1dbbc7c6",
+  "selection": {
+    "gsm8k": {
+      "selected_ids": [
+        588,
+        1214,
+        57,
+        906,
+        1252,
+        618,
+        599,
+        289,
+        608,
+        400,
+        237,
+        616,
+        672,
+        1132,
+        463,
+        222
+      ],
+      "excluded_exact_matches": []
+    },
+    "ifeval": {
+      "selected_ids": [
+        111,
+        96,
+        286,
+        368,
+        421,
+        452,
+        244,
+        422,
+        154,
+        105,
+        118,
+        364,
+        474,
+        132,
+        407,
+        313
+      ],
+      "excluded_exact_matches": []
+    }
+  },
+  "overlap_check": "Case-insensitive, whitespace-normalized prompt substring in retained SFT tokens; no fuzzy or pretraining decontamination"
+}

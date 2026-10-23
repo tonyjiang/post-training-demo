@@ -135,6 +135,50 @@ bash scripts/start_sft.sh --run-name sft-resumed --data data/dolci-combined-4k -
   --resume-from-checkpoint /absolute/path/to/checkpoint-N
 ```
 
+## Small evaluations
+
+Compare the frozen base with the SFT adapter on the same **16 [GSM8K](https://huggingface.co/datasets/openai/gsm8k) math problems
+and 16 [IFEval](https://huggingface.co/datasets/HuggingFaceH4/ifeval) instruction-following prompts**. Samples are seeded and checked for
+exact prompt overlap with retained SFT text. Both use the same chat template,
+NF4 loading and greedy decoding, capped at 1,024 generated tokens.
+
+These are learning-exercise scores: GSM8K checks the final boxed number; IFEval uses
+Ai2's strict instruction checkers. Small samples, short generations and chat prompting
+limit conclusions about general capability or the base model's best performance.
+
+| Evaluation (16 prompts each) | Base | SFT adapter |
+|---|---:|---:|
+| GSM8K: correct boxed answer | 13/16 | 13/16 |
+| IFEval: all instructions followed strictly | 5/16 | 8/16 |
+
+The comparison finished in **12m 21s**, peaking at **8.75 GiB allocated VRAM**.
+Token limits affected 2/16 math responses for each model and 9/16 versus 8/16
+instruction responses, so these scores need that qualification.
+[Results](reports/evals/results.json) · [Every generated answer](reports/evals/predictions.jsonl)
+
+<details>
+<summary>Set up and run evaluations on the server</summary>
+
+```bash
+uv sync --locked --group eval
+git clone https://github.com/allenai/olmes.git third_party/olmes
+git -C third_party/olmes checkout 5a51f502d463b8cdc4a2dcad7d7096c41ff1197e
+uv run --locked --group eval python -m nltk.downloader -d data/eval-sources/nltk punkt punkt_tab
+uv run --locked --group eval python scripts/prepare_evals.py
+mkdir -p logs
+nohup bash scripts/run_evals.sh > logs/evals.log 2>&1 < /dev/null &
+```
+
+Preparation refuses to overwrite the sampled data. Evaluation refuses to overwrite
+`outputs/evals/`; use `--output outputs/evals-v2` for a new run.
+
+</details>
+
+Scores and every generated answer go to `outputs/evals/results.json` and
+`outputs/evals/predictions.jsonl`. Progress is in `logs/evals.log`; completion status
+is in `logs/evals.exit_code` (`0` means success). Token-limit hits are reported.
+Revisions, source hashes and settings are pinned in [configs/eval-small.json](configs/eval-small.json).
+
 ## Script reference
 
 | Script | Purpose |
@@ -150,6 +194,9 @@ bash scripts/start_sft.sh --run-name sft-resumed --data data/dolci-combined-4k -
 | [smoke_nf4.py](scripts/smoke_nf4.py) | Test quantized loading, synthetic training, adapter saving/reloading and generation. |
 | [run_smoke.sh](scripts/run_smoke.sh) | Run the synthetic training and reload checks in separate processes. |
 | [probe_sft_context.py](scripts/probe_sft_context.py) | Test GPU memory fit at different sequence lengths with disposable adapter updates. |
+| [prepare_evals.py](scripts/prepare_evals.py) | Download pinned benchmarks, sample evaluation prompts and exclude exact SFT matches. |
+| [evaluate_sft.py](scripts/evaluate_sft.py) | Compare base and adapter; save answers, scores, token-limit hits and runtime. |
+| [run_evals.sh](scripts/run_evals.sh) | Run evaluation with the GPU lock and record its exit status. |
 
 Training call chain: `start_sft.sh` → `run_sft.sh` → `train_sft.py`.
 
@@ -176,8 +223,13 @@ Ai2 uses full-parameter OLMo-core SFT with packing and up to 32K context. We use
 Transformers + bitsandbytes + PEFT, QLoRA, a sampled source mixture, and 4K truncation
 to fit our GPU. The official SFT chat template is retained.
 
+The small evaluation runner reuses pinned OLMES instruction checkers and reasoning-output
+processing. OLMES's full dependency set requires older Torch/Transformers than our runtime;
+we use our existing NF4 loader, small subsets and stricter boxed-number math scoring.
+These settings differ from Ai2's full benchmark runs.
+
 A two-update 4K smoke test passed training, evaluation and checkpoint saves at
 **10.10 GiB peak allocated VRAM**. [Validation reports](reports/sft-combined-4k/)
 record the results; they establish execution compatibility, not model quality.
 
-Next: evaluate SFT against the base and official checkpoints, then implement DPO and RLVR.
+Next: compare with the official SFT checkpoint, then implement DPO and RLVR.
