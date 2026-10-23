@@ -1,0 +1,107 @@
+{
+  "repo_id": "allenai/Dolci-Think-SFT-7B",
+  "repo_type": "dataset",
+  "revision": "72ec0fe32428bada1ec686a9168a0681eecd2094",
+  "files": [
+    {
+      "rfilename": "data/train-00003-of-00156.parquet",
+      "blobId": "f8f1649b181503eb18b25d8a9030bdfbfe674417",
+      "size": 103915940,
+      "lfs": {
+        "sha256": "2c848cbde91f7bf4ee9bd5b4467233e64a83b550f55d0676658ed90cca3427fb",
+        "size": 103915940,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "data/train-00057-of-00156.parquet",
+      "blobId": "fb3c04ed6b6e6d1fae23faea55c48b86f31021c1",
+      "size": 345323316,
+      "lfs": {
+        "sha256": "bda48c71ce55229c071f17d0e37856e2aba0a8a404dc46847635f6def3c5c38c",
+        "size": 345323316,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "data/train-00064-of-00156.parquet",
+      "blobId": "e1e5dc3721e13ba30c5b4c2d9243686069b8e293",
+      "size": 390481416,
+      "lfs": {
+        "sha256": "5c99ebdae3d3e800f2b2848a93c8abbf76556bdd3ef4afa912c83e67a769e507",
+        "size": 390481416,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "data/train-00070-of-00156.parquet",
+      "blobId": "161a9f6409ae0cb09417789e3d61a5ba9322e571",
+      "size": 277832927,
+      "lfs": {
+        "sha256": "18c537a4dc9122d91a34d0d0e50c914d19bad1aa6ea066c8b8acae56fc1634b2",
+        "size": 277832927,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "data/train-00071-of-00156.parquet",
+      "blobId": "641e441514e2444ceba037a69f534005f785c2f2",
+      "size": 38191186,
+      "lfs": {
+        "sha256": "712645c6b75a08ad8585caa75769a294511f5a534a7bc3b8a53bc7065f430788",
+        "size": 38191186,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "data/train-00096-of-00156.parquet",
+      "blobId": "63dc3faade54ea59ed878f0bfc461f71700d9184",
+      "size": 49731574,
+      "lfs": {
+        "sha256": "ea1d2bc69ee7a4b0a7796d9af0769f50c394bbcb6797121d1cb8c748165c5636",
+        "size": 49731574,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "data/train-00101-of-00156.parquet",
+      "blobId": "ca6628029080cb268d55be146af20ebe04f301a6",
+      "size": 92648440,
+      "lfs": {
+        "sha256": "000798a7812aa46672c7705c8adb9a6878c41271008ce67686b2194a7327eaf0",
+        "size": 92648440,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "data/train-00115-of-00156.parquet",
+      "blobId": "0d35be759b5f08a951cfc420475996bd455f430b",
+      "size": 38553414,
+      "lfs": {
+        "sha256": "20cb55098b911e30f86b5eeace480dd2c99530502ddc41e5cf8058752bbc88ef",
+        "size": 38553414,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "data/train-00116-of-00156.parquet",
+      "blobId": "aa6c341757d9d52281d3655233af1d67c6263a32",
+      "size": 265544393,
+      "lfs": {
+        "sha256": "6aee1e8d90c1b934bb5523300dd1ed87545471a8d8a0f7b98a6516ba971fc72a",
+        "size": 265544393,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "data/train-00123-of-00156.parquet",
+      "blobId": "4e5c50fc2520c2021695ce9b1a1c60a93f8e3e07",
+      "size": 266868867,
+      "lfs": {
+        "sha256": "f4950bea17faaa2bcfee76db191e68f8662f6af933c38d4441c5f208787a7d24",
+        "size": 266868867,
+        "pointerSize": 134
+      }
+    }
+  ]
+}

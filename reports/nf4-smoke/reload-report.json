@@ -1,0 +1,22 @@
+{
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "cuda": "13.0",
+  "sequence_length": 512,
+  "batch_size": 1,
+  "synthetic_data": true,
+  "revision": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+  "nf4_linear_layers": 224,
+  "loaded_allocated_gib": 4.6428937911987305,
+  "generated_text": "The capital of France is known for its rich history and culture, which is characterized by\nA. A",
+  "adapter_reload_verified": true,
+  "peak_allocated_gib": 6.939059257507324,
+  "peak_reserved_gib": 7.89453125,
+  "status": "passed"
+}

@@ -1,0 +1,70 @@
+{
+  "liger_fused_loss": true,
+  "liger_version": "0.8.5",
+  "adapter": "outputs/sft-20261022T034737Z-cwdXm0/final-adapter",
+  "adapter_sha256": "8afc290542603afa3baf7d469e3c27b417f3a8622974f67fc873b0b962fd2e33",
+  "sample_sha256": "b7a6d0d4a796a0b7a9be76a45fefb4143f3487d987dd23e7fc49341d276fae6b",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "scope": "Two optimizer steps per target on complete conversations; disposable in-memory adapter, no saved weights; not a full-run guarantee",
+  "gradient_accumulation": 1,
+  "results": [
+    {
+      "target_tokens": 2048,
+      "examples": [
+        {
+          "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_cb6cdd8b-6c60-444d-aa92-704f10d5a1af-travel",
+          "source": "allenai/persona-precise-if-r1-final-content-filtered-chinese-filtered",
+          "tokens": 2044,
+          "loss": 1.0973395109176636,
+          "gradient_norm": 0.21303313970565796
+        },
+        {
+          "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a817a528-0dc6-4127-9593-f38cf15bd039",
+          "source": "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2",
+          "tokens": 2048,
+          "loss": 0.6885713338851929,
+          "gradient_norm": 0.18289951980113983
+        }
+      ],
+      "status": "passed",
+      "phase": "optimizer",
+      "seconds": 6.001011938787997,
+      "peak_allocated_gib": 8.400439739227295,
+      "peak_reserved_gib": 8.896484375
+    },
+    {
+      "target_tokens": 4096,
+      "examples": [
+        {
+          "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_6260",
+          "source": "allenai/oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered",
+          "tokens": 4075,
+          "loss": 0.35102373361587524,
+          "gradient_norm": 0.1046975702047348
+        },
+        {
+          "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_3987",
+          "source": "allenai/tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff",
+          "tokens": 4080,
+          "loss": 0.7629440426826477,
+          "gradient_norm": 0.16986225545406342
+        }
+      ],
+      "status": "passed",
+      "phase": "optimizer",
+      "seconds": 10.049191464670002,
+      "peak_allocated_gib": 9.99531888961792,
+      "peak_reserved_gib": 10.341796875
+    },
+    {
+      "target_tokens": 8192,
+      "examples": [],
+      "status": "out_of_memory",
+      "phase": "forward",
+      "error": "CUDA out of memory. Tried to allocate 344.00 MiB. GPU 0 has a total capacity of 11.50 GiB of which 269.00 MiB is free. Including non-PyTorch memory, this process has 11.23 GiB memory in use. Of the allocated memory 10.72 GiB is allocated by PyTorch, and 309.56 MiB is reserved by PyTorch but unallocated.",
+      "seconds": 3.198309563100338,
+      "peak_allocated_gib": 10.92483901977539,
+      "peak_reserved_gib": 11.26953125
+    }
+  ]
+}

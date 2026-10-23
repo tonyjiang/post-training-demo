@@ -1,0 +1,5715 @@
+{
+  "truncated": [
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87658",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17618,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107495",
+      "family": "Nemotron code",
+      "original_tokens": 15829,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5710",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15566,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85705",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20409,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136569",
+      "family": "Dolci Precise IF",
+      "original_tokens": 5296,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_95868",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26957,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_2003",
+      "family": "WildChat",
+      "original_tokens": 21737,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_746862",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26669,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_c19767a6-47ab-49df-ba84-8fe4506f7a74",
+      "family": "Dolci Think Python",
+      "original_tokens": 11299,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87956",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26982,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_4aa6727b-87e4-4581-9088-aae5e5ad5955",
+      "family": "Dolci Think Python",
+      "original_tokens": 7611,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96786",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20436,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_661",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 22935,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_6866",
+      "family": "WildChat",
+      "original_tokens": 4887,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112233",
+      "family": "Nemotron code",
+      "original_tokens": 26901,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_850",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18517,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111529",
+      "family": "Nemotron code",
+      "original_tokens": 9109,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_177",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12842,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_7346",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16566,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2909",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13475,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747503",
+      "family": "OpenThoughts 3",
+      "original_tokens": 27186,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_806",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20992,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_5975",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10136,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_e7a2aecf-4a9c-4b3b-9271-f46acf98ce62",
+      "family": "Dolci Think Python",
+      "original_tokens": 4512,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1884",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7612,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1630",
+      "family": "Nemotron code",
+      "original_tokens": 24078,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_95062",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18097,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747043",
+      "family": "OpenThoughts 3",
+      "original_tokens": 24196,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_7c67a21c-bd1d-4eba-a873-f5185f43b367-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 7464,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2411",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 30183,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4304",
+      "family": "Nemotron code",
+      "original_tokens": 18603,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_10258",
+      "family": "WildChat",
+      "original_tokens": 6485,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_649b1b59-f7e9-4967-890e-1d958fdef489",
+      "family": "Dolci Think Python",
+      "original_tokens": 4487,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2490",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7336,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85421",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23159,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135982",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7387,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8587",
+      "family": "Nemotron code",
+      "original_tokens": 13324,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1226",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13661,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_166c6a41-fa09-42d7-b2cf-65a5d432ec01",
+      "family": "Dolci Think Python",
+      "original_tokens": 5327,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747004",
+      "family": "OpenThoughts 3",
+      "original_tokens": 30284,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_523",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 22262,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1561",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25803,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2659",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13299,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_11366",
+      "family": "Nemotron code",
+      "original_tokens": 24851,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107994",
+      "family": "Nemotron code",
+      "original_tokens": 16117,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_e3053030-18e2-4ba3-bc92-1df9a7a066e3",
+      "family": "Dolci Think Python",
+      "original_tokens": 11979,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_5752",
+      "family": "Nemotron code",
+      "original_tokens": 5986,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_11380",
+      "family": "WildChat",
+      "original_tokens": 4598,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2570",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6286,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildguardmix-r1-v2-all-filtered-ngram-filtered-chinese-filtered_8906",
+      "family": "WildGuardMix",
+      "original_tokens": 4439,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_510",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10570,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_4691",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13357,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5138",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12884,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1258",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 15002,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2384",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 15422,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1402",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4423,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_9907",
+      "family": "WildChat",
+      "original_tokens": 7400,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_3c953e49-cba2-4320-a7eb-31a9ce8d1938",
+      "family": "Dolci Think Python",
+      "original_tokens": 17975,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_138343",
+      "family": "Dolci Precise IF",
+      "original_tokens": 5812,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1937",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7314,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b9a05ce5-1151-46f9-909d-133b3c6dff23",
+      "family": "Dolci Think Python",
+      "original_tokens": 4509,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_2302e4f3-d321-408d-b311-68c370b376e3",
+      "family": "Dolci Think Python",
+      "original_tokens": 15429,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8884",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14157,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_44bffeac-b941-45bf-9198-05d33364ec7d-travel",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 4474,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136484",
+      "family": "Dolci Precise IF",
+      "original_tokens": 13246,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2874",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 23422,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_279702c4-5fd6-4d21-a401-736a5efbb2c0",
+      "family": "Dolci Think Python",
+      "original_tokens": 19452,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_2089",
+      "family": "TableGPT",
+      "original_tokens": 10382,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_100683",
+      "family": "Nemotron code",
+      "original_tokens": 26929,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135414",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7828,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8927",
+      "family": "Nemotron code",
+      "original_tokens": 6611,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_3cfbbc48-8290-4a25-9cad-a0f9c34c5a32",
+      "family": "Dolci Think Python",
+      "original_tokens": 4106,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2176",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18992,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111318",
+      "family": "Nemotron code",
+      "original_tokens": 16672,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_94469",
+      "family": "Aya",
+      "original_tokens": 10667,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_12064",
+      "family": "Nemotron code",
+      "original_tokens": 4732,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3317",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10443,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_6621",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6518,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_3440",
+      "family": "OpenThoughts 3",
+      "original_tokens": 5028,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_124af522-210a-4ec2-9573-83cc4167548e-arts",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 10263,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47314",
+      "family": "WildChat",
+      "original_tokens": 5797,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_de1b1d00-7496-4f70-a76c-3051b596edfe",
+      "family": "Dolci Think Python",
+      "original_tokens": 7208,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_406",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13004,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_97162",
+      "family": "Aya",
+      "original_tokens": 5131,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2885",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27579,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2630",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13028,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_6e42fc8f-48f6-4364-bf6a-29ef4b692f9e",
+      "family": "Dolci Think Python",
+      "original_tokens": 5699,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5248",
+      "family": "WildChat",
+      "original_tokens": 5586,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9525",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16900,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3477",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9584,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_522",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 15566,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86085",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16302,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1363",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14264,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1008",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10353,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98352",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26719,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2919",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25616,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8624",
+      "family": "Nemotron code",
+      "original_tokens": 7240,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3075",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15079,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7254",
+      "family": "Nemotron code",
+      "original_tokens": 23931,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b90af9ce-4e5e-4afd-a6e6-e28d4162e630",
+      "family": "Dolci Think Python",
+      "original_tokens": 5668,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_100955",
+      "family": "Nemotron code",
+      "original_tokens": 9382,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_501",
+      "family": "Nemotron code",
+      "original_tokens": 12859,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2002",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18559,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a0166697-d6f8-4bdc-bb41-7b685bc2a3ce",
+      "family": "Dolci Think Python",
+      "original_tokens": 4166,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3074",
+      "family": "Nemotron code",
+      "original_tokens": 9220,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135531",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7816,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_535",
+      "family": "Nemotron code",
+      "original_tokens": 4440,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_100893",
+      "family": "Nemotron code",
+      "original_tokens": 17332,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2256",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16391,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_57fc087f-9587-4901-b545-3dcda9b74fc0",
+      "family": "Dolci Think Python",
+      "original_tokens": 18250,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88894",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23158,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748659",
+      "family": "OpenThoughts 3",
+      "original_tokens": 27518,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_103624",
+      "family": "Nemotron code",
+      "original_tokens": 9596,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1267",
+      "family": "Nemotron code",
+      "original_tokens": 8738,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7130",
+      "family": "Nemotron code",
+      "original_tokens": 25042,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136423",
+      "family": "Dolci Precise IF",
+      "original_tokens": 14400,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_8fde1b01-9e31-4d5a-a9c3-83ff3662d818",
+      "family": "Dolci Think Python",
+      "original_tokens": 6088,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_19ad7a2a-b831-412a-a09a-2c874e477b44",
+      "family": "Dolci Think Python",
+      "original_tokens": 6520,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87051",
+      "family": "OpenThoughts 3",
+      "original_tokens": 19971,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102775",
+      "family": "Nemotron code",
+      "original_tokens": 15575,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6997",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12340,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8571",
+      "family": "Nemotron code",
+      "original_tokens": 25924,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134959",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7309,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2303",
+      "family": "Nemotron code",
+      "original_tokens": 7706,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_927",
+      "family": "OpenThoughts 3",
+      "original_tokens": 5970,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6711",
+      "family": "Nemotron code",
+      "original_tokens": 9806,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_138044",
+      "family": "Dolci Precise IF",
+      "original_tokens": 8355,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_4dd7e502-0bc6-4d5a-9c56-407d46019c0a",
+      "family": "Dolci Think Python",
+      "original_tokens": 6655,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_84552",
+      "family": "OpenThoughts 3",
+      "original_tokens": 11331,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1705",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7022,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102411",
+      "family": "Nemotron code",
+      "original_tokens": 15162,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2418",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25473,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_10881",
+      "family": "WildChat",
+      "original_tokens": 12726,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_11658",
+      "family": "WildChat",
+      "original_tokens": 4578,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106773",
+      "family": "Nemotron code",
+      "original_tokens": 22114,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_84282",
+      "family": "OpenThoughts 3",
+      "original_tokens": 21385,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a77173af-71b7-4a64-b874-e957b74061d6",
+      "family": "Dolci Think Python",
+      "original_tokens": 5729,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_9b73eef5-cd45-4ca1-96b1-d20f9fbff7e4",
+      "family": "Dolci Think Python",
+      "original_tokens": 13172,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5821",
+      "family": "WildChat",
+      "original_tokens": 4471,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134335",
+      "family": "Dolci Precise IF",
+      "original_tokens": 20207,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47417",
+      "family": "WildChat",
+      "original_tokens": 5344,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_5288",
+      "family": "Nemotron code",
+      "original_tokens": 8964,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_0fed9965-b225-4074-a2d5-4946d56cec14",
+      "family": "Dolci Think Python",
+      "original_tokens": 4376,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_7121",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6157,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2820",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 15576,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1401",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12662,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_443",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15581,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1544",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10966,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_ee0521fe-f9b6-4419-b1fe-1a4ef465b1ca",
+      "family": "Dolci Think Python",
+      "original_tokens": 7849,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111221",
+      "family": "Nemotron code",
+      "original_tokens": 5318,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_6759",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16562,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_103504",
+      "family": "Nemotron code",
+      "original_tokens": 5299,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_8de82cdc-38b3-4a70-930b-9a85223fa816",
+      "family": "Dolci Think Python",
+      "original_tokens": 5474,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_d85edd15-0f8b-47ca-a685-f467b37a51e4",
+      "family": "Dolci Think Python",
+      "original_tokens": 12620,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_511",
+      "family": "Nemotron code",
+      "original_tokens": 22295,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3143",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6710,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9606",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16190,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107486",
+      "family": "Nemotron code",
+      "original_tokens": 9364,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2771",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25602,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96194",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22693,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_6198437e-e104-4e04-aa38-8b2faa2c3742",
+      "family": "Dolci Think Python",
+      "original_tokens": 6032,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134906",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6210,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8997",
+      "family": "Nemotron code",
+      "original_tokens": 12172,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_7462",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15962,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3479",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 31622,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8430",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10459,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b248501d-c7d3-436b-9184-eb087233edf4",
+      "family": "Dolci Think Python",
+      "original_tokens": 5917,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1212",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9251,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3563",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6286,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1335",
+      "family": "Nemotron code",
+      "original_tokens": 24573,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136213",
+      "family": "Dolci Precise IF",
+      "original_tokens": 12094,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83262",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26313,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3390",
+      "family": "Nemotron code",
+      "original_tokens": 10982,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_704",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6118,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_626cc101-7771-4ea9-8c80-de21eaf7d550",
+      "family": "Dolci Think Python",
+      "original_tokens": 5046,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_20a3a2f6-ffd5-4c8d-8bb7-0d533537848d",
+      "family": "Dolci Think Python",
+      "original_tokens": 14677,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113538",
+      "family": "Nemotron code",
+      "original_tokens": 18766,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_1639",
+      "family": "TableGPT",
+      "original_tokens": 5659,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_252",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 30140,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_1979",
+      "family": "TableGPT",
+      "original_tokens": 4187,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_90225",
+      "family": "Aya",
+      "original_tokens": 5219,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a4517d48-c9bf-4f7c-a087-95bb8a746d8f",
+      "family": "Dolci Think Python",
+      "original_tokens": 8255,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751801",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23332,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137242",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4315,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4669",
+      "family": "Nemotron code",
+      "original_tokens": 14891,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_6320",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 4742,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_83d0eaeb-68fc-439f-aaa8-2ad01b14dfb2",
+      "family": "Dolci Think Python",
+      "original_tokens": 12333,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_84839",
+      "family": "OpenThoughts 3",
+      "original_tokens": 29594,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_1a69a32f-153b-4c28-b65c-218031dccdb7",
+      "family": "Dolci Think Python",
+      "original_tokens": 12117,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97239",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15884,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_750108",
+      "family": "OpenThoughts 3",
+      "original_tokens": 27126,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8357",
+      "family": "Nemotron code",
+      "original_tokens": 13552,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_4590",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 4159,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_746484",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16270,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748908",
+      "family": "OpenThoughts 3",
+      "original_tokens": 29741,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7610",
+      "family": "Nemotron code",
+      "original_tokens": 8661,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1055",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18904,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2045",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 30760,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1763",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16265,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112582",
+      "family": "Nemotron code",
+      "original_tokens": 17487,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1756",
+      "family": "Nemotron code",
+      "original_tokens": 12356,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_104974",
+      "family": "Nemotron code",
+      "original_tokens": 21638,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_94647",
+      "family": "Aya",
+      "original_tokens": 6740,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a781afd7-4d11-462c-b65f-6cacfbb0185a",
+      "family": "Dolci Think Python",
+      "original_tokens": 7842,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8460",
+      "family": "Nemotron code",
+      "original_tokens": 7598,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2133",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16810,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748250",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22963,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3284",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 23253,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_749865",
+      "family": "OpenThoughts 3",
+      "original_tokens": 25889,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1373",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10123,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_078ef16a-a62d-42f5-82ac-b2a6a1492085",
+      "family": "Dolci Think Python",
+      "original_tokens": 12331,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_05929a4a-3f09-47f3-b5a6-7b5e6d2ab670",
+      "family": "Dolci Think Python",
+      "original_tokens": 8642,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_100720",
+      "family": "Nemotron code",
+      "original_tokens": 21795,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98798",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23284,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_48059",
+      "family": "WildChat",
+      "original_tokens": 8560,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_c3763957-d5d6-4b6d-b709-e83e7614b348",
+      "family": "Dolci Think Python",
+      "original_tokens": 4689,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_605",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26449,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85676",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20732,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_9514",
+      "family": "Nemotron code",
+      "original_tokens": 4187,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_23",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14764,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_7175",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 4996,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_89228",
+      "family": "Aya",
+      "original_tokens": 6270,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_2ca1d1a9-4457-4064-981d-55bcc502aa61",
+      "family": "Dolci Think Python",
+      "original_tokens": 5019,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137904",
+      "family": "Dolci Precise IF",
+      "original_tokens": 11975,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_7252",
+      "family": "OpenThoughts 3",
+      "original_tokens": 5136,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_7c49a15e-e19c-4969-a51b-9ddff4657e88",
+      "family": "Dolci Think Python",
+      "original_tokens": 10803,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_109442",
+      "family": "Nemotron code",
+      "original_tokens": 29224,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1965",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 24542,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3042",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19782,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2823",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18177,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751019",
+      "family": "OpenThoughts 3",
+      "original_tokens": 19189,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111900",
+      "family": "Nemotron code",
+      "original_tokens": 29520,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_4925",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 5038,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_667",
+      "family": "Nemotron code",
+      "original_tokens": 8699,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_11219",
+      "family": "WildChat",
+      "original_tokens": 5988,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3345",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7990,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108118",
+      "family": "Nemotron code",
+      "original_tokens": 19793,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2655",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20093,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2884",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7863,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2210",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20093,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135162",
+      "family": "Dolci Precise IF",
+      "original_tokens": 8052,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_98672",
+      "family": "Aya",
+      "original_tokens": 8820,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4114",
+      "family": "TableGPT",
+      "original_tokens": 7969,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47924",
+      "family": "WildChat",
+      "original_tokens": 6400,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4057",
+      "family": "TableGPT",
+      "original_tokens": 4199,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1418",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9463,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_353",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26886,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_197",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20276,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6308",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15132,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_90648",
+      "family": "Aya",
+      "original_tokens": 4310,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4654",
+      "family": "Nemotron code",
+      "original_tokens": 25390,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2528",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18343,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1172",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9725,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_893",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 29790,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2390",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 31795,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112154",
+      "family": "Nemotron code",
+      "original_tokens": 24416,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5404",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15024,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_0072e13e-a4c9-463b-815c-41155abf56f0",
+      "family": "Dolci Think Python",
+      "original_tokens": 9933,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3367",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10284,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_7d191cd2-4b3d-4329-be2a-84f665ed97eb",
+      "family": "Dolci Think Python",
+      "original_tokens": 7739,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112696",
+      "family": "Nemotron code",
+      "original_tokens": 15346,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_12666",
+      "family": "Nemotron code",
+      "original_tokens": 18736,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106617",
+      "family": "Nemotron code",
+      "original_tokens": 29260,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "coconot-r1-format-domain-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_3utxmzf",
+      "family": "CoCoNot",
+      "original_tokens": 7073,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_84369",
+      "family": "OpenThoughts 3",
+      "original_tokens": 28130,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1576",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7055,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2003",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13201,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_5346",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12021,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101438",
+      "family": "Nemotron code",
+      "original_tokens": 5723,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1351",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12619,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_752613",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17733,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_105458",
+      "family": "Nemotron code",
+      "original_tokens": 20668,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_99254",
+      "family": "OpenThoughts 3",
+      "original_tokens": 19862,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88444",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22665,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_852",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 32746,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_585",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19660,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4730",
+      "family": "Nemotron code",
+      "original_tokens": 6641,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7970",
+      "family": "WildChat",
+      "original_tokens": 4867,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8457",
+      "family": "Nemotron code",
+      "original_tokens": 20583,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135703",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4608,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1975",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13716,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2643",
+      "family": "OpenThoughts 3",
+      "original_tokens": 5309,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_3410",
+      "family": "TableGPT",
+      "original_tokens": 8115,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2160",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18900,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_481",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 22937,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_4760807a-30a0-454f-9a84-4d33e07a210a",
+      "family": "Dolci Think Python",
+      "original_tokens": 9122,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_5080",
+      "family": "Nemotron code",
+      "original_tokens": 11797,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_333a46eb-31c5-4a35-bd20-56f8f8cc3305-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 5719,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_749684",
+      "family": "OpenThoughts 3",
+      "original_tokens": 25505,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b2914999-cca5-4285-98e0-19a8149e57ac",
+      "family": "Dolci Think Python",
+      "original_tokens": 12289,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107354",
+      "family": "Nemotron code",
+      "original_tokens": 22039,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2406",
+      "family": "Nemotron code",
+      "original_tokens": 8680,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_ee00e04a-6f78-4c6c-a2e0-808e826977b7",
+      "family": "Dolci Think Python",
+      "original_tokens": 6480,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102478",
+      "family": "Nemotron code",
+      "original_tokens": 7152,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113348",
+      "family": "Nemotron code",
+      "original_tokens": 5881,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_112",
+      "family": "OpenThoughts 3",
+      "original_tokens": 4622,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137708",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7315,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_b124e961-9a42-435b-91c1-21e312c05f72-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 5560,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_136",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 23516,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1573",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15464,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113381",
+      "family": "Nemotron code",
+      "original_tokens": 13996,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_354",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16225,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2353",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27180,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137032",
+      "family": "Dolci Precise IF",
+      "original_tokens": 9166,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113109",
+      "family": "Nemotron code",
+      "original_tokens": 7708,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_745987",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20314,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6307",
+      "family": "Nemotron code",
+      "original_tokens": 12279,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7789",
+      "family": "Nemotron code",
+      "original_tokens": 12912,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108321",
+      "family": "Nemotron code",
+      "original_tokens": 24762,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_9f93f097-e814-4be3-8955-43f80ea998aa",
+      "family": "Dolci Think Python",
+      "original_tokens": 4888,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101722",
+      "family": "Nemotron code",
+      "original_tokens": 4649,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_2144",
+      "family": "TableGPT",
+      "original_tokens": 7180,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748254",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13554,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83439",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18660,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_596",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26925,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1973",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17615,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6395",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15247,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b37d73c9-085f-4f7d-b100-9c3e1a171e24",
+      "family": "Dolci Think Python",
+      "original_tokens": 4187,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_545ead67-6f32-495b-adc2-99599acbab83",
+      "family": "Dolci Think Python",
+      "original_tokens": 18906,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2530",
+      "family": "OpenThoughts 3",
+      "original_tokens": 5981,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4064",
+      "family": "WildChat",
+      "original_tokens": 10483,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1520",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13306,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101895",
+      "family": "Nemotron code",
+      "original_tokens": 12017,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_94760",
+      "family": "Aya",
+      "original_tokens": 5438,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3493",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6510,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112205",
+      "family": "Nemotron code",
+      "original_tokens": 22937,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_484cb1d0-1b37-44b2-a248-8d0d396dcaac",
+      "family": "Dolci Think Python",
+      "original_tokens": 16197,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2736",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7758,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86082",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20726,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3242",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17761,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136128",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6151,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_18b007a8-d21e-4ffd-8626-cfdc41f694a9",
+      "family": "Dolci Think Python",
+      "original_tokens": 10108,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_2286",
+      "family": "TableGPT",
+      "original_tokens": 5042,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2076",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 15925,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2628",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 11538,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_105223",
+      "family": "Nemotron code",
+      "original_tokens": 15039,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7626",
+      "family": "WildChat",
+      "original_tokens": 12774,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5838",
+      "family": "WildChat",
+      "original_tokens": 4259,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135953",
+      "family": "Dolci Precise IF",
+      "original_tokens": 11370,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_7e9ac5b7-e7af-46fd-8b18-170db9820108",
+      "family": "Dolci Think Python",
+      "original_tokens": 6274,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1620",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4991,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136204",
+      "family": "Dolci Precise IF",
+      "original_tokens": 17509,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87179",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23136,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97989",
+      "family": "OpenThoughts 3",
+      "original_tokens": 29977,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8860",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16816,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_93745",
+      "family": "Aya",
+      "original_tokens": 11328,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8583",
+      "family": "OpenThoughts 3",
+      "original_tokens": 11695,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_9557",
+      "family": "Nemotron code",
+      "original_tokens": 25531,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3390",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19467,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1130",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 24971,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96444",
+      "family": "OpenThoughts 3",
+      "original_tokens": 21017,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4973",
+      "family": "TableGPT",
+      "original_tokens": 7472,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_94698",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23673,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8148",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6844,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_7022",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16719,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_103257",
+      "family": "Nemotron code",
+      "original_tokens": 8189,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4802",
+      "family": "Nemotron code",
+      "original_tokens": 5673,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2063",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 21481,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_4808",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7328,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6931",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13318,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_149",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 28742,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137049",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4506,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98544",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22184,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_3256",
+      "family": "WildChat",
+      "original_tokens": 5563,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3236",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20716,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_9038",
+      "family": "Nemotron code",
+      "original_tokens": 14188,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107757",
+      "family": "Nemotron code",
+      "original_tokens": 15707,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134365",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4483,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_745745",
+      "family": "OpenThoughts 3",
+      "original_tokens": 25982,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101771",
+      "family": "Nemotron code",
+      "original_tokens": 8469,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_11429",
+      "family": "Nemotron code",
+      "original_tokens": 7841,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3355",
+      "family": "Nemotron code",
+      "original_tokens": 16792,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_85631403-8998-4c36-8c0b-6e2b69b46cd8",
+      "family": "Dolci Think Python",
+      "original_tokens": 4461,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86508",
+      "family": "OpenThoughts 3",
+      "original_tokens": 19189,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_746789",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13718,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_783ed524-fcae-4542-9a14-3a30021938b2",
+      "family": "Dolci Think Python",
+      "original_tokens": 18366,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_71dd9665-2ff1-4ec1-97b4-90a7f5fe752e",
+      "family": "Dolci Think Python",
+      "original_tokens": 8076,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_9bf25352-9de1-4a28-829c-e6d87f554dcc",
+      "family": "Dolci Think Python",
+      "original_tokens": 8448,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1046",
+      "family": "Nemotron code",
+      "original_tokens": 18448,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1340",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18426,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2632",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 22580,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7748",
+      "family": "WildChat",
+      "original_tokens": 5042,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134964",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6194,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83646",
+      "family": "OpenThoughts 3",
+      "original_tokens": 21909,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102476",
+      "family": "Nemotron code",
+      "original_tokens": 22201,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2069",
+      "family": "Nemotron code",
+      "original_tokens": 16558,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137984",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4770,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_ca8ce39f-167a-49b2-80b4-49f76a2e2a59",
+      "family": "Dolci Think Python",
+      "original_tokens": 7744,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748550",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20794,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_82537",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20053,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_6281",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14812,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_4794",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 4171,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_40946d69-627e-41d6-a7ef-b15e77c8c51f",
+      "family": "Dolci Think Python",
+      "original_tokens": 11232,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108622",
+      "family": "Nemotron code",
+      "original_tokens": 17935,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748767",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14154,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98784",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17574,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5931",
+      "family": "WildChat",
+      "original_tokens": 4384,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_2875",
+      "family": "TableGPT",
+      "original_tokens": 4643,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97832",
+      "family": "OpenThoughts 3",
+      "original_tokens": 24162,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134686",
+      "family": "Dolci Precise IF",
+      "original_tokens": 9275,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1800",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 5511,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_9724",
+      "family": "WildChat",
+      "original_tokens": 4331,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_138321",
+      "family": "Dolci Precise IF",
+      "original_tokens": 8105,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_3887",
+      "family": "TableGPT",
+      "original_tokens": 10225,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102372",
+      "family": "Nemotron code",
+      "original_tokens": 23937,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1843",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12677,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112057",
+      "family": "Nemotron code",
+      "original_tokens": 13012,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_138103",
+      "family": "Dolci Precise IF",
+      "original_tokens": 5898,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98938",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22269,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102",
+      "family": "Nemotron code",
+      "original_tokens": 10998,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3145",
+      "family": "OpenThoughts 3",
+      "original_tokens": 11157,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8982",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16539,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_46479",
+      "family": "WildChat",
+      "original_tokens": 13496,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7874",
+      "family": "Nemotron code",
+      "original_tokens": 17521,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_ca972706-3617-4888-acab-375cf494a0d1",
+      "family": "Dolci Think Python",
+      "original_tokens": 4678,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_5829",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16992,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4637",
+      "family": "Nemotron code",
+      "original_tokens": 10924,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_319",
+      "family": "OpenThoughts 3",
+      "original_tokens": 11679,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3201",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17940,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748963",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18524,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134007",
+      "family": "Dolci Precise IF",
+      "original_tokens": 8051,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_2628",
+      "family": "WildChat",
+      "original_tokens": 6723,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2529",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14345,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_750935",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22431,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_3647fbe9-49c7-495c-bc60-d02c5f5c9c0a",
+      "family": "Dolci Think Python",
+      "original_tokens": 5403,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9765",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14394,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2586",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26487,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2044",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4342,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_2384",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12490,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_105cf462-7d06-4470-b799-bd5dbcb70326",
+      "family": "Dolci Think Python",
+      "original_tokens": 17444,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86614",
+      "family": "OpenThoughts 3",
+      "original_tokens": 21491,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_641",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6221,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6708",
+      "family": "Nemotron code",
+      "original_tokens": 7240,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_611",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6080,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747784",
+      "family": "OpenThoughts 3",
+      "original_tokens": 29743,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83822",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14015,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2767",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9256,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1880",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10149,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134398",
+      "family": "Dolci Precise IF",
+      "original_tokens": 8696,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87508",
+      "family": "OpenThoughts 3",
+      "original_tokens": 30773,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_111",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20843,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6209",
+      "family": "Nemotron code",
+      "original_tokens": 24534,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_8a1f3e07-6679-4423-9c39-28d5d28252cf",
+      "family": "Dolci Think Python",
+      "original_tokens": 6571,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_5876",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 7393,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3745",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9987,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1288",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4588,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3135",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18150,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_749976",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17603,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136340",
+      "family": "Dolci Precise IF",
+      "original_tokens": 26558,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101348",
+      "family": "Nemotron code",
+      "original_tokens": 20086,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_82521",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16560,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134122",
+      "family": "Dolci Precise IF",
+      "original_tokens": 13876,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87269",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18150,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_3641",
+      "family": "WildChat",
+      "original_tokens": 7678,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1632",
+      "family": "Nemotron code",
+      "original_tokens": 20669,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_4522",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17000,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2641",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 21446,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1796",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7020,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2435",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13518,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85792",
+      "family": "OpenThoughts 3",
+      "original_tokens": 21680,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_20f0001a-f4c6-4605-bb5c-90d9d1c82646",
+      "family": "Dolci Think Python",
+      "original_tokens": 5387,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2393",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18186,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83877",
+      "family": "OpenThoughts 3",
+      "original_tokens": 24368,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4551",
+      "family": "Nemotron code",
+      "original_tokens": 8567,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_2246",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13720,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_95158",
+      "family": "OpenThoughts 3",
+      "original_tokens": 31236,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_7b68e372-3a64-4ed5-8298-4c17ab805fa4-culinary",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 5938,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2974",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26643,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_104894",
+      "family": "Nemotron code",
+      "original_tokens": 6168,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108835",
+      "family": "Nemotron code",
+      "original_tokens": 13348,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137741",
+      "family": "Dolci Precise IF",
+      "original_tokens": 9705,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85872",
+      "family": "OpenThoughts 3",
+      "original_tokens": 27164,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3266",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 32494,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97232",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18088,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8930",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13048,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3383",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13522,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_264",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18211,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_c152ed3b-94b9-437e-88bf-4f661c27fbe2",
+      "family": "Dolci Think Python",
+      "original_tokens": 8884,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_393",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 21342,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2241",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 22341,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_95293",
+      "family": "Aya",
+      "original_tokens": 5180,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_89a91b78-1fdb-4a73-bd8a-ffb93009a835",
+      "family": "Dolci Think Python",
+      "original_tokens": 12306,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_261",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 31386,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1552",
+      "family": "Nemotron code",
+      "original_tokens": 10870,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3166",
+      "family": "Nemotron code",
+      "original_tokens": 16790,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_94366",
+      "family": "Aya",
+      "original_tokens": 4583,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_91533",
+      "family": "Aya",
+      "original_tokens": 6944,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102121",
+      "family": "Nemotron code",
+      "original_tokens": 18265,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2259",
+      "family": "Nemotron code",
+      "original_tokens": 12235,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88766",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26079,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_746651",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22592,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107129",
+      "family": "Nemotron code",
+      "original_tokens": 10403,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8740",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14741,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2310",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 5541,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_99018",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10713,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_122",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16123,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_90799",
+      "family": "Aya",
+      "original_tokens": 4152,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8471",
+      "family": "Nemotron code",
+      "original_tokens": 4480,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1207",
+      "family": "Nemotron code",
+      "original_tokens": 13892,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_693",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6911,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1366",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9562,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96513",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16483,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1903",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14982,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747570",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20565,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7963",
+      "family": "WildChat",
+      "original_tokens": 9976,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87079",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18972,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135029",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7919,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7984",
+      "family": "WildChat",
+      "original_tokens": 5373,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_3328",
+      "family": "TableGPT",
+      "original_tokens": 4618,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_88070",
+      "family": "Aya",
+      "original_tokens": 4587,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_3123",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 7965,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8732",
+      "family": "Nemotron code",
+      "original_tokens": 10719,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748437",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20828,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1531",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27057,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2009",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16665,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_3af68bf8-373f-479f-9953-94c384a1741c",
+      "family": "Dolci Think Python",
+      "original_tokens": 6179,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112140",
+      "family": "Nemotron code",
+      "original_tokens": 23966,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_89963",
+      "family": "Aya",
+      "original_tokens": 5678,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3314",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19859,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83301",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22753,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_772",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27709,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106320",
+      "family": "Nemotron code",
+      "original_tokens": 23090,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5913",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16819,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_7046",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9260,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5692",
+      "family": "WildChat",
+      "original_tokens": 6480,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1224",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 23467,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1682",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25592,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_a049bb93-7cca-4809-836c-ba68f0718ab9-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 8091,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6901",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16816,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_2dc6f4fb-dfe7-4fac-b67d-e204f87fdf35",
+      "family": "Dolci Think Python",
+      "original_tokens": 4262,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97354",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26257,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_7bbf9f08-3932-4c2f-9632-e12524ef95a2",
+      "family": "Dolci Think Python",
+      "original_tokens": 10315,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4201",
+      "family": "TableGPT",
+      "original_tokens": 5388,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_91294",
+      "family": "Aya",
+      "original_tokens": 6207,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96046",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15172,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111425",
+      "family": "Nemotron code",
+      "original_tokens": 18218,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747942",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26949,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_110569",
+      "family": "Nemotron code",
+      "original_tokens": 8582,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2195",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 11409,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135985",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7638,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1909",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 32032,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3917",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13054,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2933",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10893,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_922cfcc5-1fa4-4b98-a76a-c4a2328b28f9",
+      "family": "Dolci Think Python",
+      "original_tokens": 4807,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_785",
+      "family": "WildChat",
+      "original_tokens": 6016,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_307",
+      "family": "Nemotron code",
+      "original_tokens": 25063,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_654",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 5194,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137504",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4491,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3508",
+      "family": "Nemotron code",
+      "original_tokens": 16905,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_10807",
+      "family": "Nemotron code",
+      "original_tokens": 22617,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_326",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9339,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_98319",
+      "family": "Aya",
+      "original_tokens": 4586,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47872",
+      "family": "WildChat",
+      "original_tokens": 8008,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1894",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 29643,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1473",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13526,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_95524",
+      "family": "Aya",
+      "original_tokens": 6395,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_750927",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20756,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1422",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9746,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4509",
+      "family": "TableGPT",
+      "original_tokens": 6739,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101565",
+      "family": "Nemotron code",
+      "original_tokens": 12683,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_3263",
+      "family": "WildChat",
+      "original_tokens": 6289,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8146",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14873,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3235",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 8835,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_39cd7c3e-13a8-4c28-a88e-4add006521a6",
+      "family": "Dolci Think Python",
+      "original_tokens": 10476,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_562",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13065,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107749",
+      "family": "Nemotron code",
+      "original_tokens": 5596,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3405",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18859,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135451",
+      "family": "Dolci Precise IF",
+      "original_tokens": 12337,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_656def3c-392d-441c-bd1c-368dec41cb15",
+      "family": "Dolci Think Python",
+      "original_tokens": 11623,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7969",
+      "family": "Nemotron code",
+      "original_tokens": 4353,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_67779dc4-a1e8-455c-89d7-e6fcb09d7e7b",
+      "family": "Dolci Think Python",
+      "original_tokens": 4728,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2808",
+      "family": "Nemotron code",
+      "original_tokens": 27271,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47192",
+      "family": "WildChat",
+      "original_tokens": 25842,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1242",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6884,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2456",
+      "family": "Nemotron code",
+      "original_tokens": 4150,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1614",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 5589,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2869",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27463,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_d078abfc-d58f-4085-a15c-6633a1ba0263-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 7921,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102061",
+      "family": "Nemotron code",
+      "original_tokens": 13615,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108318",
+      "family": "Nemotron code",
+      "original_tokens": 22826,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_315aec6b-6c3a-4100-a9ff-823b804ff128",
+      "family": "Dolci Think Python",
+      "original_tokens": 6501,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_109021",
+      "family": "Nemotron code",
+      "original_tokens": 20274,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2192",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16967,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748353",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18182,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_dcb4eb54-6494-40ec-881b-81486552426b",
+      "family": "Dolci Think Python",
+      "original_tokens": 6105,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_746716",
+      "family": "OpenThoughts 3",
+      "original_tokens": 30936,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_104140",
+      "family": "Nemotron code",
+      "original_tokens": 21343,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107291",
+      "family": "Nemotron code",
+      "original_tokens": 18258,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_3629",
+      "family": "WildChat",
+      "original_tokens": 5296,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7487",
+      "family": "WildChat",
+      "original_tokens": 6825,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_867",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 28686,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1834",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10430,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_95899",
+      "family": "Aya",
+      "original_tokens": 5995,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_103314",
+      "family": "Nemotron code",
+      "original_tokens": 14322,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1395",
+      "family": "Nemotron code",
+      "original_tokens": 5765,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_2953",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6661,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_694",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19347,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1697",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16182,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_2353",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9309,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_534",
+      "family": "WildChat",
+      "original_tokens": 4440,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136107",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4870,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_630",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16018,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_629",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 29500,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106147",
+      "family": "Nemotron code",
+      "original_tokens": 25074,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_45450",
+      "family": "WildChat",
+      "original_tokens": 10929,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3449",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4695,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7535",
+      "family": "WildChat",
+      "original_tokens": 5610,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2906",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 30105,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5877",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15498,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_11997",
+      "family": "Nemotron code",
+      "original_tokens": 9374,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134432",
+      "family": "Dolci Precise IF",
+      "original_tokens": 10586,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1318",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14341,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1676",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9421,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a20702d6-d9d8-4baa-a99d-6357f3276bd1",
+      "family": "Dolci Think Python",
+      "original_tokens": 4941,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4223",
+      "family": "Nemotron code",
+      "original_tokens": 14067,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_747912",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16222,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2787",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17933,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1126",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25333,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88745",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18934,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2190",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27908,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_752310",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26928,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85439",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18283,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1106",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 28005,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137215",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7189,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111003",
+      "family": "Nemotron code",
+      "original_tokens": 27417,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_35ce5240-1d45-4bc6-a36b-1f5a1044a7c8",
+      "family": "Dolci Think Python",
+      "original_tokens": 7592,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2387",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19383,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9700",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12159,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_838",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 23638,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102018",
+      "family": "Nemotron code",
+      "original_tokens": 14036,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_764",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12213,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_39337334-c53d-4634-81ed-d3d34aff67df-arts",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 5643,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4897",
+      "family": "WildChat",
+      "original_tokens": 4631,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134944",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6176,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_64307bcf-8259-4aa5-a663-948ee3a3071e",
+      "family": "Dolci Think Python",
+      "original_tokens": 7357,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_46291",
+      "family": "WildChat",
+      "original_tokens": 5577,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2583",
+      "family": "Nemotron code",
+      "original_tokens": 24355,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4116",
+      "family": "TableGPT",
+      "original_tokens": 8878,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748229",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22493,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2182",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12873,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96302",
+      "family": "OpenThoughts 3",
+      "original_tokens": 19366,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_45713",
+      "family": "WildChat",
+      "original_tokens": 6376,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_d4655318-9613-44ee-b098-bbcea5fdbd3c-arts",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 5937,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3388",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6611,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3161",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25959,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1887",
+      "family": "Nemotron code",
+      "original_tokens": 4416,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_46204",
+      "family": "WildChat",
+      "original_tokens": 7605,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_3661",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10601,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_eb84ec65-008e-4490-88b5-9569af966287",
+      "family": "Dolci Think Python",
+      "original_tokens": 6218,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b7287212-8178-4354-8013-178e66bb1305",
+      "family": "Dolci Think Python",
+      "original_tokens": 6219,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_893",
+      "family": "Nemotron code",
+      "original_tokens": 14560,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_5d8deeca-dc81-4e8a-9c69-77edfb6d6d7e",
+      "family": "Dolci Think Python",
+      "original_tokens": 4459,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6786",
+      "family": "Nemotron code",
+      "original_tokens": 16500,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_1093",
+      "family": "WildChat",
+      "original_tokens": 8579,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_138253",
+      "family": "Dolci Precise IF",
+      "original_tokens": 14204,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134032",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6631,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_820",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4104,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1958",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 8378,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_104084",
+      "family": "Nemotron code",
+      "original_tokens": 9263,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47600",
+      "family": "WildChat",
+      "original_tokens": 5446,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8295",
+      "family": "Nemotron code",
+      "original_tokens": 7906,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_404",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 22251,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_736aa39a-deed-4bb4-b1ab-911585b34a44",
+      "family": "Dolci Think Python",
+      "original_tokens": 6245,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2858",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20558,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2776",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 30019,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85722",
+      "family": "OpenThoughts 3",
+      "original_tokens": 19735,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2348",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9011,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1197",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7071,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9545",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15125,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_3068",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12138,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85719",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17620,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_865",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 5164,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_750084",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17455,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_746106",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12575,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_6805",
+      "family": "WildChat",
+      "original_tokens": 4473,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_454ff310-7351-4e68-9c41-b13cfa28bc39-professional",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 8258,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_45593",
+      "family": "WildChat",
+      "original_tokens": 4893,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_104123",
+      "family": "Nemotron code",
+      "original_tokens": 13429,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2534",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19024,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1783",
+      "family": "Nemotron code",
+      "original_tokens": 18860,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2959",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25080,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8320",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16402,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2220",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 21709,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87995",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26488,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_8bbe4a2f-c786-40d1-8a28-e4550d8bd95f",
+      "family": "Dolci Think Python",
+      "original_tokens": 4701,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1037",
+      "family": "Nemotron code",
+      "original_tokens": 14322,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1938",
+      "family": "OpenThoughts 3",
+      "original_tokens": 8729,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_653",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7274,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135436",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6170,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107289",
+      "family": "Nemotron code",
+      "original_tokens": 7737,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1593",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 28793,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_cae05106-bf4f-4980-b40c-1b18fd3881db",
+      "family": "Dolci Think Python",
+      "original_tokens": 4157,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_109302",
+      "family": "Nemotron code",
+      "original_tokens": 24725,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748941",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22516,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_12963",
+      "family": "Nemotron code",
+      "original_tokens": 6059,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_8517",
+      "family": "WildChat",
+      "original_tokens": 8683,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5521",
+      "family": "OpenThoughts 3",
+      "original_tokens": 4120,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111566",
+      "family": "Nemotron code",
+      "original_tokens": 16690,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111955",
+      "family": "Nemotron code",
+      "original_tokens": 8065,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4177",
+      "family": "WildChat",
+      "original_tokens": 7333,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6186",
+      "family": "Nemotron code",
+      "original_tokens": 11155,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_2764",
+      "family": "Nemotron code",
+      "original_tokens": 6189,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96867",
+      "family": "OpenThoughts 3",
+      "original_tokens": 24507,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111953",
+      "family": "Nemotron code",
+      "original_tokens": 17470,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_11074",
+      "family": "Nemotron code",
+      "original_tokens": 5098,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88769",
+      "family": "OpenThoughts 3",
+      "original_tokens": 28172,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_107283",
+      "family": "Nemotron code",
+      "original_tokens": 24506,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2819",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9239,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_2e0aead0-cba2-4176-9831-f2fe76020ea6-culinary",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 4725,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3071",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4595,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_3295",
+      "family": "TableGPT",
+      "original_tokens": 10026,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a0998e1b-f828-47ac-bd7b-584ccbac1e38",
+      "family": "Dolci Think Python",
+      "original_tokens": 4470,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751055",
+      "family": "OpenThoughts 3",
+      "original_tokens": 26846,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_6749",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6703,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_0374df70-5930-407d-b04b-840064547128",
+      "family": "Dolci Think Python",
+      "original_tokens": 4370,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4925",
+      "family": "WildChat",
+      "original_tokens": 4946,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3271",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14279,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751607",
+      "family": "OpenThoughts 3",
+      "original_tokens": 31928,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_92387",
+      "family": "Aya",
+      "original_tokens": 8138,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106165",
+      "family": "Nemotron code",
+      "original_tokens": 14035,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8916",
+      "family": "Nemotron code",
+      "original_tokens": 13578,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102870",
+      "family": "Nemotron code",
+      "original_tokens": 23670,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101896",
+      "family": "Nemotron code",
+      "original_tokens": 4371,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_11760",
+      "family": "Nemotron code",
+      "original_tokens": 14536,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_103594",
+      "family": "Nemotron code",
+      "original_tokens": 29721,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_5709",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7550,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5627",
+      "family": "WildChat",
+      "original_tokens": 6845,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_102860",
+      "family": "Nemotron code",
+      "original_tokens": 13951,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137626",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6998,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134544",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4597,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1569",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18825,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_d6a51672-b5ea-436f-a853-674e0bbbf3ee",
+      "family": "Dolci Think Python",
+      "original_tokens": 6446,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_750535",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13694,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_70",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 19017,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1080",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7152,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1266",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26578,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87376",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16492,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_406",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13305,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_b2f9f6f2-3480-4915-81d2-eceb4a07daa2",
+      "family": "Dolci Think Python",
+      "original_tokens": 10407,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106169",
+      "family": "Nemotron code",
+      "original_tokens": 22820,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_7349",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7692,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_749848",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12021,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_f56382ce-6925-41e1-b589-23bf2f44136e",
+      "family": "Dolci Think Python",
+      "original_tokens": 10312,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2055",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27252,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1866",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17613,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1092",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4498,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1330",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 21548,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112658",
+      "family": "Nemotron code",
+      "original_tokens": 9766,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_99053",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16615,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_745879",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17123,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_1791",
+      "family": "OpenThoughts 3",
+      "original_tokens": 10974,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_5060",
+      "family": "OpenThoughts 3",
+      "original_tokens": 5871,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2404",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9322,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136156",
+      "family": "Dolci Precise IF",
+      "original_tokens": 13780,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_8cc75ee1-752d-4b03-9b35-0196fec0e247",
+      "family": "Dolci Think Python",
+      "original_tokens": 5629,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1971",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 4665,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_9024",
+      "family": "Nemotron code",
+      "original_tokens": 9985,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1977",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13333,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113501",
+      "family": "Nemotron code",
+      "original_tokens": 6183,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47921",
+      "family": "WildChat",
+      "original_tokens": 4868,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98246",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12057,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_4099",
+      "family": "TableGPT",
+      "original_tokens": 4682,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8645",
+      "family": "Nemotron code",
+      "original_tokens": 6605,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_841",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 26662,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111768",
+      "family": "Nemotron code",
+      "original_tokens": 13569,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86015",
+      "family": "OpenThoughts 3",
+      "original_tokens": 29927,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86328",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22178,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748399",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20570,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2835",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14786,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1809",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 7831,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_550",
+      "family": "Nemotron code",
+      "original_tokens": 33164,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3324",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13025,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1328",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10298,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_5429",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7759,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_6764",
+      "family": "OpenThoughts 3",
+      "original_tokens": 11730,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_538",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17282,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9504",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15678,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_105853",
+      "family": "Nemotron code",
+      "original_tokens": 17120,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_101335",
+      "family": "Nemotron code",
+      "original_tokens": 17867,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_237",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27245,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8232",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13007,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_8924",
+      "family": "WildChat",
+      "original_tokens": 10320,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9630",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16056,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_919",
+      "family": "Nemotron code",
+      "original_tokens": 13330,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1979",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16541,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113738",
+      "family": "Nemotron code",
+      "original_tokens": 16400,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3159",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 5714,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47974",
+      "family": "WildChat",
+      "original_tokens": 5374,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3248",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 32526,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_101",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13534,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113584",
+      "family": "Nemotron code",
+      "original_tokens": 20464,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86249",
+      "family": "OpenThoughts 3",
+      "original_tokens": 21365,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108908",
+      "family": "Nemotron code",
+      "original_tokens": 24243,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3340",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 6855,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3153",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17942,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_689",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25800,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_8a6c1000-c496-4571-8896-5425fb8b17dc",
+      "family": "Dolci Think Python",
+      "original_tokens": 6123,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_1748",
+      "family": "OpenThoughts 3",
+      "original_tokens": 8429,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_334",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 27790,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_e84f2243-898d-4a1e-a2b7-1d876a0273b4",
+      "family": "Dolci Think Python",
+      "original_tokens": 5108,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136764",
+      "family": "Dolci Precise IF",
+      "original_tokens": 11363,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_532fe5ca-cbd7-46fd-a3b7-0951e85a0553",
+      "family": "Dolci Think Python",
+      "original_tokens": 4798,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_6aaf70f5-925e-4c92-9c54-a754d856c40e-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 4498,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_165",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 20981,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_8077",
+      "family": "Nemotron code",
+      "original_tokens": 22896,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_9273",
+      "family": "WildChat",
+      "original_tokens": 9257,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108338",
+      "family": "Nemotron code",
+      "original_tokens": 16882,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_861",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 23341,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_46843",
+      "family": "WildChat",
+      "original_tokens": 7435,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8771",
+      "family": "OpenThoughts 3",
+      "original_tokens": 7118,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6060",
+      "family": "Nemotron code",
+      "original_tokens": 12517,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6736",
+      "family": "OpenThoughts 3",
+      "original_tokens": 16883,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_844",
+      "family": "Nemotron code",
+      "original_tokens": 19777,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_11343",
+      "family": "Nemotron code",
+      "original_tokens": 15932,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_138075",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4997,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3302",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14097,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1191",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 14876,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3228",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13100,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_32663d6a-47c9-4dc8-b980-0bed19f8ade5",
+      "family": "Dolci Think Python",
+      "original_tokens": 7869,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_5050",
+      "family": "WildChat",
+      "original_tokens": 11034,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7516",
+      "family": "WildChat",
+      "original_tokens": 4434,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_106833",
+      "family": "Nemotron code",
+      "original_tokens": 22088,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_10856",
+      "family": "WildChat",
+      "original_tokens": 22773,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_94758",
+      "family": "OpenThoughts 3",
+      "original_tokens": 18148,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_96199",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20590,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_67fc659f-8e1b-498a-b415-fe22b9da7515-sports",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 7653,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134261",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7992,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_957eda6c-5768-496e-a154-4d24867b46ba",
+      "family": "Dolci Think Python",
+      "original_tokens": 5894,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_12798",
+      "family": "Nemotron code",
+      "original_tokens": 28367,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_23",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9757,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_98483",
+      "family": "Aya",
+      "original_tokens": 6176,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_1314",
+      "family": "Nemotron code",
+      "original_tokens": 6390,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4107",
+      "family": "Nemotron code",
+      "original_tokens": 8789,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1048",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13384,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134708",
+      "family": "Dolci Precise IF",
+      "original_tokens": 15503,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135222",
+      "family": "Dolci Precise IF",
+      "original_tokens": 5655,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_105261",
+      "family": "Nemotron code",
+      "original_tokens": 10706,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_5925",
+      "family": "Nemotron code",
+      "original_tokens": 15799,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_2843",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15757,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_7599",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15644,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_88021",
+      "family": "Aya",
+      "original_tokens": 5128,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_8048",
+      "family": "OpenThoughts 3",
+      "original_tokens": 6213,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2093",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17247,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112655",
+      "family": "Nemotron code",
+      "original_tokens": 7480,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_278fdd82-6dae-4d38-a576-b548a2a27ecf",
+      "family": "Dolci Think Python",
+      "original_tokens": 8689,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751235",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15809,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748772",
+      "family": "OpenThoughts 3",
+      "original_tokens": 27273,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3355",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 11110,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137261",
+      "family": "Dolci Precise IF",
+      "original_tokens": 5572,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_3337",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 18911,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2338",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 11831,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_105647",
+      "family": "Nemotron code",
+      "original_tokens": 16461,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_2790",
+      "family": "WildChat",
+      "original_tokens": 6813,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136948",
+      "family": "Dolci Precise IF",
+      "original_tokens": 4822,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_109881",
+      "family": "Nemotron code",
+      "original_tokens": 27263,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_47976",
+      "family": "WildChat",
+      "original_tokens": 42803,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4677",
+      "family": "WildChat",
+      "original_tokens": 13332,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5683",
+      "family": "OpenThoughts 3",
+      "original_tokens": 15293,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111756",
+      "family": "Nemotron code",
+      "original_tokens": 7367,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_caee6faf-1dff-4ed1-ac6a-2481ae582cb7",
+      "family": "Dolci Think Python",
+      "original_tokens": 7011,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_5644",
+      "family": "Nemotron code",
+      "original_tokens": 19465,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112513",
+      "family": "Nemotron code",
+      "original_tokens": 18110,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_84208",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23136,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_3577",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12240,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136622",
+      "family": "Dolci Precise IF",
+      "original_tokens": 8421,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_279",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 16863,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2500",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 13828,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_98187",
+      "family": "Aya",
+      "original_tokens": 6025,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_4456",
+      "family": "OpenThoughts 3",
+      "original_tokens": 9482,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136721",
+      "family": "Dolci Precise IF",
+      "original_tokens": 6219,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_103130",
+      "family": "Nemotron code",
+      "original_tokens": 22139,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112893",
+      "family": "Nemotron code",
+      "original_tokens": 9893,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_6057",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12143,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3378",
+      "family": "Nemotron code",
+      "original_tokens": 14412,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_160",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 15860,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1134",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 8184,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_cd6f7a37-8187-4e51-80b2-d169eda27d31",
+      "family": "Dolci Think Python",
+      "original_tokens": 8073,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112880",
+      "family": "Nemotron code",
+      "original_tokens": 13757,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_6829",
+      "family": "OpenThoughts 3",
+      "original_tokens": 4680,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88574",
+      "family": "OpenThoughts 3",
+      "original_tokens": 28929,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_2292",
+      "family": "WildChat",
+      "original_tokens": 6305,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_686",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 25250,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111854",
+      "family": "Nemotron code",
+      "original_tokens": 8554,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_840e1bde-4190-42a2-936b-7eb607f901b8",
+      "family": "Dolci Think Python",
+      "original_tokens": 8410,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_3747",
+      "family": "WildChat",
+      "original_tokens": 12937,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_113431",
+      "family": "Nemotron code",
+      "original_tokens": 16560,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751481",
+      "family": "OpenThoughts 3",
+      "original_tokens": 24431,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_748381",
+      "family": "OpenThoughts 3",
+      "original_tokens": 23388,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2672",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 17043,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_98114",
+      "family": "OpenThoughts 3",
+      "original_tokens": 28516,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff_2448",
+      "family": "TableGPT",
+      "original_tokens": 8084,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_136141",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7718,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_87241",
+      "family": "OpenThoughts 3",
+      "original_tokens": 25033,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_86961",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20516,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_111929",
+      "family": "Nemotron code",
+      "original_tokens": 32061,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_94951",
+      "family": "OpenThoughts 3",
+      "original_tokens": 25846,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7688",
+      "family": "Nemotron code",
+      "original_tokens": 27064,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_10569",
+      "family": "WildChat",
+      "original_tokens": 4891,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_848498a3-70f2-440f-9667-6c8680ddffd8",
+      "family": "Dolci Think Python",
+      "original_tokens": 5678,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_108397",
+      "family": "Nemotron code",
+      "original_tokens": 15703,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1064",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 9235,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134873",
+      "family": "Dolci Precise IF",
+      "original_tokens": 10643,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_88556",
+      "family": "OpenThoughts 3",
+      "original_tokens": 20926,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_85767",
+      "family": "OpenThoughts 3",
+      "original_tokens": 17999,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_83686",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22486,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97452",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13359,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_533916d3-b515-4502-bd51-5971aa592208",
+      "family": "Dolci Think Python",
+      "original_tokens": 7168,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_10688",
+      "family": "Nemotron code",
+      "original_tokens": 20044,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_7164",
+      "family": "OpenThoughts 3",
+      "original_tokens": 12813,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_112710",
+      "family": "Nemotron code",
+      "original_tokens": 12767,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_689c5719-117f-4f16-9c5e-cb147e329cbf",
+      "family": "Dolci Think Python",
+      "original_tokens": 6565,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_11492",
+      "family": "WildChat",
+      "original_tokens": 12976,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_3370",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14876,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_9479",
+      "family": "OpenThoughts 3",
+      "original_tokens": 11202,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1465",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 10570,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_48bca4fd-c1f1-4f2d-aca2-5e0bb3836e19-professional",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 4144,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1968",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 31288,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_4981",
+      "family": "Nemotron code",
+      "original_tokens": 22749,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_137308",
+      "family": "Dolci Precise IF",
+      "original_tokens": 5484,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_1c5c3021-4b2f-4d42-bc1e-ee5bdef3c14b-culinary",
+      "family": "Dolci Think Persona IF",
+      "original_tokens": 5379,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_1651",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 31669,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_7419",
+      "family": "WildChat",
+      "original_tokens": 4168,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-code-subsampled-decontam-v2_5080",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13298,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered_oasst1_6453",
+      "family": "OpenAssistant Guanaco",
+      "original_tokens": 4584,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_134372",
+      "family": "Dolci Precise IF",
+      "original_tokens": 10922,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-math-decontam-v2_751123",
+      "family": "OpenThoughts 3",
+      "original_tokens": 28157,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_6574",
+      "family": "Nemotron code",
+      "original_tokens": 27828,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_97286",
+      "family": "OpenThoughts 3",
+      "original_tokens": 22109,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2694",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 31360,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_4113",
+      "family": "OpenThoughts 3",
+      "original_tokens": 13496,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2549",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12880,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "OpenThoughts3-full-filtered-science-decontam-v2_3186",
+      "family": "OpenThoughts 3",
+      "original_tokens": 14173,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_98305",
+      "family": "Aya",
+      "original_tokens": 4240,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered_2464",
+      "family": "SYNTHETIC-2",
+      "original_tokens": 12506,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_7385",
+      "family": "Nemotron code",
+      "original_tokens": 4729,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_3911",
+      "family": "Nemotron code",
+      "original_tokens": 19055,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_46274",
+      "family": "WildChat",
+      "original_tokens": 8216,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls_10847",
+      "family": "Nemotron code",
+      "original_tokens": 27140,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_9880",
+      "family": "WildChat",
+      "original_tokens": 4288,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_5b91887f-17bb-4583-9762-f1a6a52a7f99",
+      "family": "Dolci Think Python",
+      "original_tokens": 6032,
+      "retained_tokens": 4096
+    },
+    {
+      "id": "if_qwq_reasoning_verified_filtered_decontam_v2_135153",
+      "family": "Dolci Precise IF",
+      "original_tokens": 7826,
+      "retained_tokens": 4096
+    }
+  ],
+  "dropped": [
+    {
+      "id": "wildchat-r1-p2-repetition-filter_2003",
+      "family": "WildChat",
+      "original_tokens": 21737,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_94469",
+      "family": "Aya",
+      "original_tokens": 10667,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_45450",
+      "family": "WildChat",
+      "original_tokens": 10929,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4177",
+      "family": "WildChat",
+      "original_tokens": 7333,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_4677",
+      "family": "WildChat",
+      "original_tokens": 13332,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered_98187",
+      "family": "Aya",
+      "original_tokens": 6025,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_3747",
+      "family": "WildChat",
+      "original_tokens": 12937,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "wildchat-r1-p2-repetition-filter_11492",
+      "family": "WildChat",
+      "original_tokens": 12976,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    },
+    {
+      "id": "tulu_v3.9_wildchat_100k_english-r1-final-content-filtered_46274",
+      "family": "WildChat",
+      "original_tokens": 8216,
+      "retained_tokens": 4096,
+      "reason": "No assistant prediction target remains after truncation"
+    }
+  ]
+}

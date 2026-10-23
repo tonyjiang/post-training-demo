@@ -1,0 +1,37 @@
+{
+  "dataset": "allenai/Dolci-Think-SFT-7B",
+  "revision": "72ec0fe32428bada1ec686a9168a0681eecd2094",
+  "template_source": {
+    "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+    "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+    "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+  },
+  "seed": 42,
+  "max_length": 1024,
+  "max_chars": 8192,
+  "candidate_rows": 40000,
+  "eligible_rows": 4911,
+  "sampling": "8 spaced shards, up to 5000 random rows per shard; raw content <= max_chars and complete conversations <= max_length; round-robin sources; not official proportions",
+  "splits": {
+    "train": {
+      "rows": 1000,
+      "sha256": "73c4e0400f3dee0337e32439bbe64de8d1f485e2e4d47d7aada1927a351e3064",
+      "sources": {
+        "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 250,
+        "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 246,
+        "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 253,
+        "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 251
+      }
+    },
+    "eval": {
+      "rows": 64,
+      "sha256": "d65c9400eaab7f60ca722a76bd7296e2c8bf966fd16ae4f8d921a8e2fb6a0c45",
+      "sources": {
+        "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 16,
+        "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 15,
+        "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 20,
+        "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 13
+      }
+    }
+  }
+}

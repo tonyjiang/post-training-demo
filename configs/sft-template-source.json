@@ -1,0 +1,5 @@
+{
+  "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+  "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+  "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+}

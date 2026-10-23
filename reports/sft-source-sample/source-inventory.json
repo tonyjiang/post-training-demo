@@ -1,0 +1,40 @@
+{
+  "dataset": "allenai/Dolci-Think-SFT-7B",
+  "revision": "72ec0fe32428bada1ec686a9168a0681eecd2094",
+  "method": "All 156 pinned parquet footers; uniform source row-group statistics, mixed source columns read exactly using HTTP ranges",
+  "rows": 2268178,
+  "families": {
+    "Aya": 98597,
+    "CoCoNot": 10227,
+    "Dolci Precise IF": 135792,
+    "Dolci Think Persona IF": 223123,
+    "Dolci Think Python": 466677,
+    "Nemotron code": 113777,
+    "OpenAssistant Guanaco": 6800,
+    "OpenThoughts 3": 941166,
+    "SYNTHETIC-2": 104569,
+    "TableGPT": 4981,
+    "WildChat": 83054,
+    "WildGuardMix": 38315,
+    "WildJailbreak": 41100
+  },
+  "sources": {
+    "allenai/SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered": 104569,
+    "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 98597,
+    "allenai/coconot-r1-format-domain-filtered-keyword-filtered-filter-datecutoff-chinese-filtered": 10227,
+    "allenai/nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls": 113777,
+    "allenai/oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered": 6800,
+    "allenai/persona-precise-if-r1-final-content-filtered-chinese-filtered": 223123,
+    "allenai/tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff": 4981,
+    "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 46312,
+    "allenai/wildchat-r1-p2-repetition-filter": 36742,
+    "allenai/wildguardmix-r1-v2-all-filtered-ngram-filtered-chinese-filtered": 38315,
+    "allenai/wildjailbreak-r1-v2-format-filtered-keyword-filtered-filter-datecutoff-final-content-filtered": 41100,
+    "saumyamalik/OpenThoughts3-full-filtered-code-subsampled-decontam-v2": 88900,
+    "saumyamalik/OpenThoughts3-full-filtered-math-decontam-v2": 752997,
+    "saumyamalik/OpenThoughts3-full-filtered-science-decontam-v2": 99269,
+    "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 466677,
+    "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 135792
+  },
+  "identity_note": "Dataset card lists 58 identity examples, but no identity source appears in published parquet data; the other family counts sum exactly to all 2268178 rows."
+}

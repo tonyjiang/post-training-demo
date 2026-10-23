@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+logs/
+outputs/
+data/
+third_party/

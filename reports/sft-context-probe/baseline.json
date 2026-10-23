@@ -1,0 +1,44 @@
+{
+  "adapter": "outputs/sft-20261022T034737Z-cwdXm0/final-adapter",
+  "adapter_sha256": "8afc290542603afa3baf7d469e3c27b417f3a8622974f67fc873b0b962fd2e33",
+  "sample_sha256": "b7a6d0d4a796a0b7a9be76a45fefb4143f3487d987dd23e7fc49341d276fae6b",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "scope": "Two optimizer steps per target on complete conversations; disposable in-memory adapter, no saved weights; not a full-run guarantee",
+  "gradient_accumulation": 1,
+  "results": [
+    {
+      "target_tokens": 2048,
+      "examples": [
+        {
+          "id": "persona-precise-if-r1-final-content-filtered-chinese-filtered_cb6cdd8b-6c60-444d-aa92-704f10d5a1af-travel",
+          "source": "allenai/persona-precise-if-r1-final-content-filtered-chinese-filtered",
+          "tokens": 2044,
+          "loss": 1.0973392724990845,
+          "gradient_norm": 0.21344581246376038
+        },
+        {
+          "id": "correct-python-sft-187k-x16-thoughts-filtered-decontam-v2_a817a528-0dc6-4127-9593-f38cf15bd039",
+          "source": "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2",
+          "tokens": 2048,
+          "loss": 0.6888453364372253,
+          "gradient_norm": 0.16879154741764069
+        }
+      ],
+      "status": "passed",
+      "phase": "optimizer",
+      "seconds": 4.86254783347249,
+      "peak_allocated_gib": 10.555355548858643,
+      "peak_reserved_gib": 10.984375
+    },
+    {
+      "target_tokens": 4096,
+      "examples": [],
+      "status": "out_of_memory",
+      "phase": "forward",
+      "error": "CUDA out of memory. Tried to allocate 1.52 GiB. GPU 0 has a total capacity of 11.50 GiB of which 939.00 MiB is free. Including non-PyTorch memory, this process has 10.57 GiB memory in use. Of the allocated memory 10.18 GiB is allocated by PyTorch, and 191.34 MiB is reserved by PyTorch but unallocated.",
+      "seconds": 1.5350473979488015,
+      "peak_allocated_gib": 10.207512855529785,
+      "peak_reserved_gib": 10.482421875
+    }
+  ]
+}

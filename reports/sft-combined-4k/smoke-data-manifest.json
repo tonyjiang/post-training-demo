@@ -1,0 +1,58 @@
+{
+  "dataset": "allenai/Dolci-Think-SFT-7B",
+  "revision": "72ec0fe32428bada1ec686a9168a0681eecd2094",
+  "max_length": 4096,
+  "required_training_options": {
+    "liger_fused_loss": true
+  },
+  "purpose": "Two optimizer updates with accumulation 8; all 16 training examples are 4096 tokens; four longest original eval examples",
+  "parent_train_sha256": "ce932e892689499b48f3bf521637af19cd092b25e9de981086629bea1dbbc7c6",
+  "splits": {
+    "train": {
+      "rows": 16,
+      "sha256": "7d8c033b42d319a44d0757a56d51179f06c852748fc5ff4971b81bb71e9dcca7",
+      "sources": {
+        "allenai/SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered": 5,
+        "allenai/nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls": 3,
+        "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 1,
+        "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 3,
+        "saumyamalik/OpenThoughts3-full-filtered-code-subsampled-decontam-v2": 1,
+        "saumyamalik/OpenThoughts3-full-filtered-math-decontam-v2": 1,
+        "allenai/persona-precise-if-r1-final-content-filtered-chinese-filtered": 1,
+        "saumyamalik/OpenThoughts3-full-filtered-science-decontam-v2": 1
+      },
+      "lengths": [
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "eval": {
+      "rows": 4,
+      "sha256": "7aa4692fb7f207f1bdb656102562405aaa17e614d439367ddc4c38b826a6aaf5",
+      "sources": {
+        "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 3,
+        "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 1
+      },
+      "lengths": [
+        1015,
+        1012,
+        1002,
+        1000
+      ]
+    }
+  }
+}

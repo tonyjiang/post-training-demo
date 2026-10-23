@@ -1,0 +1,205 @@
+{
+  "dataset": "allenai/Dolci-Think-SFT-7B",
+  "revision": "72ec0fe32428bada1ec686a9168a0681eecd2094",
+  "template_source": {
+    "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+    "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+    "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+  },
+  "seed": 42,
+  "max_length": 4096,
+  "training_ready": true,
+  "required_training_options": {
+    "liger_fused_loss": true
+  },
+  "sampling": "Original train plus expanded sample; right truncation; seed-shuffled records; original eval unchanged",
+  "truncation": "Keep the first max_length tokens; preserve assistant masks; do not append EOS or invent a completion",
+  "inputs": {
+    "previous_manifest": {
+      "dataset": "allenai/Dolci-Think-SFT-7B",
+      "revision": "72ec0fe32428bada1ec686a9168a0681eecd2094",
+      "template_source": {
+        "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+        "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+        "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+      },
+      "seed": 42,
+      "max_length": 1024,
+      "max_chars": 8192,
+      "candidate_rows": 40000,
+      "eligible_rows": 4911,
+      "sampling": "8 spaced shards, up to 5000 random rows per shard; raw content <= max_chars and complete conversations <= max_length; round-robin sources; not official proportions",
+      "splits": {
+        "train": {
+          "rows": 1000,
+          "sha256": "73c4e0400f3dee0337e32439bbe64de8d1f485e2e4d47d7aada1927a351e3064",
+          "sources": {
+            "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 250,
+            "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 246,
+            "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 253,
+            "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 251
+          }
+        },
+        "eval": {
+          "rows": 64,
+          "sha256": "d65c9400eaab7f60ca722a76bd7296e2c8bf966fd16ae4f8d921a8e2fb6a0c45",
+          "sources": {
+            "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 16,
+            "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 15,
+            "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 20,
+            "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 13
+          }
+        }
+      }
+    },
+    "sample_sha256": "b7a6d0d4a796a0b7a9be76a45fefb4143f3487d987dd23e7fc49341d276fae6b",
+    "sample_manifest_sha256": "2dc61181ddc270a1ac5bc53e65db19039d0ee5112df46bc735f1586c745c3674"
+  },
+  "original_train_rows": 1000,
+  "expanded_sample_rows": 3250,
+  "expanded_kept_rows": 3241,
+  "over_limit_rows": 941,
+  "dropped_no_assistant_target_rows": 9,
+  "expanded_families": {
+    "Aya": {
+      "sampled": 250,
+      "kept": 248,
+      "truncated_kept": 22,
+      "over_limit": 24,
+      "dropped_no_assistant_target": 2
+    },
+    "CoCoNot": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 1,
+      "over_limit": 1
+    },
+    "Dolci Precise IF": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 61,
+      "over_limit": 61
+    },
+    "Dolci Think Persona IF": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 16,
+      "over_limit": 16
+    },
+    "Dolci Think Python": {
+      "sampled": 250,
+      "over_limit": 99,
+      "kept": 250,
+      "truncated_kept": 99
+    },
+    "Nemotron code": {
+      "sampled": 250,
+      "over_limit": 202,
+      "kept": 250,
+      "truncated_kept": 202
+    },
+    "OpenAssistant Guanaco": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 8,
+      "over_limit": 8
+    },
+    "OpenThoughts 3": {
+      "sampled": 250,
+      "over_limit": 237,
+      "kept": 250,
+      "truncated_kept": 237
+    },
+    "SYNTHETIC-2": {
+      "sampled": 250,
+      "over_limit": 207,
+      "kept": 250,
+      "truncated_kept": 207
+    },
+    "TableGPT": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 18,
+      "over_limit": 18
+    },
+    "WildChat": {
+      "sampled": 250,
+      "kept": 243,
+      "truncated_kept": 60,
+      "over_limit": 67,
+      "dropped_no_assistant_target": 7
+    },
+    "WildGuardMix": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 1,
+      "over_limit": 1
+    },
+    "WildJailbreak": {
+      "sampled": 250,
+      "kept": 250,
+      "truncated_kept": 0
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 4241,
+      "sha256": "ce932e892689499b48f3bf521637af19cd092b25e9de981086629bea1dbbc7c6",
+      "sources": {
+        "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 306,
+        "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 503,
+        "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 494,
+        "allenai/wildchat-r1-p2-repetition-filter": 187,
+        "allenai/SYNTHETIC-2-SFT-cn-fltrd-final-ngram-filtered-chinese-filtered": 250,
+        "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 501,
+        "allenai/nemotron-post-training-dataset-subset-ngram-filtered-no-tool-calls": 250,
+        "allenai/wildguardmix-r1-v2-all-filtered-ngram-filtered-chinese-filtered": 250,
+        "allenai/tablegpt_r1-format-filtered-keyword-filtered-filter-datecutoff": 250,
+        "allenai/persona-precise-if-r1-final-content-filtered-chinese-filtered": 250,
+        "saumyamalik/OpenThoughts3-full-filtered-science-decontam-v2": 82,
+        "allenai/coconot-r1-format-domain-filtered-keyword-filtered-filter-datecutoff-chinese-filtered": 250,
+        "allenai/wildjailbreak-r1-v2-format-filtered-keyword-filtered-filter-datecutoff-final-content-filtered": 250,
+        "saumyamalik/OpenThoughts3-full-filtered-math-decontam-v2": 48,
+        "allenai/oasst1-r1-format-filtered-keyword-filtered-filter-datecutoff-chinese-filtered": 250,
+        "saumyamalik/OpenThoughts3-full-filtered-code-subsampled-decontam-v2": 120
+      },
+      "families": {
+        "WildChat": 493,
+        "Dolci Think Python": 503,
+        "Aya": 494,
+        "SYNTHETIC-2": 250,
+        "Dolci Precise IF": 501,
+        "Nemotron code": 250,
+        "WildGuardMix": 250,
+        "TableGPT": 250,
+        "Dolci Think Persona IF": 250,
+        "OpenThoughts 3": 250,
+        "CoCoNot": 250,
+        "WildJailbreak": 250,
+        "OpenAssistant Guanaco": 250
+      },
+      "tokens": 7724324,
+      "supervised_tokens": 6642883,
+      "max_tokens": 4096
+    },
+    "eval": {
+      "rows": 64,
+      "sha256": "d65c9400eaab7f60ca722a76bd7296e2c8bf966fd16ae4f8d921a8e2fb6a0c45",
+      "sources": {
+        "allenai/tulu_v3.9_wildchat_100k_english-r1-final-content-filtered": 16,
+        "saumyamalik/if_qwq_reasoning_verified_filtered_decontam_v2": 15,
+        "allenai/aya-100k-r1-format-filtered-keyword-filtered-filter-datecutoff-ngram-filtered": 20,
+        "saumyamalik/correct-python-sft-187k-x16-thoughts-filtered-decontam-v2": 13
+      },
+      "families": {
+        "WildChat": 16,
+        "Dolci Precise IF": 15,
+        "Aya": 20,
+        "Dolci Think Python": 13
+      },
+      "tokens": 47781,
+      "supervised_tokens": 40641,
+      "max_tokens": 1015
+    }
+  }
+}

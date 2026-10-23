@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olmo 3 Think 7B Post-Training Workflow</title>
+  <style>
+    :root {
+      --ink: #edf2ff; --muted: #9aa8bf; --line: #334155;
+      --surface: #101725; --canvas: #070b13; --blue: #6da8ff;
+      --blue-soft: #10233e; --purple: #ad8cff; --purple-soft: #241b3d;
+      --cyan: #67ddec; --cyan-soft: #102c34; --amber: #f4b76b;
+      --amber-soft: #342413; --green: #68d99a; --green-soft: #122c20;
+      --red: #fb7f91; --shadow: 0 24px 70px rgba(0,0,0,.38);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: radial-gradient(circle at 50% -10%, #17233a 0, var(--canvas) 42%); font: 15px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(1280px, calc(100% - 32px)); margin: 32px auto 56px; }
+    header { display: flex; justify-content: space-between; gap: 24px; align-items: flex-end; margin-bottom: 24px; }
+    h1 { margin: 0 0 6px; font-size: clamp(24px,3vw,38px); letter-spacing: -.035em; }
+    header p { margin: 0; color: var(--muted); max-width: 760px; }
+    header a { color: var(--blue); }
+    .mode { flex: 0 0 auto; padding: 8px 12px; border: 1px solid #42516a; border-radius: 999px; background: #111a2a; color: #bdc8da; font-weight: 700; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+    .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+    .legend > div { padding: 14px 18px; border: 1px solid #334155; border-radius: 12px; background: #101725; }
+    .legend p { margin: 0 0 10px; color: var(--muted); font-size: 12px; }
+    .legend ul { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 0; padding: 0; list-style: none; color: #bdc8da; font-size: 12px; }
+    .legend li { display: flex; align-items: center; gap: 8px; }
+    .swatch { width: 14px; height: 14px; border-radius: 4px; border: 1px solid; }
+    .swatch.source { background: var(--blue-soft); border-color: #315b91; }
+    .swatch.process { background: #151e2d; border-color: var(--line); }
+    .swatch.ref { background: var(--green-soft); border-color: #34684a; }
+    .board { background: var(--surface); border: 1px solid #263247; border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+    .stage { position: relative; padding: 26px 30px; border-bottom: 1px solid #253044; }
+    .stage:last-child { border-bottom: 0; }
+    .stage + .stage::before { content: "→"; position: absolute; top: -24px; left: 50%; transform: translateX(-50%) rotate(90deg); color: #7f8ba1; font-size: 44px; font-weight: 800; line-height: 1; }
+    .stage-label { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .stage-label .why { margin-left: auto; text-transform: none; letter-spacing: 0; font-weight: 600; color: #8492aa; max-width: 620px; text-align: right; }
+    .step-number { display: grid; width: 25px; height: 25px; place-items: center; border-radius: 8px; background: #263247; color: #d7dfed; }
+    .sequence { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1.25fr) auto minmax(0,1fr); gap: 10px; align-items: stretch; }
+    .sequence.four { grid-template-columns: minmax(0,1fr) auto minmax(0,1.1fr) auto minmax(0,.9fr) auto minmax(0,1fr); }
+    .arrow { align-self: center; color: #7f8ba1; font-size: 24px; font-weight: 800; text-align: center; }
+    .card { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #151e2d; }
+    .card h2, .card h3 { margin: 0 0 7px; font-size: 17px; letter-spacing: -.015em; }
+    .card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .card p + p { margin-top: 8px; }
+    .card a { color: var(--blue); }
+    .card code, .verifier code, .footer code { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfd8e6; overflow-wrap: anywhere; }
+    .card.source { border-color: #315b91; background: var(--blue-soft); }
+    .card.ref { border-color: #34684a; background: var(--green-soft); }
+    .kicker { display: block; margin-bottom: 6px; font-size: 11px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+    .source .kicker { color: var(--blue); } .ref .kicker { color: var(--green); }
+    .provenance { margin-top: 10px; padding: 10px; border-radius: 9px; background: rgba(7,11,19,.38); color: #b4bfd1; font-size: 12px; }
+    .provenance strong { color: var(--ink); }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+    .pill { padding: 4px 8px; border-radius: 999px; background: rgba(7,11,19,.45); border: 1px solid #3a4961; color: #c0cada; font-size: 11px; font-weight: 700; }
+    .compute { display: inline-block; padding: 3px 8px; border: 1px solid; border-radius: 6px; font-size: 11px; font-weight: 800; }
+    .compute.torch { color: var(--amber); border-color: #73502b; background: var(--amber-soft); }
+    .compute.ds { color: var(--purple); border-color: #604a91; background: var(--purple-soft); }
+    .compute.ray { color: var(--cyan); border-color: #28616b; background: var(--cyan-soft); }
+    .compute.cpu { color: #c0cada; border-color: #3a4961; background: #1a2333; }
+    .rl-shell { padding: 18px; border: 1px solid #37455c; border-radius: 16px; background: #0c1320; min-width: 0; }
+    .rl-shell h2 { margin: 0 0 4px; font-size: 18px; }
+    .rl-shell > p { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+    .loop { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 8px; align-items: center; margin-bottom: 12px; }
+    .loop .box { padding: 10px; border: 1px solid #28616b; border-radius: 10px; background: var(--cyan-soft); font-size: 12px; color: #bdc8da; }
+    .loop .box strong { display: block; color: var(--cyan); font-size: 12px; }
+    .loop .arrow { font-size: 18px; }
+    .loop-back { margin: -4px 0 12px; color: #7f8ba1; font-size: 11px; text-align: center; }
+    .verifiers { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+    .verifier { padding: 10px; border-left: 4px solid var(--purple); border-radius: 8px; background: #1d1830; }
+    .verifier h3 { margin: 0 0 3px; font-size: 13px; } .verifier p { margin: 0; color: var(--muted); font-size: 11px; }
+    .tricks { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .eval { margin-top: 24px; padding: 20px; border: 1px solid #34684a; border-radius: 16px; background: #0d2118; box-shadow: var(--shadow); }
+    .eval .label { display: block; margin-bottom: 10px; color: var(--green); font-size: 11px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .eval h2 { margin: 0 0 8px; font-size: 20px; }
+    .eval > p { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+    .checkpoints { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+    .checkpoint { padding: 12px; border: 1px solid #34684a; border-radius: 10px; background: rgba(7,11,19,.38); }
+    .checkpoint strong { display: block; color: var(--green); font-size: 14px; }
+    .checkpoint code { font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: #bdc8da; }
+    .checkpoint span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+    .eval .note { margin: 12px 0 0; color: var(--muted); font-size: 12px; }
+    .footer { display: flex; justify-content: space-between; gap: 20px; padding: 16px 30px; background: #080d16; color: #aeb9ca; font-size: 12px; }
+    .footer strong { color: #fff; }
+    @media (max-width: 1000px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .legend, .sequence, .sequence.four, .verifiers, .checkpoints, .loop { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); }
+      .stage-label { flex-wrap: wrap; } .stage-label .why { margin-left: 0; text-align: left; }
+      .stage { padding: 24px 18px; } .footer { flex-direction: column; padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Olmo 3 Think 7B post-training</h1>
+        <p>Reproduce Ai2's Think track: base model → SFT → DPO → RLVR, using their released data and code. Based on the <a href="https://arxiv.org/abs/2512.13961">Olmo 3 paper</a> (arXiv 2512.13961). Out of scope: pretraining, RL-Zero, and the Instruct track.</p>
+      </div>
+      <div class="mode">Plan · no runs yet</div>
+    </header>
+
+    <section class="legend" aria-label="Legend">
+      <div>
+        <p><strong>Card types.</strong> Ai2 already built every dataset; we download them. The "How Ai2 built it" notes explain what's inside.</p>
+        <ul>
+          <li><span class="swatch source"></span> Ai2 artifact we download</li>
+          <li><span class="swatch process"></span> Step we run</li>
+          <li><span class="swatch ref"></span> Ai2 reference checkpoint</li>
+        </ul>
+      </div>
+      <div>
+        <p><strong>Compute.</strong> What each training step runs on. All three need multi-GPU nodes for the full recipe.</p>
+        <ul>
+          <li><span class="compute torch">GPU · OLMo-core</span> torchrun, FSDP</li>
+          <li><span class="compute ds">GPU · open-instruct</span> accelerate + DeepSpeed</li>
+          <li><span class="compute ray">GPU · Ray + vLLM</span> learners + rollout engines</li>
+          <li><span class="compute cpu">CPU</span> scripts</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="board" aria-label="Post-training workflow">
+
+      <div class="stage">
+        <div class="stage-label"><span class="step-number">0</span> Start point <span class="why">Pretrained, midtrained, and long-context extended to 65K tokens. No chat or thinking format yet.</span></div>
+        <div class="sequence">
+          <article class="card source"><span class="kicker">Base model</span><h2><a href="https://huggingface.co/allenai/Olmo-3-1025-7B">Olmo-3-1025-7B</a></h2><p>About 6T tokens of Dolma 3 in three stages: pretrain, Dolmino midtrain (100B), Longmino long-context (50B).</p><div class="meta"><span class="pill">Apache 2.0</span><span class="pill">transformers ≥ 4.57</span></div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card"><span class="kicker">Setup</span><h2>Environment and baseline</h2><p>Clone OLMo-core, open-instruct, and OLMES into <code>third_party/</code>. Rewrite Ai2's Beaker / <code>mason.py</code> launchers as plain <code>torchrun</code> and Ray commands. Pin dataset and model revisions.</p><div class="meta"><span class="compute cpu">CPU</span></div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card ref"><span class="kicker">First milestone</span><h2>Evaluate the 4 official checkpoints</h2><p>Run our eval suite on base, Think-SFT, Think-DPO, and Think. This tells us what "correct" looks like before we train anything.</p><div class="meta"><span class="compute ray">GPU · vLLM</span></div></article>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-label"><span class="step-number">1</span> SFT · learn to think <span class="why">Imitation: teach the base model the chat format and long &lt;think&gt; traces before the final answer.</span></div>
+        <div class="sequence four">
+          <article class="card source"><span class="kicker">Data</span><h2><a href="https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B">Dolci-Think-SFT-7B</a></h2><p>Prompts plus full reasoning traces: math, code, chat, instruction following, safety.</p><div class="provenance"><strong>How Ai2 built it:</strong> prompts from OpenThoughts3, SYNTHETIC-2, Nemotron post-training, Tülu 3 and more. Traces from QwQ-32B / DeepSeek-R1, filtered for correctness (code test cases, IF verifiers), completeness, repetition, and license.</div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card"><span class="kicker">Current experiment · our only GPU</span><h2>NF4 + LoRA SFT · completed</h2><p>Fixed hardware: one RTX 5070, 12,227 MiB VRAM. Frozen NF4 base, rank-8 adapters, batch 1 with accumulation 8. All experiments must fit this GPU.</p><p>4,241 training conversations across 13 source families, shuffled each epoch; 64 held-out conversations. Assistant-only loss, right truncation at 4,096 tokens, and Liger fused loss.</p><p>Completed 531 updates in 3h 13m. Held-out loss: 0.9288; peak allocated VRAM: 10.13 GiB. The adapter, latest two resumable checkpoints, logs and metrics are in <code>outputs/sft/</code>.</p><p>Deviation: QLoRA, a sampled mixture and truncation; Ai2 uses full-parameter OLMo-core SFT with 32K context and packing. Next: evaluate the trained adapter.</p><div class="meta"><span class="compute torch">GPU · RTX 5070 only</span><span class="pill">SFT completed</span></div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card"><span class="kicker">Merge</span><h2>Linear weight merge</h2><p>Average the two learning-rate runs into one checkpoint.</p><div class="meta"><span class="compute cpu">CPU</span></div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card ref"><span class="kicker">Output · compare to</span><h2>Our Think-SFT</h2><p>Reference: <a href="https://huggingface.co/allenai/Olmo-3-7B-Think-SFT">Olmo-3-7B-Think-SFT</a>. If ours falls short, read open-instruct#1352 first.</p></article>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-label"><span class="step-number">2</span> DPO · delta learning <span class="why">More SFT on stronger traces stopped helping. Contrasting a good answer with a clearly worse one still did.</span></div>
+        <div class="sequence">
+          <article class="card source"><span class="kicker">Data</span><h2><a href="https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B">Dolci-Think-DPO-7B</a></h2><p>About 150K preference pairs (chosen, rejected) over a broad prompt pool.</p><div class="provenance"><strong>How Ai2 built it:</strong> chosen = Qwen3-32B (thinking), rejected = Qwen3-0.6B (thinking). The model learns from the quality gap between the two, not from how good the chosen answer is.</div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card"><span class="kicker">Train</span><h2>open-instruct DPO</h2><p>Start from our Think-SFT. The SFT model is also the frozen reference for the DPO loss.</p><p>Script: <code>open-instruct/scripts/train/olmo3/7b_think_dpo.sh</code>.</p><div class="meta"><span class="compute ds">GPU · open-instruct</span><span class="pill">fallback start: Ai2 Think-SFT</span></div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card ref"><span class="kicker">Output · compare to</span><h2>Our Think-DPO</h2><p>Reference: <a href="https://huggingface.co/allenai/Olmo-3-7B-Think-DPO">Olmo-3-7B-Think-DPO</a>. The paper reports that DPO then RL beats SFT then RL.</p></article>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-label"><span class="step-number">3</span> RLVR · OlmoRL <span class="why">Generate answers, score them with automatic checkers, and push the model toward the ones that scored well.</span></div>
+        <div class="sequence">
+          <article class="card source"><span class="kicker">Data</span><h2><a href="https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B">Dolci-Think-RL-7B</a></h2><p>Prompts with ground truth or a checker, not full answers. Math, code, instruction following, general chat.</p><div class="provenance"><strong>How Ai2 built it:</strong> generated 8 samples per prompt from Think-SFT and dropped prompts it already solved more than 62.5% of the time. Those samples are released as <code>Dolci-Think-RL-7B-Completions-SFT</code>.</div></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="rl-shell">
+            <h2>GRPO in open-instruct (<code>grpo_fast.py</code>)</h2>
+            <p>Start from our Think-DPO. Script: <code>open-instruct/scripts/train/olmo3/7b_think_rl.sh</code>. Asynchronous: vLLM keeps generating while learners update.</p>
+            <div class="loop">
+              <div class="box"><strong>1 · Rollout</strong>vLLM samples a group of answers per prompt</div><div class="arrow">→</div>
+              <div class="box"><strong>2 · Reward</strong>verifier scores each answer</div><div class="arrow">→</div>
+              <div class="box"><strong>3 · Update</strong>learners take a GRPO step, push new weights to vLLM</div>
+            </div>
+            <div class="loop-back">↺ repeat · weights update in flight, without pausing generation</div>
+            <div class="verifiers">
+              <div class="verifier"><h3>Math</h3><p>Answer match against ground truth (SymPy)</p></div>
+              <div class="verifier"><h3>Code</h3><p>Run the answer against test cases</p></div>
+              <div class="verifier"><h3>Instruction following</h3><p>Code checks for each constraint</p></div>
+              <div class="verifier"><h3>Chat</h3><p>LLM-as-judge score</p></div>
+            </div>
+            <div class="tricks">
+              <span class="pill">no KL penalty</span><span class="pill">clip-higher</span><span class="pill">token-level loss</span><span class="pill">no std normalization</span><span class="pill">drop zero-gradient groups</span><span class="pill">active sampling</span><span class="pill">truncated importance sampling</span>
+            </div>
+            <div class="meta"><span class="compute ray">GPU · Ray + vLLM</span><span class="pill">chat judge needs an LLM endpoint</span></div>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="card ref"><span class="kicker">Output · compare to</span><h2>Our Olmo-3-7B-Think</h2><p>Reference: <a href="https://huggingface.co/allenai/Olmo-3-7B-Think">Olmo-3-7B-Think</a>. Check our reward curves against Ai2's public W&amp;B reports.</p></article>
+        </div>
+      </div>
+
+      <div class="footer"><span><strong>README:</strong> artifact inventory, decisions, deviations, run log in <code>README.md</code></span><span><strong>Fallback:</strong> any stage can start from Ai2's checkpoint of the previous stage</span></div>
+    </section>
+
+    <aside class="eval" aria-label="Evaluation">
+      <span class="label">Evaluation · runs after every stage</span>
+      <h2>Compare each of our checkpoints with Ai2's at the same stage</h2>
+      <p>Use OLMES with Ai2's settings (thinking models need long generations, e.g. 32K tokens, and sampling). Start with a small, cheap subset, such as AIME, MATH-500, IFEval, and a code benchmark like LiveCodeBench, then widen it.</p>
+      <div class="checkpoints">
+        <div class="checkpoint"><strong>Base</strong><code>Olmo-3-1025-7B</code><span>Shared start point. Scored once.</span></div>
+        <div class="checkpoint"><strong>After SFT</strong><code>Olmo-3-7B-Think-SFT</code><span>Biggest jump; thinking format appears.</span></div>
+        <div class="checkpoint"><strong>After DPO</strong><code>Olmo-3-7B-Think-DPO</code><span>Gains in reasoning and chat.</span></div>
+        <div class="checkpoint"><strong>After RLVR</strong><code>Olmo-3-7B-Think</code><span>Gains on the verifiable domains.</span></div>
+      </div>
+      <p class="note"><strong>Success criterion:</strong> each of our checkpoints lands within noise of Ai2's on the subset, or the gap is explained by a recorded deviation.</p>
+    </aside>
+  </main>
+</body>
+</html>
