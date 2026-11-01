@@ -1,0 +1,52 @@
+{
+  "upstream": {
+    "repo": "https://github.com/allenai/open-instruct",
+    "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+    "files": {
+      "scripts/train/olmo3/7b_think_dpo.sh": "0550e17bca2b27f24aa79608c98e3cabefe71d793b3b052f0b973f57bbc659f8",
+      "open_instruct/dpo_utils.py": "b0f93ad0e3f1186c54a5f21b0ed2679c8f7fb194f36fb6072d1566dfaeec7eb0",
+      "open_instruct/olmo_core_utils.py": "02b424975ec2c68043db99dad3fbac347d9c8dae9667201a65ad910f19da9894"
+    }
+  },
+  "official_recipe": {
+    "learning_rate": 8e-08,
+    "lr_scheduler_type": "linear",
+    "warmup_ratio": 0.1,
+    "epochs": 1,
+    "loss_type": "dpo_norm",
+    "beta": 5.0,
+    "max_length": 16384,
+    "max_train_samples": 150000,
+    "note": "Launch-script settings plus defaults from the pinned upstream configuration."
+  },
+  "reference_checkpoint": {
+    "repo_id": "allenai/Olmo-3-7B-Think-DPO",
+    "revision": "7b18bf927b430ff06376fdfa5610eb3b1b6a5c38"
+  },
+  "fallback_sft_checkpoint": {
+    "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+    "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66"
+  },
+  "experiment": {
+    "learning_rate": 1e-05,
+    "lr_scheduler_type": "linear",
+    "warmup_ratio": 0.1,
+    "epochs": 1,
+    "loss_type": "sigmoid_norm",
+    "beta": 5.0,
+    "max_length": 2048,
+    "gradient_accumulation": 8,
+    "train_size": 1024,
+    "eval_size": 64,
+    "seed": 42,
+    "init_adapter": "outputs/sft/final-adapter"
+  },
+  "deviations": [
+    "TRL 1.17.1 instead of the full open-instruct runtime; its launcher initializes new adapters rather than loading our SFT adapter.",
+    "Frozen NF4 base plus continued rank-8 SFT adapter instead of full-parameter training.",
+    "One preference pair per microbatch, 8-pair effective batch; 2048-token right truncation instead of 16384.",
+    "A seeded subset of one pinned shard instead of 150000 pairs.",
+    "Peak LR 1e-5 for adapters instead of the full-parameter 8e-8; not tuned.",
+    "Frozen copy of our SFT adapter shares the quantized base; reference log probabilities cached before updates."
+  ]
+}

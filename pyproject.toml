@@ -20,6 +20,9 @@ package = false
 environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
 
 [dependency-groups]
+dpo = [
+    "trl==1.17.1",
+]
 eval = [
     "emoji>=2.16.0",
     "immutabledict>=4.3.1",

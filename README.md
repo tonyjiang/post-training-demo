@@ -1,7 +1,28 @@
 # Olmo 3 Think 7B post-training demo
 
-A learning exercise following Ai2's pipeline: **base model → SFT → DPO → RLVR**.
-SFT is implemented with QLoRA; DPO and RLVR are planned.
+A learning exercise: we retrace how Ai2 turned its Olmo 3 7B base model into
+**Olmo 3 7B Think**, one stage at a time: **base model → SFT → DPO → RLVR**.
+SFT, DPO, and the 1,024- and 2,048-token evaluation runs are complete; RLVR comes next.
+
+## What we build on
+
+Everything we start from is released by Ai2 (`allenai` on Hugging Face). For each
+stage we take a small sample of Ai2's dataset, because our single 12 GB GPU can't
+train on the full sets, and compare our result with Ai2's own checkpoint for that stage.
+
+| Stage | Ai2 dataset | Our sample (train / held-out) | Ai2 checkpoint to compare against |
+|---|---|---|---|
+| Base | — | — | [Olmo-3-1025-7B](https://huggingface.co/allenai/Olmo-3-1025-7B) (our starting point) |
+| SFT | [Dolci-Think-SFT-7B](https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B) | 4,241 / 64 conversations | [Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) |
+| DPO | [Dolci-Think-DPO-7B](https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B) | 1,024 / 64 preference pairs | [Olmo-3-7B-Think-DPO](https://huggingface.co/allenai/Olmo-3-7B-Think-DPO) |
+| RLVR | [Dolci-Think-RL-7B](https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B) | Not sampled yet | [Olmo-3-7B-Think](https://huggingface.co/allenai/Olmo-3-7B-Think) |
+
+We reuse Ai2's code and recipes from [OLMo-core](https://github.com/allenai/OLMo-core),
+[open-instruct](https://github.com/allenai/open-instruct) and
+[olmes](https://github.com/allenai/olmes) wherever our hardware allows; every place we
+had to differ is listed under [Deviations and validation](#deviations-and-validation).
+Model, dataset, chat-template and recipe revisions are pinned in [configs/](configs/);
+RLVR revisions will be pinned when that stage starts.
 
 ## Hardware and setup
 
@@ -62,9 +83,9 @@ uv run --locked python scripts/download_base.py \
   --manifest configs/sft-data.json --output data/dolci-shards
 uv run --locked python scripts/download_base.py \
   --manifest configs/sft-source-shards.json --output data/dolci-source-shards
-uv run --locked python scripts/prepare_sft.py
-uv run --locked python scripts/sample_sft_sources.py --exclude-data data/dolci-small
-uv run --locked python scripts/prepare_combined_sft.py
+uv run --locked python -m sft.prepare
+uv run --locked python -m sft.sample_sources --exclude-data data/dolci-small
+uv run --locked python -m sft.prepare_combined
 ```
 
 If Hugging Face downloads time out, add `--endpoint https://hf-mirror.com` to the
@@ -135,11 +156,128 @@ bash scripts/start_sft.sh --run-name sft-resumed --data data/dolci-combined-4k -
   --resume-from-checkpoint /absolute/path/to/checkpoint-N
 ```
 
+## DPO
+
+DPO continues `outputs/sft/final-adapter` using chosen/rejected conversations from
+[Dolci-Think-DPO-7B](https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B).
+The policy and a frozen copy of the **SFT adapter** share one NF4 base. Reference
+scores are cached before any updates; disabling the SFT adapter would incorrectly
+use the base model as the reference. The final DPO adapter replaces the SFT adapter
+at inference and uses the same original base weights.
+
+The default experiment samples **1,024 training pairs and 64 held-out pairs** from
+one pinned shard. IDs and exact conversation prompts are unique across splits.
+Both branches use the official SFT chat template and are right-truncated to
+**2,048 tokens including the prompt**. Empty or identical retained responses are
+dropped. Truncation can remove final answers and weaken the preference signal;
+the data manifest records exclusions and truncated-branch counts.
+
+A [random 10-pair length audit](reports/dpo-data/random-10-pairs.json) (seed
+20261031) found chosen responses longer in 7/10 original pairs, but 5/10 after
+training truncation (two ties). Across all 1,024 retained training pairs, chosen
+responses average **1,252 tokens versus 962 rejected** (30% longer): 645 chosen
+longer, 139 rejected longer, 240 ties. Counts exclude the shared prompt and include
+reasoning and response end tokens. This supports a response-length imbalance in
+the training data, but does not establish why the trained model became more verbose.
+
+
+| Setting | Value |
+|---|---|
+| Objective | Length-normalized DPO (`sigmoid_norm` in TRL, `dpo_norm` in Ai2), beta 5 |
+| Trainable weights | Continue our rank-8 SFT adapter; FP32 adapter/optimizer weights, BF16 compute |
+| Batch | One preference pair (two sequences); accumulate over 8 pairs |
+| Schedule | One epoch; peak LR `1e-5`, 10% warmup, linear decay, no weight decay |
+| Memory | NF4 base, SDPA, gradient checkpointing, TRL's chunked fused LM head |
+| Evaluation/checkpoints | Every 25 updates plus final evaluation; keep two checkpoints |
+
+The LR is an untuned adapter-training starting point. Override it with
+`--learning-rate`, `--warmup-ratio`, `--lr-scheduler`, or `--beta`.
+[configs/dpo.json](configs/dpo.json) records the pinned Ai2 recipe, official
+reference checkpoints, experiment defaults, and deviations.
+
+Run from the repository root on the server:
+
+```bash
+uv sync --locked --group dpo
+uv run --locked python scripts/download_base.py \
+  --manifest configs/dpo-data.json --output data/dolci-dpo-shards
+uv run --locked --group dpo python -m dpo.prepare
+bash scripts/start_dpo.sh
+```
+
+Use `--endpoint https://hf-mirror.com` for the downloader if needed. Preparation
+and the launcher refuse to overwrite existing outputs. The detached launcher
+writes to `outputs/dpo/`; inspect `train.log`, `exit_code`, and `all_results.json`.
+The SFT, DPO, and evaluation launchers share the same GPU lock. Successful runs
+save `final-adapter/`, cached SFT reference scores, and resumable checkpoints.
+
+For a short **real-data compatibility test**, prepare a separate dataset and run:
+
+```bash
+uv run --locked --group dpo python -m dpo.prepare \
+  --train-size 4 --eval-size 2 --output data/dolci-dpo-smoke
+bash scripts/start_dpo.sh --run-name dpo-smoke --data data/dolci-dpo-smoke \
+  --max-steps 2 --gradient-accumulation 1 --save-steps 1
+```
+
+Resume into a new run directory with the same data and training arguments, adding
+`--resume-from-checkpoint /absolute/path/to/checkpoint-N`. The original SFT adapter
+must remain available: it defines the fixed reference even when resuming.
+
+Run the DPO checks with `uv run --locked --group dpo python -m unittest discover -s tests/dpo -t . -v`.
+See [Tests](#tests) for the complete suite.
+
+The first subset run completed successfully on **2026-10-31** on `gaming-server`:
+**1,024 pairs, one epoch, 128 optimizer updates in 1h 37m** including reference
+caching and final evaluation. Exit status was `0`, final held-out DPO loss was
+**0.4118**, and peak allocated VRAM was **10.19 GiB**. The frozen SFT reference
+remained unchanged. [Full run metrics](reports/dpo/all_results.json).
+
+The saved adapter is `/root/post-training-demo/outputs/dpo/final-adapter/`;
+resumable checkpoints are `checkpoint-125/` and `checkpoint-128/` in the same run
+directory. Its SHA-256 matches the recorded final adapter hash. The GPU is now idle.
+Small SFT-versus-DPO task evaluations are complete (below). Comparison to Ai2's
+official `Olmo-3-7B-Think-DPO` checkpoint remains pending.
+
+Validation on `gaming-server`: a real-data **two-update 2K smoke test passed**,
+including evaluation and checkpoint saves, at **9.93 GiB peak allocated VRAM**.
+The SFT reference stayed unchanged, and the final adapter reloaded and generated
+successfully. Seven CPU tests cover data integrity, the normalized objective,
+frozen reference/base weights, adapter reload, and checkpoint continuation.
+[Smoke metrics](reports/dpo-smoke/all_results.json) ·
+[Prepared 1,024/64-pair dataset](reports/dpo-data/data-manifest.json).
+GPU resume from update 2 completed update 3 with the same cached reference scores
+and an unchanged SFT reference. Replay was not bit-identical: parameter RMS
+difference `1.31e-8`, maximum `3.58e-6` versus the uninterrupted run
+([comparison](reports/dpo-resume/comparison.json)).
+This validates execution, not a quality improvement.
+
+## Next experiments: RLVR and human-feedback RLHF
+
+Run RLVR first from `outputs/dpo/final-adapter`, using a small math subset of
+`allenai/Dolci-Think-RL-7B`. Start with a proposed 1,024 training prompts and 128
+held-out prompts; validate verifier behavior, rollout diversity, and GPU memory
+on a short pilot before a full run. Reuse the pinned Ai2 RL recipe where feasible
+and record hardware-driven deviations when implementing it. Dataset revisions
+and splits must be pinned before training. RLVR is not implemented or running yet.
+
+For the subsequent RLHF experiment, use the human `preference` subset of
+`nvidia/HelpSteer3`: a proposed **1,024 training pairs plus 128 validation pairs**,
+covering General, STEM, Code, and Multilingual domains. Use the official splits,
+check for shared prompts, preserve preference strength, and audit response lengths
+and truncation. Validate the reward model on held-out human preferences before
+using it to train the policy. This is a pilot size, not evidence of sufficient data
+for general quality improvements; no HelpSteer3 data has been sampled yet.
+
+Compare independent RLVR and RLHF branches from the same DPO adapter, then run
+RLHF on the RLVR adapter as a combined experiment. This additional human-feedback
+experiment extends the original Olmo reproduction scope at the user's request.
+
 ## Small evaluations
 
 Compare the frozen base with the SFT adapter on the same **16 [GSM8K](https://huggingface.co/datasets/openai/gsm8k) math problems
 and 16 [IFEval](https://huggingface.co/datasets/HuggingFaceH4/ifeval) instruction-following prompts**. Samples are seeded and checked for
-exact prompt overlap with retained SFT text. Both use the same chat template,
+exact prompt overlap with retained SFT text. The initial runs used the same chat template,
 NF4 loading and greedy decoding, capped at 1,024 generated tokens.
 
 These are learning-exercise scores: GSM8K checks the final boxed number; IFEval uses
@@ -156,6 +294,68 @@ Token limits affected 2/16 math responses for each model and 9/16 versus 8/16
 instruction responses, so these scores need that qualification.
 [Results](reports/evals/results.json) · [Every generated answer](reports/evals/predictions.jsonl)
 
+DPO evaluation completed on **2026-10-31** in **13m 41s**, with exit status `0`.
+The data hash matches the SFT run, and all 32 regenerated base predictions are
+identical to the earlier run.
+
+| Evaluation | SFT | DPO |
+|---|---:|---:|
+| GSM8K correct | 13/16 | 10/16 |
+| IFEval strict prompt passes | 8/16 | 9/16 |
+| IFEval individual instruction passes | 13/22 | 13/22 |
+| GSM8K token-limit hits | 2/16 | 6/16 |
+| IFEval token-limit hits | 8/16 | 13/16 |
+
+All three newly failed math prompts hit the 1,024-token generation limit under
+DPO. One computes the correct answer (83 boxes), but keeps rechecking until cut
+off before a final boxed answer. IFEval has two prompt gains and one regression;
+its aggregate individual-instruction score is unchanged. These results show a
+math regression under the current budget and more truncation, not proof of lost
+math ability or a broad instruction-following gain. A longer-budget paired run
+is needed to distinguish unfinished answers from reasoning failures.
+[DPO results](reports/evals-dpo/results.json) ·
+[DPO generated answers](reports/evals-dpo/predictions.jsonl)
+
+**2,048-token evaluation rerun completed successfully** on `gaming-server` on
+2026-11-01 at approximately 01:18 UTC (October 31 Pacific). Both stages and the
+pipeline exited `0`. The initial batch-2 attempt exhausted GPU memory after
+12 SFT prompts; restarting at batch size 1 preserved the 2,048-token output budget.
+SFT took 14m 24s and DPO 19m 42s, peaking at **8.55 GiB allocated VRAM**.
+Five-minute monitoring checks found no further errors. The GPU is now idle.
+
+| Metric | SFT, 1,024 output tokens | DPO, 1,024 | SFT, 2,048 | DPO, 2,048 |
+|---|---:|---:|---:|---:|
+| GSM8K correct | 13/16 | 10/16 | 13/16 | 12/16 |
+| IFEval prompts passed | 8/16 | 9/16 | 7/16 | 7/16 |
+| Individual instructions passed | 13/22 | 13/22 | 12/22 | 13/22 |
+| Math responses hitting output cap | 2/16 | 6/16 | 2/16 | 4/16 |
+| IFEval responses hitting output cap | 8/16 | 13/16 | 6/16 | 6/16 |
+
+Both new runs use the same 32 prompts, batch size 1, greedy decoding, and
+4,096-token total context. Historical runs used batch size 2: differences from
+those runs include batching as well as output budget. Some previously completed
+answers also changed. The new comparison shows DPO one math answer behind SFT,
+with equal strict IFEval prompt scores; it does not establish a broad DPO gain.
+DPO still generates more tokens overall. Samples remain too small for strong
+claims, and some responses still reach the output cap.
+
+The evaluator runs SFT alone, then reuses its validated predictions for DPO.
+No base generation or training was performed. The default generation budget is
+now 2,048; `--max-new-tokens` overrides it. Effective settings are recorded
+separately from the unchanged prepared-data manifest.
+
+- SFT: `outputs/evals-sft-2k-b1/`, log `logs/evals-sft-2k-b1.log`.
+- DPO plus cached SFT: `outputs/evals-dpo-2k-b1/`, log `logs/evals-dpo-2k-b1.log`.
+- Pipeline status: `logs/evals-2k-b1.exit_code`; per-stage status:
+  `logs/evals-{sft,dpo}-2k-b1.exit_code`.
+
+[2K comparison results](reports/evals-dpo-2k-b1/results.json) ·
+[2K generated answers](reports/evals-dpo-2k-b1/predictions.jsonl) ·
+[Validation](reports/evals-dpo-2k-b1/validation.json).
+All previous results are preserved. Ten scorer/cache tests passed before launch;
+final validation checked all 64 predictions, matching prompts, cached SFT answers,
+score aggregates, effective configs, adapter hashes, and exit statuses.
+
 <details>
 <summary>Set up and run evaluations on the server</summary>
 
@@ -164,9 +364,9 @@ uv sync --locked --group eval
 git clone https://github.com/allenai/olmes.git third_party/olmes
 git -C third_party/olmes checkout 5a51f502d463b8cdc4a2dcad7d7096c41ff1197e
 uv run --locked --group eval python -m nltk.downloader -d data/eval-sources/nltk punkt punkt_tab
-uv run --locked --group eval python scripts/prepare_evals.py
+uv run --locked --group eval python -m sft.prepare_evals
 mkdir -p logs
-nohup bash scripts/run_evals.sh > logs/evals.log 2>&1 < /dev/null &
+nohup bash scripts/run_evals.sh --compare-base --adapter-name sft > logs/evals.log 2>&1 < /dev/null &
 ```
 
 Preparation refuses to overwrite the sampled data. Evaluation refuses to overwrite
@@ -179,43 +379,105 @@ Scores and every generated answer go to `outputs/evals/results.json` and
 is in `logs/evals.exit_code` (`0` means success). Token-limit hits are reported.
 Revisions, source hashes and settings are pinned in [configs/eval-small.json](configs/eval-small.json).
 
-## Script reference
+To evaluate a new DPO adapter against saved SFT answers, run on the server:
 
-| Script | Purpose |
+```bash
+mkdir -p logs
+nohup bash scripts/run_evals.sh \
+  --adapter outputs/dpo/final-adapter \
+  --adapter-name dpo \
+  --baseline-results outputs/evals-sft-2k-b1 --baseline-name sft \
+  --max-new-tokens 2048 \
+  --output outputs/evals-dpo-new \
+  > logs/evals-dpo-new.log 2>&1 < /dev/null &
+```
+
+The launcher invokes `evaluate_and_compare`. Choose `--baseline-results` to
+reuse saved answers, or explicitly choose `--compare-base` to generate base answers.
+DPO comparisons should reuse SFT results with the same output budget; only the
+new adapter generates answers. Use `--adapter-only` to establish a new SFT baseline
+without generating base answers. Cached results must match the prompts, generation and
+scoring config, base revision, chat template, and recorded package versions.
+Changing the token budget requires new evaluations of both adapters.
+
+The original 1,024-token runs are complete; compare them without loading a model:
+
+```bash
+uv run --locked --group eval python -m evaluate_and_compare \
+  --baseline-results outputs/evals --baseline-name sft \
+  --candidate-results outputs/evals-dpo --adapter-name dpo \
+  --output outputs/sft-vs-dpo
+```
+
+[Saved SFT-versus-DPO comparison](reports/sft-vs-dpo/results.json) reuses both
+completed runs. Comparison reports record source file hashes and never overwrite
+existing outputs. Keep each path on one line; use a trailing backslash to continue
+a shell command.
+
+
+## Code layout
+
+Reusable stage code lives in the `sft/` and `dpo/` Python packages. Shared
+evaluation lives in the root-level `evaluate_and_compare.py`. `scripts/` holds shell
+launchers, hardware diagnostics, and the standalone download utility; `configs/` holds pinned inputs.
+Automated tests are grouped by stage under `tests/sft/` and `tests/dpo/`.
+Run SFT modules from the repository root with `uv run --locked python -m sft.<module>`
+(add `--group eval` to `uv run` for evaluation modules).
+
+| File | Purpose |
 |---|---|
 | [download_base.py](scripts/download_base.py) | Download pinned model files or dataset shards; resume downloads and verify hashes. |
-| [prepare_sft.py](scripts/prepare_sft.py) | Prepare short conversation splits and assistant loss masks; provide shared tokenizer helpers. |
-| [sample_sft_sources.py](scripts/sample_sft_sources.py) | Sample conversations across source families, exclude specified IDs and remove duplicates. |
-| [profile_sft_sample.py](scripts/profile_sft_sample.py) | Report token lengths and context-limit coverage by source family. |
-| [prepare_combined_sft.py](scripts/prepare_combined_sft.py) | Assemble the training dataset, apply truncation, shuffle records and retain the held-out split. |
+| [sft/prepare.py](sft/prepare.py) | Prepare short conversation splits and assistant loss masks; provide shared tokenizer helpers. |
+| [sft/sample_sources.py](sft/sample_sources.py) | Sample conversations across source families, exclude specified IDs and remove duplicates. |
+| [sft/profile_sample.py](sft/profile_sample.py) | Report token lengths and context-limit coverage by source family. |
+| [sft/prepare_combined.py](sft/prepare_combined.py) | Assemble the training dataset, apply truncation, shuffle records and retain the held-out split. |
 | [start_sft.sh](scripts/start_sft.sh) | Validate inputs and launch detached training in a named directory; refuse to overwrite results. |
 | [run_sft.sh](scripts/run_sft.sh) | Set the runtime environment, prevent concurrent SFT jobs and record the exit status. |
-| [train_sft.py](scripts/train_sft.py) | Train and evaluate QLoRA adapters; save checkpoints and metrics; support continuation and resume. |
-| [smoke_nf4.py](scripts/smoke_nf4.py) | Test quantized loading, synthetic training, adapter saving/reloading and generation. |
+| [sft/train.py](sft/train.py) | Train and evaluate QLoRA adapters; save checkpoints and metrics; support continuation and resume. |
+| [scripts/smoke_nf4.py](scripts/smoke_nf4.py) | Test quantized loading, synthetic training, adapter saving/reloading and generation. |
 | [run_smoke.sh](scripts/run_smoke.sh) | Run the synthetic training and reload checks in separate processes. |
-| [probe_sft_context.py](scripts/probe_sft_context.py) | Test GPU memory fit at different sequence lengths with disposable adapter updates. |
-| [prepare_evals.py](scripts/prepare_evals.py) | Download pinned benchmarks, sample evaluation prompts and exclude exact SFT matches. |
-| [evaluate_sft.py](scripts/evaluate_sft.py) | Compare base and adapter; save answers, scores, token-limit hits and runtime. |
+| [scripts/probe_sft_context.py](scripts/probe_sft_context.py) | Test GPU memory fit at different sequence lengths with disposable adapter updates. |
+| [sft/prepare_evals.py](sft/prepare_evals.py) | Download pinned benchmarks, sample evaluation prompts and exclude exact SFT matches. |
+| [evaluate_and_compare.py](evaluate_and_compare.py) | Compare base and adapter; save answers, scores, token-limit hits and runtime. |
 | [run_evals.sh](scripts/run_evals.sh) | Run evaluation with the GPU lock and record its exit status. |
+| [run_evals_2k.sh](scripts/run_evals_2k.sh) | Evaluate SFT then DPO with 2,048 output tokens, reusing SFT results and preserving old runs. |
+| [dpo/data.py](dpo/data.py) | Validate preference pairs, tokenize/truncate both branches, and verify prepared splits. |
+| [dpo/prepare.py](dpo/prepare.py) | Sample pinned Dolci preference data and write disjoint tokenized splits. |
+| [dpo/train.py](dpo/train.py) | Continue the SFT adapter with TRL DPO, a frozen SFT reference, checkpoints, and metrics. |
+| [start_dpo.sh](scripts/start_dpo.sh) | Validate DPO inputs and launch a detached named run. |
+| [run_dpo.sh](scripts/run_dpo.sh) | Run DPO under the shared GPU lock and record exit status. |
 
-Training call chain: `start_sft.sh` → `run_sft.sh` → `train_sft.py`.
+Training call chain: `scripts/start_sft.sh` → `scripts/run_sft.sh` → `python -m sft.train`.
 
-## Ai2 artifacts
+## Tests
 
-All artifacts below are from `allenai` on Hugging Face.
+Run from the repository root. The suite uses CPU checks and a tiny model; it does
+not run the 7B training jobs. `-t .` keeps the test packages separate from the
+production `sft` and `dpo` packages during discovery.
 
-| Stage | Dataset | Official checkpoint |
-|---|---|---|
-| Base | — | [Olmo-3-1025-7B](https://huggingface.co/allenai/Olmo-3-1025-7B) |
-| SFT | [Dolci-Think-SFT-7B](https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B) | [Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) |
-| DPO | [Dolci-Think-DPO-7B](https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B) | [Olmo-3-7B-Think-DPO](https://huggingface.co/allenai/Olmo-3-7B-Think-DPO) |
-| RLVR | [Dolci-Think-RL-7B](https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B) | [Olmo-3-7B-Think](https://huggingface.co/allenai/Olmo-3-7B-Think) |
+```bash
+# All automated tests (requires the OLMES checkout and NLTK data prepared above).
+uv run --locked --group dpo --group eval python -m unittest discover -s tests -t . -v
 
-Model, SFT data and chat-template revisions are pinned in [configs/](configs/).
-Pin DPO and RLVR revisions before using them. Upstream code:
-[OLMo-core](https://github.com/allenai/OLMo-core),
-[open-instruct](https://github.com/allenai/open-instruct),
-[olmes](https://github.com/allenai/olmes).
+# One stage at a time.
+uv run --locked --group eval python -m unittest discover -s tests/sft -t . -v
+uv run --locked --group dpo python -m unittest discover -s tests/dpo -t . -v
+```
+
+`tests/sft/test_evaluate.py` holds the math and instruction-scoring checks previously
+embedded in the evaluator. `tests/dpo/` holds preference-data and
+trainer integration checks. Tests requiring unavailable optional dependencies,
+the OLMES checkout, or cached NLTK data are reported as skipped; discovery does
+not download resources.
+
+Hardware diagnostics remain explicit server commands:
+
+```bash
+bash scripts/run_smoke.sh
+uv run --locked python -m scripts.probe_sft_context \
+  --adapter outputs/sft/final-adapter --liger --lengths 2048 4096 \
+  --output outputs/sft-context-probe-new
+```
 
 ## Deviations and validation
 
@@ -228,8 +490,22 @@ processing. OLMES's full dependency set requires older Torch/Transformers than o
 we use our existing NF4 loader, small subsets and stricter boxed-number math scoring.
 These settings differ from Ai2's full benchmark runs.
 
+DPO follows the length-normalized objective, beta, warmup fraction, and linear
+schedule in the [pinned Ai2 recipe](https://github.com/allenai/open-instruct/blob/5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce/scripts/train/olmo3/7b_think_dpo.sh)
+and its configuration defaults. We use TRL 1.17.1 instead of open-instruct's full
+DeepSpeed/Beaker runtime: the upstream QLoRA path initializes a fresh adapter and
+does not directly continue our saved SFT adapter. TRL supplies the loss, frozen
+reference adapter, and memory-efficient LM head; our thin wrapper consumes the
+already validated tokenized pairs. The 12 GB experiment uses QLoRA, a one-shard
+subset, 2K truncation, an effective batch of 8 pairs, and peak LR `1e-5` instead
+of Ai2's full-parameter `8e-8`, 16K context, and 150K-pair run. These are recorded
+deviations, not a claim of equivalent model quality.
+The wrapper also restores the policy adapter explicitly on resume: Transformers
+5.20.2 otherwise sees the saved `ref/` directory and skips the policy at the
+checkpoint root. The original SFT reference is retained.
+
 A two-update 4K smoke test passed training, evaluation and checkpoint saves at
 **10.10 GiB peak allocated VRAM**. [Validation reports](reports/sft-combined-4k/)
 record the results; they establish execution compatibility, not model quality.
 
-Next: compare with the official SFT checkpoint, then implement DPO and RLVR.
+Next: broaden evaluation, compare with the official SFT/DPO checkpoints, then implement RLVR.

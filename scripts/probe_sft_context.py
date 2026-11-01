@@ -9,7 +9,7 @@ from pathlib import Path
 import torch
 from peft import PeftModel, prepare_model_for_kbit_training
 from transformers import AutoModelForCausalLM, BitsAndBytesConfig
-from prepare_sft import training_tokenizer, encode_record
+from sft.prepare import training_tokenizer, encode_record
 
 
 def main():

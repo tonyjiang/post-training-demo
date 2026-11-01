@@ -1,0 +1,12 @@
+{
+  "original_steps": 3,
+  "resumed_steps": 3,
+  "checkpoint_step": 2,
+  "max_absolute_parameter_difference": 3.5818666219711304e-06,
+  "close_to_uninterrupted": false,
+  "original_run": "outputs/dpo-resume-check",
+  "resumed_run": "outputs/dpo-resume-fixed",
+  "rms_parameter_difference": 1.3071967508437865e-08,
+  "reference_cache_identical": true,
+  "note": "CPU tiny-model replay passes strict tensor comparison. GPU replay is not bit-identical; report measured differences without claiming exact reproducibility."
+}

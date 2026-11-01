@@ -46,7 +46,7 @@ def main():
     data = Path(args.data)
     if not (data / 'manifest.json').is_file():
         parser.error(f'{data} is not prepared training data: missing manifest.json. '
-                     'For the expanded sample, run scripts/prepare_combined_sft.py first.')
+                     'For the expanded sample, run python -m sft.prepare_combined first.')
     manifest = json.loads((data / 'manifest.json').read_text())
     if manifest.get('required_training_options', {}).get('liger_fused_loss') and not args.liger_fused_loss:
         parser.error('This data requires --liger-fused-loss to fit our GPU')

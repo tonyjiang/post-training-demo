@@ -11,4 +11,4 @@ export HF_HUB_OFFLINE=1
 export TOKENIZERS_PARALLELISM=false
 export NLTK_DATA="$PWD/data/eval-sources/nltk"
 export PYTORCH_ALLOC_CONF=expandable_segments:True
-uv run --locked --group eval python -u scripts/evaluate_sft.py "$@"
+uv run --locked --group eval python -u -m evaluate_and_compare "$@"

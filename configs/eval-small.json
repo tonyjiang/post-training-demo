@@ -2,8 +2,8 @@
   "name": "sft-small-evals",
   "seed": 42,
   "examples_per_task": 16,
-  "batch_size": 2,
-  "max_new_tokens": 1024,
+  "batch_size": 1,
+  "max_new_tokens": 2048,
   "max_context": 4096,
   "do_sample": false,
   "datasets": [

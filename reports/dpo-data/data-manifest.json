@@ -1,0 +1,97 @@
+{
+  "dataset": "allenai/Dolci-Think-DPO-7B",
+  "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+  "source_manifest": {
+    "repo_id": "allenai/Dolci-Think-DPO-7B",
+    "repo_type": "dataset",
+    "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+    "sampling_scope": "First of seven shuffled-mixture shards; a learning subset, not the full official recipe.",
+    "files": [
+      {
+        "rfilename": "data/train-00000-of-00007.parquet",
+        "blobId": "c7b9374d003b9b8a0b1057fc76a14fd66fe7b394",
+        "size": 198512174,
+        "lfs": {
+          "sha256": "5a4c4942f8f66e1bc1f01bb0241c3b6f62b87373a5593284e17d90b6e392c0af",
+          "size": 198512174,
+          "pointerSize": 134
+        }
+      }
+    ]
+  },
+  "seed": 42,
+  "max_length": 2048,
+  "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+  "template_source": {
+    "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+    "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+    "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+  },
+  "sampling": "Seed-shuffled rows; unique IDs and prompts across both splits",
+  "truncation": "Right-truncate each prompt+response; drop empty or identical retained responses",
+  "truncated_branches": {
+    "chosen": 437,
+    "rejected": 284
+  },
+  "excluded": {
+    "Prompt leaves no completion tokens": 12,
+    "Duplicate ID or prompt": 5
+  },
+  "splits": {
+    "train": {
+      "rows": 1024,
+      "sha256": "85c5e8aa1114b742d84e884156a53205d784111fe1e91049510ea26540e64a58",
+      "sources": {
+        "ultrafeedback_cleaned_olmo2_7b": 173,
+        "tulu-3-sft-personas-math": 49,
+        "filtered_wc_sample_500k": 88,
+        "tulu_v3.9_table_gpt_5k": 5,
+        "valpy_if_qwq_reasoning_verified_no_reasoning": 88,
+        "tulu_v3.9_aya_100k": 21,
+        "OpenThoughts3-full-filtered-science-no-cot": 97,
+        "correct-python-sft-187k": 66,
+        "tulu_v3.9_synthetic_finalresp_wildguardmixtrain_decontaminated_50k": 35,
+        "flan_v2_converted": 88,
+        "Wildchat-1M-gpt-4.1-regenerated-english": 111,
+        "Wildchat-1m-gpt-4.1-regeneration-not-english": 35,
+        "tulu_v3.9_wildjailbreak_decontaminated_50k": 26,
+        "tulu-3-sft-coconot-regenerated": 3,
+        "tulu-3-sft-personas-math-grade": 24,
+        "IF_sft_data_verified_permissive": 18,
+        "tulu_v3.9_sciriff_10k": 8,
+        "evol_codealpaca_heval_decontaminated": 35,
+        "tulu-3-sft-personas-instruction-following-o3": 11,
+        "personahub_code_v2_34999": 8,
+        "tulu_v3.9_open_math_2_gsm8k_50k": 11,
+        "oasst1_converted": 8,
+        "DaringAnteater-prefs_olmo2_7b": 4,
+        "tulu-3-sft-personas-algebra": 12
+      }
+    },
+    "eval": {
+      "rows": 64,
+      "sha256": "fd2787b16cc45b18fd84065ee3eb026b11e1bf2a697c093b5529f67cf6145923",
+      "sources": {
+        "correct-python-sft-187k": 5,
+        "OpenThoughts3-full-filtered-science-no-cot": 3,
+        "tulu-3-sft-personas-math-grade": 2,
+        "evol_codealpaca_heval_decontaminated": 1,
+        "flan_v2_converted": 7,
+        "Wildchat-1M-gpt-4.1-regenerated-english": 4,
+        "filtered_wc_sample_500k": 7,
+        "valpy_if_qwq_reasoning_verified_no_reasoning": 5,
+        "ultrafeedback_cleaned_olmo2_7b": 10,
+        "tulu-3-sft-personas-math": 3,
+        "tulu_v3.9_wildjailbreak_decontaminated_50k": 2,
+        "tulu_v3.9_open_math_2_gsm8k_50k": 2,
+        "tulu_v3.9_sciriff_10k": 3,
+        "tulu-3-sft-coconot-regenerated": 1,
+        "tulu_v3.9_synthetic_finalresp_wildguardmixtrain_decontaminated_50k": 2,
+        "tulu-3-sft-personas-instruction-following-o3": 3,
+        "IF_sft_data_verified_permissive": 2,
+        "oasst1_converted": 1,
+        "tulu_v3.9_aya_100k": 1
+      }
+    }
+  }
+}

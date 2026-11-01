@@ -1,0 +1,233 @@
+{
+  "training": {
+    "learning_rate": 1e-05,
+    "warmup_ratio": 0.1,
+    "lr_scheduler": "linear",
+    "beta": 5.0,
+    "epochs": 1,
+    "gradient_accumulation": 1,
+    "max_steps": 2
+  },
+  "data_manifest": {
+    "dataset": "allenai/Dolci-Think-DPO-7B",
+    "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+    "source_manifest": {
+      "repo_id": "allenai/Dolci-Think-DPO-7B",
+      "repo_type": "dataset",
+      "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+      "sampling_scope": "First of seven shuffled-mixture shards; a learning subset, not the full official recipe.",
+      "files": [
+        {
+          "rfilename": "data/train-00000-of-00007.parquet",
+          "blobId": "c7b9374d003b9b8a0b1057fc76a14fd66fe7b394",
+          "size": 198512174,
+          "lfs": {
+            "sha256": "5a4c4942f8f66e1bc1f01bb0241c3b6f62b87373a5593284e17d90b6e392c0af",
+            "size": 198512174,
+            "pointerSize": 134
+          }
+        }
+      ]
+    },
+    "seed": 42,
+    "max_length": 2048,
+    "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+    "template_source": {
+      "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+      "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+      "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+    },
+    "sampling": "Seed-shuffled rows; unique IDs and prompts across both splits",
+    "truncation": "Right-truncate each prompt+response; drop empty or identical retained responses",
+    "truncated_branches": {
+      "chosen": 3,
+      "rejected": 2
+    },
+    "excluded": {},
+    "splits": {
+      "train": {
+        "rows": 4,
+        "sha256": "30a7620f376afb7d98a5e9a0556d0cc5e072cd86f4f3da30a82ab88e92eb12ce",
+        "sources": {
+          "Wildchat-1M-gpt-4.1-regenerated-english": 1,
+          "filtered_wc_sample_500k": 1,
+          "ultrafeedback_cleaned_olmo2_7b": 1,
+          "flan_v2_converted": 1
+        }
+      },
+      "eval": {
+        "rows": 2,
+        "sha256": "d73344e0018774b3f176cd37ea5638476e834518cd46e476387ab7e979f8e7c9",
+        "sources": {
+          "personahub_code_v2_34999": 1,
+          "OpenThoughts3-full-filtered-science-no-cot": 1
+        }
+      }
+    }
+  },
+  "parent_adapter": {
+    "path": "/root/post-training-demo/outputs/sft/final-adapter",
+    "sha256": "5d35c5d0c811ee50370e23fa2c54e9ba60c90f27787e9ee48de1e88d6cbdfd2b",
+    "config_sha256": "43266e49f9ebe38affa90ec5998606299a656991453205cbdb83bbda5d1c7b25"
+  },
+  "base_manifest": {
+    "repo_id": "allenai/Olmo-3-1025-7B",
+    "revision": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+    "files": [
+      {
+        "rfilename": "README.md",
+        "blobId": "15fe2e8b8b0fbf49416d3943ca6cf0174d0f2c07",
+        "size": 12222
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "5e1778fbc278e8f47217ba485e9a075689207f0f",
+        "size": 1620
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "33b71a9c3ddf78cfa1c6721826775ae02d06d64d",
+        "size": 69
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "354558edcdbd64ca7abd407b8be3d5d09d39d781",
+        "size": 916646
+      },
+      {
+        "rfilename": "model-00001-of-00003.safetensors",
+        "blobId": "a04aa765e30d6c14c059c0d511ffc68bd807c8a0",
+        "size": 4969984976,
+        "lfs": {
+          "sha256": "0490d6668e613a29b23367e3a7aa9cc6aced3d162694445bb969ed7622b3c4e2",
+          "size": 4969984976,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00002-of-00003.safetensors",
+        "blobId": "f17156e68ed4a2366ec7decc8b5394c251b1d6f0",
+        "size": 4981161496,
+        "lfs": {
+          "sha256": "e127ea479fb6e208fe9d48d23b11212b5722f4873f6eef9c009b7a855866c641",
+          "size": 4981161496,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00003-of-00003.safetensors",
+        "blobId": "4254e20e90dbc3154b93a8098bf0a2530dc62cfa",
+        "size": 4644917240,
+        "lfs": {
+          "sha256": "f3ddff10052ffe5de5c6b4cad45c422c0d898acc6beb21b1b8531244adfb3c70",
+          "size": 4644917240,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model.safetensors.index.json",
+        "blobId": "421a80b181a130ccbc579a328fb349d8792a32ce",
+        "size": 29630
+      },
+      {
+        "rfilename": "special_tokens_map.json",
+        "blobId": "48f174b441a37b588e40d794c437adad1624a311",
+        "size": 207
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "5fe172127988c3709a49d8d2ce20e11bb266cd57",
+        "size": 7137177
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "5599723dac37d9f0b7e496de66d15e0a762babe9",
+        "size": 4308
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "51135344eec01a62fc4deaca39c72ac08f5b9709",
+        "size": 1611056
+      }
+    ]
+  },
+  "recipe": {
+    "upstream": {
+      "repo": "https://github.com/allenai/open-instruct",
+      "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+      "files": {
+        "scripts/train/olmo3/7b_think_dpo.sh": "0550e17bca2b27f24aa79608c98e3cabefe71d793b3b052f0b973f57bbc659f8",
+        "open_instruct/dpo_utils.py": "b0f93ad0e3f1186c54a5f21b0ed2679c8f7fb194f36fb6072d1566dfaeec7eb0",
+        "open_instruct/olmo_core_utils.py": "02b424975ec2c68043db99dad3fbac347d9c8dae9667201a65ad910f19da9894"
+      }
+    },
+    "official_recipe": {
+      "learning_rate": 8e-08,
+      "lr_scheduler_type": "linear",
+      "warmup_ratio": 0.1,
+      "epochs": 1,
+      "loss_type": "dpo_norm",
+      "beta": 5.0,
+      "max_length": 16384,
+      "max_train_samples": 150000,
+      "note": "Launch-script settings plus defaults from the pinned upstream configuration."
+    },
+    "reference_checkpoint": {
+      "repo_id": "allenai/Olmo-3-7B-Think-DPO",
+      "revision": "7b18bf927b430ff06376fdfa5610eb3b1b6a5c38"
+    },
+    "fallback_sft_checkpoint": {
+      "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+      "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66"
+    },
+    "experiment": {
+      "learning_rate": 1e-05,
+      "lr_scheduler_type": "linear",
+      "warmup_ratio": 0.1,
+      "epochs": 1,
+      "loss_type": "sigmoid_norm",
+      "beta": 5.0,
+      "max_length": 2048,
+      "gradient_accumulation": 8,
+      "train_size": 1024,
+      "eval_size": 64,
+      "seed": 42,
+      "init_adapter": "outputs/sft/final-adapter"
+    },
+    "deviations": [
+      "TRL 1.17.1 instead of the full open-instruct runtime; its launcher initializes new adapters rather than loading our SFT adapter.",
+      "Frozen NF4 base plus continued rank-8 SFT adapter instead of full-parameter training.",
+      "One preference pair per microbatch, 8-pair effective batch; 2048-token right truncation instead of 16384.",
+      "A seeded subset of one pinned shard instead of 150000 pairs.",
+      "Peak LR 1e-5 for adapters instead of the full-parameter 8e-8; not tuned.",
+      "Frozen copy of our SFT adapter shares the quantized base; reference log probabilities cached before updates."
+    ]
+  },
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2",
+    "trl": "1.17.1",
+    "datasets": "5.1.0"
+  },
+  "arguments": {
+    "config": "configs/dpo.json",
+    "model": "/root/models/Olmo-3-1025-7B",
+    "data": "data/dolci-dpo-smoke-2k",
+    "init_adapter": "outputs/sft/final-adapter",
+    "output_dir": "/root/post-training-demo/validation/dpo-implementation-20261031/outputs/dpo-smoke-2k",
+    "check_only": false,
+    "learning_rate": 1e-05,
+    "warmup_ratio": 0.1,
+    "lr_scheduler": "linear",
+    "beta": 5.0,
+    "epochs": 1,
+    "gradient_accumulation": 1,
+    "max_steps": 2,
+    "save_steps": 1,
+    "resume_from_checkpoint": null
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "cuda": "13.0"
+}

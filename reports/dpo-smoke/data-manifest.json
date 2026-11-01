@@ -1,0 +1,57 @@
+{
+  "dataset": "allenai/Dolci-Think-DPO-7B",
+  "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+  "source_manifest": {
+    "repo_id": "allenai/Dolci-Think-DPO-7B",
+    "repo_type": "dataset",
+    "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+    "sampling_scope": "First of seven shuffled-mixture shards; a learning subset, not the full official recipe.",
+    "files": [
+      {
+        "rfilename": "data/train-00000-of-00007.parquet",
+        "blobId": "c7b9374d003b9b8a0b1057fc76a14fd66fe7b394",
+        "size": 198512174,
+        "lfs": {
+          "sha256": "5a4c4942f8f66e1bc1f01bb0241c3b6f62b87373a5593284e17d90b6e392c0af",
+          "size": 198512174,
+          "pointerSize": 134
+        }
+      }
+    ]
+  },
+  "seed": 42,
+  "max_length": 2048,
+  "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+  "template_source": {
+    "repo_id": "allenai/Olmo-3-7B-Think-SFT",
+    "revision": "6ff857587e040d6d523a3d5f3a56e918f5401d66",
+    "purpose": "chat template only; base weights remain Olmo-3-1025-7B"
+  },
+  "sampling": "Seed-shuffled rows; unique IDs and prompts across both splits",
+  "truncation": "Right-truncate each prompt+response; drop empty or identical retained responses",
+  "truncated_branches": {
+    "chosen": 3,
+    "rejected": 2
+  },
+  "excluded": {},
+  "splits": {
+    "train": {
+      "rows": 4,
+      "sha256": "30a7620f376afb7d98a5e9a0556d0cc5e072cd86f4f3da30a82ab88e92eb12ce",
+      "sources": {
+        "Wildchat-1M-gpt-4.1-regenerated-english": 1,
+        "filtered_wc_sample_500k": 1,
+        "ultrafeedback_cleaned_olmo2_7b": 1,
+        "flan_v2_converted": 1
+      }
+    },
+    "eval": {
+      "rows": 2,
+      "sha256": "d73344e0018774b3f176cd37ea5638476e834518cd46e476387ab7e979f8e7c9",
+      "sources": {
+        "personahub_code_v2_34999": 1,
+        "OpenThoughts3-full-filtered-science-no-cot": 1
+      }
+    }
+  }
+}

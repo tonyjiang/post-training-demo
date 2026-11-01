@@ -37,7 +37,7 @@ if [[ -e "$run_dir" || -L "$run_dir" ]]; then
     exit 1
 fi
 # Check the actual --data and options synchronously, before reporting a submitted job.
-uv run --locked python scripts/train_sft.py --check-only "$@"
+uv run --locked python -m sft.train --check-only "$@"
 mkdir -p outputs
 # Atomic creation also protects against two simultaneous launches with the same name.
 mkdir "$run_dir"

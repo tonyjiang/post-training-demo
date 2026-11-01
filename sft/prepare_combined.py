@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import random
 
-from prepare_sft import training_tokenizer
+from .prepare import training_tokenizer
 
 
 def read_verified(path, digest):

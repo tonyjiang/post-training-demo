@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "sft": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "hit_token_limit": 2,
+        "closed_think_tag": 14,
+        "generated_tokens": 11931
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "hit_token_limit": 6,
+        "closed_think_tag": 10,
+        "generated_tokens": 19782,
+        "instruction_accuracy": 0.5454545454545454,
+        "instructions": 22
+      }
+    }
+  },
+  "runtime_seconds": 863.9328845217824,
+  "peak_allocated_gib": 8.545084476470947,
+  "data_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+  "adapter_sha256": "5d35c5d0c811ee50370e23fa2c54e9ba60c90f27787e9ee48de1e88d6cbdfd2b"
+}

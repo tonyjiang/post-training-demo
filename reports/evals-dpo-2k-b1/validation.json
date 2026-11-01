@@ -1,0 +1,94 @@
+{
+  "validation": "passed",
+  "complete_predictions_per_adapter": 32,
+  "cached_sft_predictions_match": true,
+  "same_prompts": true,
+  "all_exit_codes": 0,
+  "max_new_tokens": 2048,
+  "batch_size": 1,
+  "historical_batch_size": 2,
+  "scores": {
+    "sft": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "hit_token_limit": 2,
+        "closed_think_tag": 14,
+        "generated_tokens": 11931
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "hit_token_limit": 6,
+        "closed_think_tag": 10,
+        "generated_tokens": 19782,
+        "instruction_accuracy": 0.5454545454545454,
+        "instructions": 22
+      }
+    },
+    "dpo": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 12,
+        "accuracy": 0.75,
+        "hit_token_limit": 4,
+        "closed_think_tag": 12,
+        "generated_tokens": 16981
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "hit_token_limit": 6,
+        "closed_think_tag": 10,
+        "generated_tokens": 24428,
+        "instruction_accuracy": 0.5909090909090909,
+        "instructions": 22
+      }
+    }
+  },
+  "dpo_changes_from_1k": [
+    {
+      "task": "gsm8k",
+      "id": 588,
+      "old_correct": false,
+      "new_correct": true,
+      "old_cutoff": true,
+      "new_cutoff": false
+    },
+    {
+      "task": "gsm8k",
+      "id": 57,
+      "old_correct": false,
+      "new_correct": true,
+      "old_cutoff": true,
+      "new_cutoff": false
+    },
+    {
+      "task": "ifeval",
+      "id": 421,
+      "old_correct": true,
+      "new_correct": false,
+      "old_cutoff": false,
+      "new_cutoff": true
+    },
+    {
+      "task": "ifeval",
+      "id": 364,
+      "old_correct": true,
+      "new_correct": false,
+      "old_cutoff": true,
+      "new_cutoff": true
+    }
+  ],
+  "source_hashes": {
+    "reports/evals-sft-2k-b1/predictions.jsonl": "b17f7b43a2fed53a31ae4572cfc9f43d236583beb2207564a6e2e17ef9a32e2f",
+    "reports/evals-sft-2k-b1/results.json": "34296cd2651c411dabe151cecaa7c7858320ad08166cf10c5793a347da395149",
+    "reports/evals-sft-2k-b1/run-config.json": "310f35a1b8234c05809613a9a742261b36dfd4c7fffb916b56545d529c3347db",
+    "reports/evals-dpo-2k-b1/predictions.jsonl": "82fc862a5cec896aa27f46760e21708a9f3d8a01b81b80980d7e3662293c3123",
+    "reports/evals-dpo-2k-b1/results.json": "372fc1cdecb8afff64cc43a9cbc26516489582d53307fb12ae4ebe2d596f3ce5",
+    "reports/evals-dpo-2k-b1/run-config.json": "507028cac4e21134023ef08c9889c956ff66fa38f88336abba86ecf660120078"
+  }
+}

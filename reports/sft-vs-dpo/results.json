@@ -1,0 +1,66 @@
+{
+  "scores": {
+    "sft": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "hit_token_limit": 2,
+        "closed_think_tag": 14,
+        "generated_tokens": 9465
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 8,
+        "accuracy": 0.5,
+        "hit_token_limit": 8,
+        "closed_think_tag": 10,
+        "generated_tokens": 12818,
+        "instruction_accuracy": 0.5909090909090909,
+        "instructions": 22
+      }
+    },
+    "dpo": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 10,
+        "accuracy": 0.625,
+        "hit_token_limit": 6,
+        "closed_think_tag": 11,
+        "generated_tokens": 12076
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 9,
+        "accuracy": 0.5625,
+        "hit_token_limit": 13,
+        "closed_think_tag": 8,
+        "generated_tokens": 15649,
+        "instruction_accuracy": 0.5909090909090909,
+        "instructions": 22
+      }
+    }
+  },
+  "generation_performed": false,
+  "data_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+  "baseline": {
+    "directory": "reports/evals",
+    "label": "sft",
+    "adapter_sha256": "5d35c5d0c811ee50370e23fa2c54e9ba60c90f27787e9ee48de1e88d6cbdfd2b",
+    "files": {
+      "run-config.json": "fab57d82d72a05febb1bdc9d6101605c45b2c827314bbf9e7865502d7cc467a5",
+      "results.json": "8890c98e566d9eb635ddace3caf8f748a41826dd4b1391bca4d55dd92003c5fb",
+      "predictions.jsonl": "ee976b66b9fa3cbf5d80e37ddf026dc763e872e7d22daa24aab9feb9b6f90515"
+    }
+  },
+  "candidate": {
+    "directory": "reports/evals-dpo",
+    "label": "dpo",
+    "adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+    "files": {
+      "run-config.json": "22dcd1e8c0f2d76417e332d548fd246750d65170b4b9bd2f56926c29c5cc6136",
+      "results.json": "a5b1e4403cf01758774057c54c17918f64ea64ef6909577c9d3511d6a43ba06f",
+      "predictions.jsonl": "0734d9370a2ee3f1c469435a6cc9f722ffbb4eb0f0034d005091b8efee527ff7"
+    }
+  }
+}

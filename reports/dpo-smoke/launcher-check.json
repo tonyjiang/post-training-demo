@@ -1,0 +1,5 @@
+{
+  "existing_run_rejected": true,
+  "exit_code": 1,
+  "message": "Refusing to overwrite /root/post-training-demo/validation/dpo-implementation-20261031/outputs/dpo-smoke-2k; choose another --run-name."
+}

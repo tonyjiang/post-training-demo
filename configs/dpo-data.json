@@ -1,0 +1,18 @@
+{
+  "repo_id": "allenai/Dolci-Think-DPO-7B",
+  "repo_type": "dataset",
+  "revision": "f27fa9b8e9f315f01fbc25b4d6d7763e0f6e25cb",
+  "sampling_scope": "First of seven shuffled-mixture shards; a learning subset, not the full official recipe.",
+  "files": [
+    {
+      "rfilename": "data/train-00000-of-00007.parquet",
+      "blobId": "c7b9374d003b9b8a0b1057fc76a14fd66fe7b394",
+      "size": 198512174,
+      "lfs": {
+        "sha256": "5a4c4942f8f66e1bc1f01bb0241c3b6f62b87373a5593284e17d90b6e392c0af",
+        "size": 198512174,
+        "pointerSize": 134
+      }
+    }
+  ]
+}

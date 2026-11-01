@@ -1,0 +1,48 @@
+{
+  "scores": {
+    "sft": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "hit_token_limit": 2,
+        "closed_think_tag": 14,
+        "generated_tokens": 11931
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "hit_token_limit": 6,
+        "closed_think_tag": 10,
+        "generated_tokens": 19782,
+        "instruction_accuracy": 0.5454545454545454,
+        "instructions": 22
+      }
+    },
+    "dpo": {
+      "gsm8k": {
+        "examples": 16,
+        "correct": 12,
+        "accuracy": 0.75,
+        "hit_token_limit": 4,
+        "closed_think_tag": 12,
+        "generated_tokens": 16981
+      },
+      "ifeval": {
+        "examples": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "hit_token_limit": 6,
+        "closed_think_tag": 10,
+        "generated_tokens": 24428,
+        "instruction_accuracy": 0.5909090909090909,
+        "instructions": 22
+      }
+    }
+  },
+  "runtime_seconds": 1181.7864649230614,
+  "peak_allocated_gib": 8.545084953308105,
+  "data_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+  "adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa"
+}

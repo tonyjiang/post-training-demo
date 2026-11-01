@@ -11,4 +11,4 @@ flock -n 9 || { echo 'Another SFT job is already running.' >&2; exit 1; }
 export HF_HUB_OFFLINE=1
 export TOKENIZERS_PARALLELISM=false
 export PYTORCH_ALLOC_CONF=expandable_segments:True
-uv run --locked python -u scripts/train_sft.py --output-dir "$run_dir" "$@"
+uv run --locked python -u -m sft.train --output-dir "$run_dir" "$@"

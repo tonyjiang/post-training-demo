@@ -1,0 +1,202 @@
+{
+  "arguments": {
+    "data": "data/eval-small",
+    "model": "/root/models/Olmo-3-1025-7B",
+    "adapter": "outputs/dpo/final-adapter",
+    "adapter_name": "dpo",
+    "output": "outputs/evals-dpo"
+  },
+  "data_manifest": {
+    "config": {
+      "name": "sft-small-evals",
+      "seed": 42,
+      "examples_per_task": 16,
+      "batch_size": 2,
+      "max_new_tokens": 1024,
+      "max_context": 4096,
+      "do_sample": false,
+      "datasets": [
+        {
+          "name": "gsm8k",
+          "repo_id": "openai/gsm8k",
+          "revision": "740312add88f781978c0658806c59bc2815b9866",
+          "file": "main/test-00000-of-00001.parquet",
+          "split": "test",
+          "local_file": "gsm8k-test.parquet",
+          "sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+          "bytes": 419088
+        },
+        {
+          "name": "ifeval",
+          "repo_id": "HuggingFaceH4/ifeval",
+          "revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+          "file": "ifeval_input_data.jsonl",
+          "split": "train (the benchmark evaluation split)",
+          "local_file": "ifeval.jsonl",
+          "git_blob": "7c875005c09550bc3fd94c7f42867f78490bc554",
+          "sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2",
+          "bytes": 207111
+        }
+      ],
+      "olmes": {
+        "repo": "https://github.com/allenai/olmes",
+        "revision": "5a51f502d463b8cdc4a2dcad7d7096c41ff1197e",
+        "files": {
+          "oe_eval/__init__.py": "4466ba72645ddde5f8f4dc286eb8602c4197d2d194f0bbe61aa6f36c757b7743",
+          "oe_eval/version.py": "3a4876cadb756d6c5a43a07bcbaf8d8f7fb4a5d927c7157f06dbcfff3d253ae8",
+          "oe_eval/models/output_processors.py": "6faae28381ef4d0c9a5ac8659f0fc0d0949cca645f75162b9dc5460fd53b028d",
+          "oe_eval/dependencies/ifeval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "oe_eval/dependencies/ifeval/instructions.py": "215f8f148551aa316e812d88c854bf3b9d3cc994be00ff85465317e11519fae8",
+          "oe_eval/dependencies/ifeval/instructions_util.py": "a0292d4d4e0072dd83df49e24e217d67a8cf7e3d44d02bbc0863cbdcb2a014c8",
+          "oe_eval/dependencies/ifeval/instructions_registry.py": "41fa28ff96f82c915eb0275adb82dbab035b24bcf29b5d174a52bed26427dd72"
+        }
+      },
+      "gsm8k_prompt": "Solve the following grade school math word problem:\n{question}\n\nShow your work and conclude with \"Therefore, the final answer is \\boxed{{answer}}.\" where answer is just the final number that solves the problem. E.g., if the answer is 6, conclude with \"Therefore, the final answer is \\boxed{{6}}.\""
+    },
+    "cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+    "training_sha256": "ce932e892689499b48f3bf521637af19cd092b25e9de981086629bea1dbbc7c6",
+    "selection": {
+      "gsm8k": {
+        "selected_ids": [
+          588,
+          1214,
+          57,
+          906,
+          1252,
+          618,
+          599,
+          289,
+          608,
+          400,
+          237,
+          616,
+          672,
+          1132,
+          463,
+          222
+        ],
+        "excluded_exact_matches": []
+      },
+      "ifeval": {
+        "selected_ids": [
+          111,
+          96,
+          286,
+          368,
+          421,
+          452,
+          244,
+          422,
+          154,
+          105,
+          118,
+          364,
+          474,
+          132,
+          407,
+          313
+        ],
+        "excluded_exact_matches": []
+      }
+    },
+    "overlap_check": "Case-insensitive, whitespace-normalized prompt substring in retained SFT tokens; no fuzzy or pretraining decontamination"
+  },
+  "runner_sha256": "ff74ff4b78ea51d0e62f620020e6a424d10f10d699cea791e7e965f6a18dc30b",
+  "base_manifest": {
+    "repo_id": "allenai/Olmo-3-1025-7B",
+    "revision": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+    "files": [
+      {
+        "rfilename": "README.md",
+        "blobId": "15fe2e8b8b0fbf49416d3943ca6cf0174d0f2c07",
+        "size": 12222
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "5e1778fbc278e8f47217ba485e9a075689207f0f",
+        "size": 1620
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "33b71a9c3ddf78cfa1c6721826775ae02d06d64d",
+        "size": 69
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "354558edcdbd64ca7abd407b8be3d5d09d39d781",
+        "size": 916646
+      },
+      {
+        "rfilename": "model-00001-of-00003.safetensors",
+        "blobId": "a04aa765e30d6c14c059c0d511ffc68bd807c8a0",
+        "size": 4969984976,
+        "lfs": {
+          "sha256": "0490d6668e613a29b23367e3a7aa9cc6aced3d162694445bb969ed7622b3c4e2",
+          "size": 4969984976,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00002-of-00003.safetensors",
+        "blobId": "f17156e68ed4a2366ec7decc8b5394c251b1d6f0",
+        "size": 4981161496,
+        "lfs": {
+          "sha256": "e127ea479fb6e208fe9d48d23b11212b5722f4873f6eef9c009b7a855866c641",
+          "size": 4981161496,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00003-of-00003.safetensors",
+        "blobId": "4254e20e90dbc3154b93a8098bf0a2530dc62cfa",
+        "size": 4644917240,
+        "lfs": {
+          "sha256": "f3ddff10052ffe5de5c6b4cad45c422c0d898acc6beb21b1b8531244adfb3c70",
+          "size": 4644917240,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model.safetensors.index.json",
+        "blobId": "421a80b181a130ccbc579a328fb349d8792a32ce",
+        "size": 29630
+      },
+      {
+        "rfilename": "special_tokens_map.json",
+        "blobId": "48f174b441a37b588e40d794c437adad1624a311",
+        "size": 207
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "5fe172127988c3709a49d8d2ce20e11bb266cd57",
+        "size": 7137177
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "5599723dac37d9f0b7e496de66d15e0a762babe9",
+        "size": 4308
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "51135344eec01a62fc4deaca39c72ac08f5b9709",
+        "size": 1611056
+      }
+    ]
+  },
+  "adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+  "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2",
+    "nltk": "3.10.4",
+    "spacy": "3.8.16"
+  },
+  "comparison": "Same chat prompts and frozen NF4 base; adapter disabled versus enabled. This is not an optimized few-shot base-model evaluation.",
+  "metrics": {
+    "gsm8k": "Exact numeric match of last boxed answer; stricter than OLMES flexible extraction",
+    "ifeval": "Strict prompt and instruction accuracy using pinned OLMES checkers"
+  },
+  "limitations": "Small subsets, greedy decoding, 1024 generated-token cap, quantization; not official benchmark scores. Exact SFT overlap checked; pretraining and fuzzy overlap unknown."
+}
