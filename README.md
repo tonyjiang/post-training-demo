@@ -15,14 +15,15 @@ train on the full sets, and compare our result with Ai2's own checkpoint for tha
 | Base | — | — | [Olmo-3-1025-7B](https://huggingface.co/allenai/Olmo-3-1025-7B) (our starting point) |
 | SFT | [Dolci-Think-SFT-7B](https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B) | 4,241 / 64 conversations | [Olmo-3-7B-Think-SFT](https://huggingface.co/allenai/Olmo-3-7B-Think-SFT) |
 | DPO | [Dolci-Think-DPO-7B](https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B) | 1,024 / 64 preference pairs | [Olmo-3-7B-Think-DPO](https://huggingface.co/allenai/Olmo-3-7B-Think-DPO) |
-| RLVR | [Dolci-Think-RL-7B](https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B) | Not sampled yet | [Olmo-3-7B-Think](https://huggingface.co/allenai/Olmo-3-7B-Think) |
+| RLVR | [Dolci-Think-RL-7B](https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B) | 1,024 / 128 math prompts | [Olmo-3-7B-Think](https://huggingface.co/allenai/Olmo-3-7B-Think) |
 
 We reuse Ai2's code and recipes from [OLMo-core](https://github.com/allenai/OLMo-core),
 [open-instruct](https://github.com/allenai/open-instruct) and
 [olmes](https://github.com/allenai/olmes) wherever our hardware allows; every place we
 had to differ is listed under [Deviations and validation](#deviations-and-validation).
 Model, dataset, chat-template and recipe revisions are pinned in [configs/](configs/);
-RLVR revisions will be pinned when that stage starts.
+RLVR dataset, upstream recipe, verifier sources, and official reference checkpoint
+are pinned in `configs/rlvr-data.json` and `configs/rlvr.json`.
 
 ## Hardware and setup
 
@@ -254,12 +255,67 @@ This validates execution, not a quality improvement.
 
 ## Next experiments: RLVR and human-feedback RLHF
 
-Run RLVR first from `outputs/dpo/final-adapter`, using a small math subset of
-`allenai/Dolci-Think-RL-7B`. Start with a proposed 1,024 training prompts and 128
-held-out prompts; validate verifier behavior, rollout diversity, and GPU memory
-on a short pilot before a full run. Reuse the pinned Ai2 RL recipe where feasible
-and record hardware-driven deviations when implementing it. Dataset revisions
-and splits must be pinned before training. RLVR is not implemented or running yet.
+RLVR is implemented in `rlvr/`, continuing `outputs/dpo/final-adapter` with
+NF4 QLoRA and TRL 1.17.1 GRPO. The prepared math-only dataset has **1,024 training
+and 128 held-out prompts** from the first pinned Dolci shard. Prompts are sampled
+with seed 42, deduplicated, checked against the fixed benchmark prompts, and
+dropped if over 512 tokens; they are never truncated. The manifest records the
+three source families and all exclusions. Ground-truth answers are used only by
+the reward function, never included in model inputs.
+
+Each prompt receives **four sequential sampled rollouts**, temperature 1.0, up to
+**2,048 completion tokens**. Updates use microbatch 1, accumulation 4, constant
+LR `1e-6`, no weight decay, and beta 0 (no reference/KL term), following those parts
+of the pinned Ai2 recipe. The DPO adapter remains preserved as the parent.
+An answer earns 1 only when thinking closes, a boxed final answer matches using
+Ai2's pinned math equivalence helpers, and the completion is not token-truncated.
+Truncated completions are also masked from the GRPO loss. Reward and rollout
+records make zero-variance groups and absence of learning visible. A pilot stops
+early after eight updates without any mixed-reward group rather than spending
+the remaining budget on zero-advantage updates.
+
+The default run is a bounded **16-update pilot**, not a full pass over all 1,024
+training prompts. It uses four fixed held-out prompts for greedy before/after
+checks; the complete 128-prompt split remains separate. This is a compatibility
+and learning-signal experiment, not a reliable quality benchmark. `--max-steps -1`
+selects a full epoch (1,024 optimizer updates / 4,096 sampled completions), which
+must be budgeted using measured pilot runtime. New run names preserve old results.
+
+```bash
+uv sync --locked --group rlvr --group eval
+uv run --locked python scripts/download_base.py \
+  --manifest configs/rlvr-data.json --output data/dolci-rlvr-shards
+uv run --locked --group rlvr python -m rlvr.prepare
+bash scripts/start_rlvr.sh rlvr-smoke-2k --max-steps 1 --eval-size 1
+# After smoke validation:
+bash scripts/start_rlvr.sh rlvr-pilot
+```
+
+Preparation and launch refuse to overwrite data or outputs. Runs share the SFT/DPO
+GPU lock and save `exit_code`, `all_results.json`, `final-adapter/`, rollout logs,
+before/after predictions, configs, and checkpoints every eight updates. Inspect
+`mixed_reward_groups` and `policy_changed` before claiming that learning occurred.
+A pinned upstream snapshot was exported unchanged from the local clone for the
+server's math helpers and recipe, avoiding a slow full-network Git clone.
+[Data manifest](reports/rlvr-data/data-manifest.json).
+
+Real-model validation: the one-update 2K smoke test completed with exit status 0
+in **6m 10s**, at **8.63 GiB peak allocated VRAM**. All four sampled answers were
+truncated and received zero reward; the policy did not change. This validates
+execution and memory fit, not learning. The tiny CPU integration test separately
+verified a nonzero adapter update from mixed rewards with frozen base weights.
+The implementation recognizes both answer-ending tokens for generation and
+truncation masking. All 22 tests passed, with the five RLVR checks rechecked
+before pilot launch. [Smoke metrics](reports/rlvr-smoke-2k/all_results.json).
+
+The detached pilot is launched as `outputs/rlvr-pilot/`, capped at 16 updates
+(four rollouts per prompt), stopping after eight updates if no mixed-reward group
+appears. Monitor `train.log`; completion requires `exit_code` equal to 0, final
+metrics, and `final-adapter/`. Review `mixed_reward_groups`, `policy_changed`, and
+`stopped_for_no_learning_signal` before expanding the run. A full epoch is **not**
+currently scheduled. The smoke timing suggests roughly an hour or more for the
+pilot, and multiple days for a full 1,024-prompt epoch at these settings.
+
 
 For the subsequent RLHF experiment, use the human `preference` subset of
 `nvidia/HelpSteer3`: a proposed **1,024 training pairs plus 128 validation pairs**,
@@ -417,10 +473,10 @@ a shell command.
 
 ## Code layout
 
-Reusable stage code lives in the `sft/` and `dpo/` Python packages. Shared
+Reusable stage code lives in the `sft/`, `dpo/`, and `rlvr/` Python packages. Shared
 evaluation lives in the root-level `evaluate_and_compare.py`. `scripts/` holds shell
 launchers, hardware diagnostics, and the standalone download utility; `configs/` holds pinned inputs.
-Automated tests are grouped by stage under `tests/sft/` and `tests/dpo/`.
+Automated tests are grouped by stage under `tests/sft/`, `tests/dpo/`, and `tests/rlvr/`.
 Run SFT modules from the repository root with `uv run --locked python -m sft.<module>`
 (add `--group eval` to `uv run` for evaluation modules).
 
@@ -441,6 +497,11 @@ Run SFT modules from the repository root with `uv run --locked python -m sft.<mo
 | [evaluate_and_compare.py](evaluate_and_compare.py) | Compare base and adapter; save answers, scores, token-limit hits and runtime. |
 | [run_evals.sh](scripts/run_evals.sh) | Run evaluation with the GPU lock and record its exit status. |
 | [run_evals_2k.sh](scripts/run_evals_2k.sh) | Evaluate SFT then DPO with 2,048 output tokens, reusing SFT results and preserving old runs. |
+| [rlvr/prepare.py](rlvr/prepare.py) | Prepare the pinned, disjoint math prompt splits. |
+| [rlvr/rewards.py](rlvr/rewards.py) | Verify boxed final answers with pinned Ai2 math helpers. |
+| [rlvr/train.py](rlvr/train.py) | Run sequential-rollout QLoRA GRPO with before/after checks and auditable rewards. |
+| [start_rlvr.sh](scripts/start_rlvr.sh) | Validate and launch a detached named RLVR pilot. |
+| [run_rlvr.sh](scripts/run_rlvr.sh) | Run RLVR under the shared GPU lock and record exit status. |
 | [dpo/data.py](dpo/data.py) | Validate preference pairs, tokenize/truncate both branches, and verify prepared splits. |
 | [dpo/prepare.py](dpo/prepare.py) | Sample pinned Dolci preference data and write disjoint tokenized splits. |
 | [dpo/train.py](dpo/train.py) | Continue the SFT adapter with TRL DPO, a frozen SFT reference, checkpoints, and metrics. |
@@ -457,7 +518,7 @@ production `sft` and `dpo` packages during discovery.
 
 ```bash
 # All automated tests (requires the OLMES checkout and NLTK data prepared above).
-uv run --locked --group dpo --group eval python -m unittest discover -s tests -t . -v
+uv run --locked --group dpo --group rlvr --group eval python -m unittest discover -s tests -t . -v
 
 # One stage at a time.
 uv run --locked --group eval python -m unittest discover -s tests/sft -t . -v
@@ -508,4 +569,12 @@ A two-update 4K smoke test passed training, evaluation and checkpoint saves at
 **10.10 GiB peak allocated VRAM**. [Validation reports](reports/sft-combined-4k/)
 record the results; they establish execution compatibility, not model quality.
 
-Next: broaden evaluation, compare with the official SFT/DPO checkpoints, then implement RLVR.
+Next: inspect the bounded RLVR pilot for reward variation and policy updates, then decide whether a full epoch is justified.
+
+RLVR deviations: TRL replaces the distributed open-instruct/vLLM/Beaker runtime;
+we use QLoRA, the original GRPO loss, a first-shard math-only subset, four serial
+rollouts, a 512-token prompt ceiling and 2,048-token completion cap instead of
+Ai2's full mixture, eight rollouts and 32K completions. We add a boxed-answer
+instruction and require closed thinking, with zero reward and loss masking for
+truncation. These changes fit the hardware and define a narrower experiment;
+they do not reproduce the full official RL recipe.

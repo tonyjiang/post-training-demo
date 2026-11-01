@@ -1,0 +1,47 @@
+{
+  "upstream": {
+    "repo": "https://github.com/allenai/open-instruct",
+    "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+    "files": {
+      "scripts/train/olmo3/7b_think_rl.sh": "63339c58c65ff168838fbbbe684e318e46472d094fa6564919f6764bc3e1f2bc",
+      "open_instruct/math_utils.py": "8d341b58106c7e782197165b04a3e1ee2c3e7c0debc7eeb54478269630223573",
+      "open_instruct/logger_utils.py": "f8d0bb3be3fc51cd98a9be681bdd55a657cef44b5d5dcb3741a789b18bc1106d",
+      "open_instruct/__init__.py": "c4f5a8e0e50e0800f35f712f3f63897b9bd5b7b83197a81860d0bd4142c78b04"
+    }
+  },
+  "reference_checkpoint": {
+    "repo_id": "allenai/Olmo-3-7B-Think",
+    "revision": "d97e442d7cc678210054dbcc9b440894d62c89a4"
+  },
+  "official_recipe": {
+    "learning_rate": 1e-06,
+    "lr_scheduler_type": "constant",
+    "beta": 0.0,
+    "num_generations": 8,
+    "temperature": 1.0,
+    "response_length": 32768
+  },
+  "experiment": {
+    "train_size": 1024,
+    "eval_size": 128,
+    "seed": 42,
+    "max_prompt_length": 512,
+    "max_completion_length": 2048,
+    "num_generations": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 1e-06,
+    "epochs": 1,
+    "loss_type": "grpo",
+    "beta": 0.0,
+    "init_adapter": "outputs/dpo/final-adapter",
+    "pilot_max_steps": 16
+  },
+  "deviations": [
+    "TRL GRPO on NF4 QLoRA instead of distributed open-instruct GRPO with vLLM/Beaker.",
+    "First-shard math-only 1024/128 pilot instead of the full math/code/IF/chat mixture.",
+    "512-token prompt ceiling (drop, never truncate); 2048-token completion cap, four sequential rollouts per prompt.",
+    "Original GRPO loss rather than claiming exact grpo_fast loss equivalence; constant LR 1e-6 and beta zero retained.",
+    "Boxed final-answer reward using pinned Ai2 math equivalence functions; incomplete thinking and token-truncated completions receive zero reward.",
+    "Append an explicit boxed-final-answer instruction; reward requires closed thinking and a boxed final answer."
+  ]
+}

@@ -20,7 +20,7 @@ Out of scope: RL-Zero runs, the Instruct track, pretraining / midtraining.
   once we start training.
 - Every stage has an official Ai2 checkpoint. Use it as the reference to compare against, and as a
   fallback starting point (e.g. start DPO from `Olmo-3-7B-Think-SFT` if our SFT is not ready).
-- Upstream repos are cloned into `third_party/` and not edited in place. Our reusable stage code lives in `sft/` and `dpo/`,
+- Upstream repos are cloned into `third_party/` and not edited in place. Our reusable stage code lives in `sft/`, `dpo/`, and `rlvr/`,
   launchers and standalone utilities in `scripts/`, and configs in `configs/`.
 - Keep `README.md` current: decisions, open questions, run log.
 
@@ -61,6 +61,7 @@ not the local Mac. Dependencies live in `pyproject.toml`; resolved versions live
     evaluate_and_compare.py  shared evaluation across training stages
     sft/             reusable SFT preparation and training
     dpo/             reusable preference preparation and DPO training
+    rlvr/            math data preparation, verification, and GRPO training
     scripts/         shell launchers, hardware diagnostics, and standalone utilities
     configs/         our config overrides
-    tests/           automated tests grouped under sft/ and dpo/
+    tests/           automated tests grouped under sft/, dpo/, and rlvr/

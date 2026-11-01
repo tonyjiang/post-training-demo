@@ -20,6 +20,10 @@ package = false
 environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
 
 [dependency-groups]
+rlvr = [
+    "trl==1.17.1",
+    "antlr4-python3-runtime==4.11.1",
+]
 dpo = [
     "trl==1.17.1",
 ]

@@ -96,6 +96,15 @@ wheels = [
 ]
 
 [[package]]
+name = "antlr4-python3-runtime"
+version = "4.11.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e0/64/c548678120cccf784f555972ed37cedcf4f026abeec30ab0340c3af4ea07/antlr4-python3-runtime-4.11.1.tar.gz", hash = "sha256:a53de701312f9bdacc5258a6872cd6c62b90d3a90ae25e494026f76267333b60", size = 116945 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b6/3a/4f2e9d67277cc255a17a34c1b54e02d939ca5991bc596dee3d63e587e512/antlr4_python3_runtime-4.11.1-py3-none-any.whl", hash = "sha256:ff1954eda1ca9072c02bf500387d0c86cb549bef4dbb3b64f39468b547ec5f6b", size = 144186 },
+]
+
+[[package]]
 name = "anyio"
 version = "4.15.1"
 source = { registry = "https://pypi.org/simple" }
@@ -887,6 +896,10 @@ eval = [
     { name = "spacy", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
     { name = "syllapy", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
 ]
+rlvr = [
+    { name = "antlr4-python3-runtime", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "trl", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -909,6 +922,10 @@ eval = [
     { name = "nltk", specifier = ">=3.9,<4" },
     { name = "spacy", specifier = ">=3.8,<4" },
     { name = "syllapy", specifier = ">=0.8.0" },
+]
+rlvr = [
+    { name = "antlr4-python3-runtime", specifier = "==4.11.1" },
+    { name = "trl", specifier = "==1.17.1" },
 ]
 
 [[package]]

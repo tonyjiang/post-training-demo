@@ -1,0 +1,50 @@
+{
+  "source_manifest": {
+    "repo_id": "allenai/Dolci-Think-RL-7B",
+    "repo_type": "dataset",
+    "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+    "sampling_scope": "Math-only pilot from the first released shard; not the full RL mixture.",
+    "files": [
+      {
+        "rfilename": "data/train-00000-of-00009.parquet",
+        "blobId": "61bc81c3098c6d1b36c644dd510f6d54a6bd476b",
+        "size": 65820417,
+        "lfs": {
+          "sha256": "afe32ea94a2cbf82092736cab74a346251cf39a792e6ff53b549dacb2a6877d8",
+          "size": 65820417,
+          "pointerSize": 133
+        }
+      }
+    ]
+  },
+  "seed": 42,
+  "max_prompt_length": 512,
+  "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+  "benchmark_cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+  "excluded": {
+    "overlong_prompt": 20,
+    "duplicate_or_benchmark_overlap": 13
+  },
+  "sampling": "Seed-shuffled first-shard math prompts; no passrate filtering; drop overlong prompts without truncation",
+  "prompt_instruction": "Append a work-and-boxed-final-answer instruction.",
+  "splits": {
+    "train": {
+      "rows": 1024,
+      "sha256": "47c410763b0e3b883990dba9d77c3b3ed774bb1fe2448a83015b4f5297484576",
+      "sources": {
+        "hamishivi/AceReason-Math_filtered": 585,
+        "hamishivi/MathSub-30K_filtered": 205,
+        "hamishivi/DAPO-Math-17k-Processed_filtered": 234
+      }
+    },
+    "eval": {
+      "rows": 128,
+      "sha256": "992f65c7985da68e3c60755dff5b43190f2d68266e981d28fc2a8e74fd50e4ff",
+      "sources": {
+        "hamishivi/DAPO-Math-17k-Processed_filtered": 29,
+        "hamishivi/AceReason-Math_filtered": 72,
+        "hamishivi/MathSub-30K_filtered": 27
+      }
+    }
+  }
+}

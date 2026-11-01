@@ -165,14 +165,14 @@
           <article class="card source"><span class="kicker">Data</span><h2><a href="https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B">Dolci-Think-RL-7B</a></h2><p>Prompts with ground truth or a checker, not full answers. Math, code, instruction following, general chat.</p><div class="provenance"><strong>How Ai2 built it:</strong> generated 8 samples per prompt from Think-SFT and dropped prompts it already solved more than 62.5% of the time. Those samples are released as <code>Dolci-Think-RL-7B-Completions-SFT</code>.</div></article>
           <div class="arrow" aria-hidden="true">→</div>
           <div class="rl-shell">
-            <h2>GRPO in open-instruct (<code>grpo_fast.py</code>)</h2>
-            <p>Start from our Think-DPO. Script: <code>open-instruct/scripts/train/olmo3/7b_think_rl.sh</code>. Asynchronous: vLLM keeps generating while learners update.</p>
+            <h2>Math-only QLoRA GRPO pilot</h2>
+            <p>Start from our DPO adapter. Pinned reference recipe: <code>open-instruct/scripts/train/olmo3/7b_think_rl.sh</code>. Our RTX 5070 implementation uses TRL GRPO, a shared NF4 base, and four sequential rollouts per prompt. Dataset: 1,024 train / 128 held-out math prompts. Default: 16-update pilot, 2,048 completion tokens, LR 1e-6, beta 0. A one-update 2K smoke passed at 8.63 GiB peak VRAM, with zero rewards and no policy change because all answers were truncated. The detached 16-update pilot is launched with an early stop for absent reward variation.</p>
             <div class="loop">
-              <div class="box"><strong>1 · Rollout</strong>vLLM samples a group of answers per prompt</div><div class="arrow">→</div>
+              <div class="box"><strong>1 · Rollout</strong>sample four answers sequentially per prompt</div><div class="arrow">→</div>
               <div class="box"><strong>2 · Reward</strong>verifier scores each answer</div><div class="arrow">→</div>
-              <div class="box"><strong>3 · Update</strong>learners take a GRPO step, push new weights to vLLM</div>
+              <div class="box"><strong>3 · Update</strong>update only the LoRA adapter using group-relative rewards</div>
             </div>
-            <div class="loop-back">↺ repeat · weights update in flight, without pausing generation</div>
+            <div class="loop-back">↺ repeat · sample, verify, then update on one GPU</div>
             <div class="verifiers">
               <div class="verifier"><h3>Math</h3><p>Answer match against ground truth (SymPy)</p></div>
               <div class="verifier"><h3>Code</h3><p>Run the answer against test cases</p></div>

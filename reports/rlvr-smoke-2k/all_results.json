@@ -1,0 +1,28 @@
+{
+  "train_runtime": 248.5285,
+  "train_samples_per_second": 0.016,
+  "train_steps_per_second": 0.004,
+  "train_loss": 0.0,
+  "epoch": 0.0009765625,
+  "before": {
+    "examples": 1,
+    "correct": 0,
+    "truncated": 1
+  },
+  "after": {
+    "examples": 1,
+    "correct": 0,
+    "truncated": 1
+  },
+  "groups": 1,
+  "mixed_reward_groups": 0,
+  "correct_rollouts": 0.0,
+  "rollouts": 4,
+  "truncated_rollouts": 4,
+  "optimizer_steps": 1,
+  "policy_changed": false,
+  "parent_unchanged": true,
+  "final_adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+  "process_runtime_seconds": 369.77363589126617,
+  "peak_allocated_gib": 8.625680446624756
+}

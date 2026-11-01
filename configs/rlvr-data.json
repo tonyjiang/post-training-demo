@@ -1,0 +1,18 @@
+{
+  "repo_id": "allenai/Dolci-Think-RL-7B",
+  "repo_type": "dataset",
+  "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+  "sampling_scope": "Math-only pilot from the first released shard; not the full RL mixture.",
+  "files": [
+    {
+      "rfilename": "data/train-00000-of-00009.parquet",
+      "blobId": "61bc81c3098c6d1b36c644dd510f6d54a6bd476b",
+      "size": 65820417,
+      "lfs": {
+        "sha256": "afe32ea94a2cbf82092736cab74a346251cf39a792e6ff53b549dacb2a6877d8",
+        "size": 65820417,
+        "pointerSize": 133
+      }
+    }
+  ]
+}
