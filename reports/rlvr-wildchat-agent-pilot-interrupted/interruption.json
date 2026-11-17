@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "exit_code": 1,
+  "cause": "interactive judge timeout after 900 seconds; agent missed the queue deadline",
+  "completed_optimizer_steps": 7,
+  "steps_with_nonzero_gradient": 5,
+  "weights_recoverable": false,
+  "checkpoints_saved": 0,
+  "judgment_cache_preserved": true,
+  "recovery": "Restart with a 3072-token completion budget, checkpoint every update, one-hour judge timeout, and tested checkpoint resume."
+}

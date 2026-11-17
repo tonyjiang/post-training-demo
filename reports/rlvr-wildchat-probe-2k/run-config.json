@@ -1,0 +1,129 @@
+{
+  "arguments": {
+    "config": "configs/rlvr-wildchat.json",
+    "output_dir": "outputs/rlvr-wildchat-probe-2k",
+    "count": 4,
+    "max_completion_length": 2048
+  },
+  "recipe": {
+    "upstream": {
+      "repo": "https://github.com/allenai/open-instruct",
+      "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+      "files": {
+        "scripts/train/olmo3/7b_think_rl.sh": "63339c58c65ff168838fbbbe684e318e46472d094fa6564919f6764bc3e1f2bc",
+        "open_instruct/math_utils.py": "8d341b58106c7e782197165b04a3e1ee2c3e7c0debc7eeb54478269630223573",
+        "open_instruct/logger_utils.py": "f8d0bb3be3fc51cd98a9be681bdd55a657cef44b5d5dcb3741a789b18bc1106d",
+        "open_instruct/__init__.py": "c4f5a8e0e50e0800f35f712f3f63897b9bd5b7b83197a81860d0bd4142c78b04",
+        "open_instruct/judge_utils.py": "e80c53db0a9d56dc0c0c22dd2bb5cc7fbc7144105f6e5369ea877a1505f06ca6"
+      }
+    },
+    "reference_checkpoint": {
+      "repo_id": "allenai/Olmo-3-7B-Think",
+      "revision": "d97e442d7cc678210054dbcc9b440894d62c89a4"
+    },
+    "official_recipe": {
+      "learning_rate": 1e-06,
+      "lr_scheduler_type": "constant",
+      "beta": 0.0,
+      "num_generations": 8,
+      "temperature": 1.0,
+      "response_length": 32768
+    },
+    "experiment": {
+      "train_size": 1024,
+      "eval_size": 128,
+      "seed": 42,
+      "max_prompt_length": 1024,
+      "max_completion_length": 2048,
+      "num_generations": 4,
+      "gradient_accumulation_steps": 4,
+      "learning_rate": 1e-06,
+      "epochs": 1,
+      "loss_type": "grpo",
+      "beta": 0.0,
+      "init_adapter": "outputs/dpo/final-adapter",
+      "pilot_max_steps": 8,
+      "data": "data/dolci-rlvr-wildchat",
+      "shards": "data/dolci-wildchat-inspection"
+    },
+    "deviations": [
+      "WildChat English only; 1024 train / 128 held-out records from the pinned Dolci release.",
+      "Continue our NF4 QLoRA DPO adapter with TRL GRPO and four sequential rollouts.",
+      "Drop malformed conversations and prompts over 1024 tokens; never truncate prompts.",
+      "Completion budget 2048 tokens after the initial 1024-token probe showed frequent truncation; validate termination and quality reward variation before a longer run.",
+      "Use the pinned Ai2 general-quality judge prompt and normalized 1-to-10 score. Endpoint failures and malformed judgments raise errors, never substitute zero.",
+      "The judge endpoint/model must be configured explicitly; no self-judging or lexical reference-match reward substitution."
+    ],
+    "reward_type": "general-quality",
+    "data_source_config": "configs/rlvr-wildchat-data.json",
+    "dataset_filter": "hamishivi/new-wildchat-english-general_filtered",
+    "judge": {
+      "base_url_env": "RLVR_JUDGE_BASE_URL",
+      "model_env": "RLVR_JUDGE_MODEL",
+      "api_key_env": "RLVR_JUDGE_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "timeout_seconds": 90,
+      "max_attempts": 3
+    }
+  },
+  "data_manifest": {
+    "source_manifest": {
+      "repo_id": "allenai/Dolci-Think-RL-7B",
+      "repo_type": "dataset",
+      "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+      "files": [
+        {
+          "rfilename": "data/train-00007-of-00009.parquet",
+          "blobId": "ed9aec1baf454d26e34886d2177ad066bad436e2",
+          "size": 53221941,
+          "lfs": {
+            "sha256": "33e1ee5646f283f3bcce6f64bc4aeb1e1461f1fac25b895651d410f39350c290",
+            "size": 53221941,
+            "pointerSize": 133
+          }
+        },
+        {
+          "rfilename": "data/train-00008-of-00009.parquet",
+          "blobId": "75cd0a5e88f88b2237c913a74b9c7cad4e3f28f4",
+          "size": 37077528,
+          "lfs": {
+            "sha256": "c41094a76784c9812512ae1ab4d602456b7fa4c304713233e35aa565897a9364",
+            "size": 37077528,
+            "pointerSize": 133
+          }
+        }
+      ]
+    },
+    "seed": 42,
+    "reward_type": "general-quality",
+    "max_prompt_length": 1024,
+    "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+    "benchmark_cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+    "excluded": {
+      "wrong_reward_type": 867,
+      "overlong_prompt": 97,
+      "duplicate_id_or_conversation": 99,
+      "Empty conversation turn": 17
+    },
+    "sampling": "Seed-shuffled WildChat English; preserve valid conversation turns; drop malformed/overlong cases; no reference-length filtering",
+    "splits": {
+      "train": {
+        "rows": 1024,
+        "sha256": "cfe06dbd22766b43dfc4e13599a3dcd7837b10492d5acbf27626b1575a2f0f3e",
+        "sources": {
+          "hamishivi/new-wildchat-english-general_filtered": 1024
+        }
+      },
+      "eval": {
+        "rows": 128,
+        "sha256": "e46821b0516c6b0e43d042aaa6150ec1e2680c9434b9442a9ae94c9403a75b0a",
+        "sources": {
+          "hamishivi/new-wildchat-english-general_filtered": 128
+        }
+      }
+    }
+  },
+  "parent_adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+  "kind": "generation-only; no reward or training"
+}

@@ -1,0 +1,15 @@
+{
+  "reason": "Intentional stop at verified checkpoint-5 to publish file-judge requests as a batch before waiting; rubric, reward mapping, dataset, and training recipe unchanged.",
+  "exit_code": 143,
+  "global_step": 5,
+  "resume_checkpoint": "outputs/rlvr/checkpoint-5",
+  "new_rollouts": 4,
+  "token_cutoffs": 0,
+  "rewards": [
+    0.1,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "note": "No within-group reward variance; zero gradient for this group. Historical source snapshot is in sources/rlvr."
+}

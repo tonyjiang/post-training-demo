@@ -1,0 +1,32 @@
+{
+  "train_runtime": 1414.8619,
+  "train_samples_per_second": 0.011,
+  "train_steps_per_second": 0.003,
+  "train_loss": -0.14561149664223194,
+  "epoch": 0.00390625,
+  "before": {
+    "examples": 1,
+    "mean_reward": 0.0,
+    "truncated": 1
+  },
+  "after": {
+    "examples": 1,
+    "mean_reward": 0.0,
+    "truncated": 1
+  },
+  "groups": 4,
+  "mixed_reward_groups": 4,
+  "reward_sum": 3.4000000000000004,
+  "rollouts": 16,
+  "truncated_rollouts": 2,
+  "optimizer_steps": 4,
+  "resumed_step": 0,
+  "new_optimizer_steps": 4,
+  "rollout_statistics_scope": "current run only; resumed updates excluded",
+  "policy_changed": true,
+  "stopped_for_no_learning_signal": false,
+  "parent_unchanged": true,
+  "final_adapter_sha256": "0620bb89080b2e0037e221ee0d7bcc24fb6fb5c48530371f523a75912ff8ffba",
+  "process_runtime_seconds": 1609.431642900221,
+  "peak_allocated_gib": 10.064231395721436
+}

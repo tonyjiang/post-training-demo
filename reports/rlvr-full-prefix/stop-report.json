@@ -1,0 +1,9 @@
+{
+  "reason": "Intentional checkpoint-safe stop at global step 8 for a matched-model, matched-seed generation-only test of a brief-reasoning instruction. Training recipe is unchanged.",
+  "exit_code": 143,
+  "checkpoint": "outputs/rlvr-full/checkpoint-8",
+  "global_step": 8,
+  "training_rollouts_total": 32,
+  "token_cutoffs_total": 5,
+  "latest_failure": "Three of four game-command responses hit the 3072-token cap before closing thinking."
+}

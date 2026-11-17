@@ -1,0 +1,10 @@
+{
+  "status": "stopped intentionally",
+  "exit_code": 143,
+  "global_optimizer_step": 5,
+  "resumed_from_step": 1,
+  "new_optimizer_steps": 4,
+  "checkpoint": "/root/post-training-demo/outputs/rlvr-wildchat-agent-3k-pilot/checkpoint-5",
+  "optimizer_and_rng_state_preserved": true,
+  "reason": "Switch to a separate short-output WildChat sample after finding a 2000-word request among all-cutoff prompts; original data and scores preserved."
+}

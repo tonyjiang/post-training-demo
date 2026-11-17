@@ -1,0 +1,240 @@
+{
+  "arguments": {
+    "config": "configs/rlvr-wildchat.json",
+    "data": "data/dolci-rlvr-wildchat",
+    "judge_backend": "file",
+    "model": "/root/models/Olmo-3-1025-7B",
+    "output_dir": "/root/post-training-demo/outputs/rlvr-wildchat-agent-smoke",
+    "max_steps": 1,
+    "max_completion_length": 2048,
+    "eval_size": 2,
+    "check_only": false
+  },
+  "recipe": {
+    "upstream": {
+      "repo": "https://github.com/allenai/open-instruct",
+      "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+      "files": {
+        "scripts/train/olmo3/7b_think_rl.sh": "63339c58c65ff168838fbbbe684e318e46472d094fa6564919f6764bc3e1f2bc",
+        "open_instruct/math_utils.py": "8d341b58106c7e782197165b04a3e1ee2c3e7c0debc7eeb54478269630223573",
+        "open_instruct/logger_utils.py": "f8d0bb3be3fc51cd98a9be681bdd55a657cef44b5d5dcb3741a789b18bc1106d",
+        "open_instruct/__init__.py": "c4f5a8e0e50e0800f35f712f3f63897b9bd5b7b83197a81860d0bd4142c78b04",
+        "open_instruct/judge_utils.py": "e80c53db0a9d56dc0c0c22dd2bb5cc7fbc7144105f6e5369ea877a1505f06ca6"
+      }
+    },
+    "reference_checkpoint": {
+      "repo_id": "allenai/Olmo-3-7B-Think",
+      "revision": "d97e442d7cc678210054dbcc9b440894d62c89a4"
+    },
+    "official_recipe": {
+      "learning_rate": 1e-06,
+      "lr_scheduler_type": "constant",
+      "beta": 0.0,
+      "num_generations": 8,
+      "temperature": 1.0,
+      "response_length": 32768
+    },
+    "experiment": {
+      "train_size": 1024,
+      "eval_size": 128,
+      "seed": 42,
+      "max_prompt_length": 1024,
+      "max_completion_length": 2048,
+      "num_generations": 4,
+      "gradient_accumulation_steps": 4,
+      "learning_rate": 1e-06,
+      "epochs": 1,
+      "loss_type": "grpo",
+      "beta": 0.0,
+      "init_adapter": "outputs/dpo/final-adapter",
+      "pilot_max_steps": 8,
+      "data": "data/dolci-rlvr-wildchat",
+      "shards": "data/dolci-wildchat-inspection"
+    },
+    "deviations": [
+      "WildChat English only; 1024 train / 128 held-out records from the pinned Dolci release.",
+      "Continue our NF4 QLoRA DPO adapter with TRL GRPO and four sequential rollouts.",
+      "Drop malformed conversations and prompts over 1024 tokens; never truncate prompts.",
+      "Completion budget 2048 tokens after the initial 1024-token probe showed frequent truncation; validate termination and quality reward variation before a longer run.",
+      "Use the pinned Ai2 general-quality judge prompt and normalized 1-to-10 score. Endpoint failures and malformed judgments raise errors, never substitute zero.",
+      "The judge endpoint/model must be configured explicitly; no self-judging or lexical reference-match reward substitution.",
+      "Original GRPO loss instead of exact grpo_fast loss; constant LR 1e-6 and beta zero retained.",
+      "Judge endpoint is configurable instead of Ai2 private hosted endpoint; model choice is pending and will be recorded in run metadata.",
+      "Score only final answers following closed thinking; unfinished answers receive zero, and token-truncated rollouts are masked from loss."
+    ],
+    "reward_type": "general-quality",
+    "data_source_config": "configs/rlvr-wildchat-data.json",
+    "dataset_filter": "hamishivi/new-wildchat-english-general_filtered",
+    "judge": {
+      "base_url_env": "RLVR_JUDGE_BASE_URL",
+      "model_env": "RLVR_JUDGE_MODEL",
+      "api_key_env": "RLVR_JUDGE_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "timeout_seconds": 90,
+      "max_attempts": 3
+    }
+  },
+  "data_manifest": {
+    "source_manifest": {
+      "repo_id": "allenai/Dolci-Think-RL-7B",
+      "repo_type": "dataset",
+      "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+      "files": [
+        {
+          "rfilename": "data/train-00007-of-00009.parquet",
+          "blobId": "ed9aec1baf454d26e34886d2177ad066bad436e2",
+          "size": 53221941,
+          "lfs": {
+            "sha256": "33e1ee5646f283f3bcce6f64bc4aeb1e1461f1fac25b895651d410f39350c290",
+            "size": 53221941,
+            "pointerSize": 133
+          }
+        },
+        {
+          "rfilename": "data/train-00008-of-00009.parquet",
+          "blobId": "75cd0a5e88f88b2237c913a74b9c7cad4e3f28f4",
+          "size": 37077528,
+          "lfs": {
+            "sha256": "c41094a76784c9812512ae1ab4d602456b7fa4c304713233e35aa565897a9364",
+            "size": 37077528,
+            "pointerSize": 133
+          }
+        }
+      ]
+    },
+    "seed": 42,
+    "reward_type": "general-quality",
+    "max_prompt_length": 1024,
+    "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+    "benchmark_cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+    "excluded": {
+      "wrong_reward_type": 867,
+      "overlong_prompt": 97,
+      "duplicate_id_or_conversation": 99,
+      "Empty conversation turn": 17
+    },
+    "sampling": "Seed-shuffled WildChat English; preserve valid conversation turns; drop malformed/overlong cases; no reference-length filtering",
+    "splits": {
+      "train": {
+        "rows": 1024,
+        "sha256": "cfe06dbd22766b43dfc4e13599a3dcd7837b10492d5acbf27626b1575a2f0f3e",
+        "sources": {
+          "hamishivi/new-wildchat-english-general_filtered": 1024
+        }
+      },
+      "eval": {
+        "rows": 128,
+        "sha256": "e46821b0516c6b0e43d042aaa6150ec1e2680c9434b9442a9ae94c9403a75b0a",
+        "sources": {
+          "hamishivi/new-wildchat-english-general_filtered": 128
+        }
+      }
+    }
+  },
+  "base_manifest": {
+    "repo_id": "allenai/Olmo-3-1025-7B",
+    "revision": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+    "files": [
+      {
+        "rfilename": "README.md",
+        "blobId": "15fe2e8b8b0fbf49416d3943ca6cf0174d0f2c07",
+        "size": 12222
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "5e1778fbc278e8f47217ba485e9a075689207f0f",
+        "size": 1620
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "33b71a9c3ddf78cfa1c6721826775ae02d06d64d",
+        "size": 69
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "354558edcdbd64ca7abd407b8be3d5d09d39d781",
+        "size": 916646
+      },
+      {
+        "rfilename": "model-00001-of-00003.safetensors",
+        "blobId": "a04aa765e30d6c14c059c0d511ffc68bd807c8a0",
+        "size": 4969984976,
+        "lfs": {
+          "sha256": "0490d6668e613a29b23367e3a7aa9cc6aced3d162694445bb969ed7622b3c4e2",
+          "size": 4969984976,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00002-of-00003.safetensors",
+        "blobId": "f17156e68ed4a2366ec7decc8b5394c251b1d6f0",
+        "size": 4981161496,
+        "lfs": {
+          "sha256": "e127ea479fb6e208fe9d48d23b11212b5722f4873f6eef9c009b7a855866c641",
+          "size": 4981161496,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00003-of-00003.safetensors",
+        "blobId": "4254e20e90dbc3154b93a8098bf0a2530dc62cfa",
+        "size": 4644917240,
+        "lfs": {
+          "sha256": "f3ddff10052ffe5de5c6b4cad45c422c0d898acc6beb21b1b8531244adfb3c70",
+          "size": 4644917240,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model.safetensors.index.json",
+        "blobId": "421a80b181a130ccbc579a328fb349d8792a32ce",
+        "size": 29630
+      },
+      {
+        "rfilename": "special_tokens_map.json",
+        "blobId": "48f174b441a37b588e40d794c437adad1624a311",
+        "size": 207
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "5fe172127988c3709a49d8d2ce20e11bb266cd57",
+        "size": 7137177
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "5599723dac37d9f0b7e496de66d15e0a762babe9",
+        "size": 4308
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "51135344eec01a62fc4deaca39c72ac08f5b9709",
+        "size": 1611056
+      }
+    ]
+  },
+  "parent_adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "judge": {
+    "backend": "file",
+    "judge": "Codex interactive session",
+    "rubric": "Ai2 general-quality",
+    "queue": "/root/post-training-demo/outputs/rlvr-wildchat-agent-smoke/judge-queue",
+    "timeout_seconds": 900,
+    "limitation": "Requires an active interactive agent; exact model version is not pinned"
+  },
+  "source_hashes": {
+    "rlvr/train.py": "12cdbf6bc89861e43a8b961a27d1ee39bcd81cd77a4f96dabb4e0fd510d75329",
+    "rlvr/data.py": "748e8e49560e2f121c07049ed249f5b79c88d8c70915150d5ce328a5c9688d5d",
+    "rlvr/rewards.py": "d0e2183c0070414d8314de0b287d67b0356776a3ae0b9a37ec13e321975d1c60",
+    "rlvr/quality.py": "be60973d5987720641bdd919bd27ea6c33dc09d2a2978738c6f06209a814069b",
+    "rlvr/file_judge.py": "3f423b551da90e3872825027b93d0895d641d0a63ba60e4cd280a23af47ef4e5"
+  },
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "trl": "1.17.1",
+    "bitsandbytes": "0.50.2"
+  }
+}

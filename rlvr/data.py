@@ -1,13 +1,13 @@
-"""Integrity checks for the pinned Dolci math pilot."""
+"""Integrity checks for the pinned Dolci experiments."""
 import json
 from pathlib import Path
 from dpo.data import sha256
 
 
-def load_splits(directory):
+def load_splits(directory, source_config="configs/rlvr-data.json"):
     directory = Path(directory)
     manifest = json.loads((directory / 'manifest.json').read_text())
-    if manifest['source_manifest'] != json.loads(Path('configs/rlvr-data.json').read_text()):
+    if manifest['source_manifest'] != json.loads(Path(source_config).read_text()):
         raise ValueError('RLVR dataset differs from pinned source')
     seen_ids, seen_prompts, splits = set(), set(), {}
     for split in ('train', 'eval'):

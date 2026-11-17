@@ -1,0 +1,18 @@
+{
+  "train_records": 1024,
+  "held_out_records": 128,
+  "optimizer_steps": 4,
+  "training_rollouts": 16,
+  "token_limit_hits": 2,
+  "judged_final_answers": 13,
+  "unscored_nontruncated": 1,
+  "max_observed_combined_tokens": 3579,
+  "peak_allocated_gib": 10.064231395721436,
+  "parent_unchanged": true,
+  "final_adapter_verified": true,
+  "teacher_bindings_verified": true,
+  "finite_nonzero_gradient_updates": 4,
+  "training_runtime_seconds": 1414.8619,
+  "total_runtime_seconds": 1609.431642900221,
+  "quality_gain_demonstrated": false
+}

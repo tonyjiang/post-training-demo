@@ -1,0 +1,15 @@
+{
+  "kind": "generation-only; no reward or training",
+  "examples": 4,
+  "truncated": 3,
+  "closed_thinking": 2,
+  "tokens": [
+    1024,
+    1024,
+    1024,
+    817
+  ],
+  "runtime_seconds": 115.2605084599927,
+  "peak_allocated_gib": 5.6729254722595215,
+  "parent_unchanged": true
+}

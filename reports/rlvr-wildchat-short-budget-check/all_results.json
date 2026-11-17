@@ -1,0 +1,39 @@
+{
+  "kind": "generation-only; no reward or training",
+  "examples": 4,
+  "truncated": 1,
+  "closed_thinking": 2,
+  "tokens": [
+    2019,
+    2019,
+    2048,
+    2534
+  ],
+  "by_budget": {
+    "2048": {
+      "examples": 2,
+      "truncated": 1,
+      "closed_thinking": 1
+    },
+    "3072": {
+      "examples": 2,
+      "truncated": 0,
+      "closed_thinking": 1
+    }
+  },
+  "paired_prefix_checks": [
+    {
+      "id": "new-wildchat-english-general_filtered-request-16-11",
+      "seed": 2384971983,
+      "prefix_matches": true
+    },
+    {
+      "id": "new-wildchat-english-general_filtered-request-147-82",
+      "seed": 3502340613,
+      "prefix_matches": true
+    }
+  ],
+  "runtime_seconds": 254.55928842071444,
+  "peak_allocated_gib": 6.068711280822754,
+  "parent_unchanged": true
+}

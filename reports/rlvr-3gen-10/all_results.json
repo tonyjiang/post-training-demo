@@ -1,0 +1,33 @@
+{
+  "train_runtime": 2008.982,
+  "train_samples_per_second": 0.015,
+  "train_steps_per_second": 0.005,
+  "train_loss": -0.07576877474784852,
+  "epoch": 0.0302734375,
+  "before": {
+    "examples": 4,
+    "mean_reward": 0.175,
+    "truncated": 3
+  },
+  "after": {
+    "examples": 4,
+    "mean_reward": 0.225,
+    "truncated": 2
+  },
+  "groups": 10,
+  "mixed_reward_groups": 10,
+  "reward_sum": 9.3,
+  "rollouts": 30,
+  "truncated_rollouts": 3,
+  "optimizer_steps": 31,
+  "evaluation_baseline_checkpoint": "/root/post-training-demo/outputs/rlvr-full-resumed/checkpoint-21",
+  "resumed_step": 21,
+  "new_optimizer_steps": 10,
+  "rollout_statistics_scope": "current run only; resumed updates excluded",
+  "policy_changed": true,
+  "stopped_for_no_learning_signal": false,
+  "parent_unchanged": true,
+  "final_adapter_sha256": "1daca977cf1c9143ba3855cda7f6e6caba090d256bb6535a89aeb3debce9b13b",
+  "process_runtime_seconds": 2795.36778618861,
+  "peak_allocated_gib": 10.87652587890625
+}

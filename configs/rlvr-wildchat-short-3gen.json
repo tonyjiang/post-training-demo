@@ -1,0 +1,71 @@
+{
+  "upstream": {
+    "repo": "https://github.com/allenai/open-instruct",
+    "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+    "files": {
+      "scripts/train/olmo3/7b_think_rl.sh": "63339c58c65ff168838fbbbe684e318e46472d094fa6564919f6764bc3e1f2bc",
+      "open_instruct/math_utils.py": "8d341b58106c7e782197165b04a3e1ee2c3e7c0debc7eeb54478269630223573",
+      "open_instruct/logger_utils.py": "f8d0bb3be3fc51cd98a9be681bdd55a657cef44b5d5dcb3741a789b18bc1106d",
+      "open_instruct/__init__.py": "c4f5a8e0e50e0800f35f712f3f63897b9bd5b7b83197a81860d0bd4142c78b04",
+      "open_instruct/judge_utils.py": "e80c53db0a9d56dc0c0c22dd2bb5cc7fbc7144105f6e5369ea877a1505f06ca6"
+    }
+  },
+  "reference_checkpoint": {
+    "repo_id": "allenai/Olmo-3-7B-Think",
+    "revision": "d97e442d7cc678210054dbcc9b440894d62c89a4"
+  },
+  "official_recipe": {
+    "learning_rate": 1e-06,
+    "lr_scheduler_type": "constant",
+    "beta": 0.0,
+    "num_generations": 8,
+    "temperature": 1.0,
+    "response_length": 32768
+  },
+  "experiment": {
+    "train_size": 1024,
+    "eval_size": 128,
+    "seed": 42,
+    "max_prompt_length": 512,
+    "max_completion_length": 3072,
+    "num_generations": 3,
+    "gradient_accumulation_steps": 3,
+    "learning_rate": 1e-06,
+    "epochs": 1,
+    "loss_type": "grpo",
+    "beta": 0.0,
+    "init_adapter": "outputs/dpo/final-adapter",
+    "pilot_max_steps": 10,
+    "data": "data/dolci-rlvr-wildchat-short",
+    "shards": "data/dolci-wildchat-inspection",
+    "max_reference_tokens": 768,
+    "max_requested_words": 600
+  },
+  "deviations": [
+    "WildChat English only; 1024 train / 128 held-out records from the pinned Dolci release.",
+    "Continue our NF4 QLoRA DPO adapter with TRL GRPO and three sequential rollouts.",
+    "Drop malformed conversations and prompts over 512 tokens; never truncate prompts.",
+    "Completion budget 3072 tokens with at most 512 prompt tokens (3584 combined); preserve the short-output dataset.",
+    "Use the pinned Ai2 general-quality judge prompt and normalized 1-to-10 score. Endpoint failures and malformed judgments raise errors, never substitute zero.",
+    "In API mode the judge endpoint/model must be configured explicitly; no self-judging or lexical reference-match reward substitution.",
+    "Original GRPO loss instead of exact grpo_fast loss; constant LR 1e-6 and beta zero retained.",
+    "Judge endpoint is configurable instead of Ai2 private hosted endpoint; model choice is pending and will be recorded in run metadata.",
+    "Score only final answers following closed thinking; unfinished answers receive zero, and token-truncated rollouts are masked from loss.",
+    "The earlier 3072-token feasibility and short-output pilot established memory fit; generation-only probes are separate from backpropagation memory measurements.",
+    "Short-output resample from the same pinned WildChat source: drop prompts over 512 tokens, user numeric word-count mentions over 600, and references over 768 tokens. These are conservative budget proxies, not guarantees of short model reasoning. Original data and interrupted/pilot runs are preserved.",
+    "User-approved three-generation continuation from checkpoint-21, with accumulation 3 to retain one prompt per optimizer update. Run ten additional updates (global target 31), preserve optimizer state and committed prompt position; this is a recipe change, not an identical replay.",
+    "Full continuation excludes token-truncated rewards from GRPO group normalization using None and masks their tokens from loss. Groups with fewer than two non-truncated completions receive equal zero training rewards, producing no relative learning signal; actual judgments remain in diagnostic logs."
+  ],
+  "reward_type": "general-quality",
+  "data_source_config": "configs/rlvr-wildchat-data.json",
+  "dataset_filter": "hamishivi/new-wildchat-english-general_filtered",
+  "judge": {
+    "base_url_env": "RLVR_JUDGE_BASE_URL",
+    "model_env": "RLVR_JUDGE_MODEL",
+    "api_key_env": "RLVR_JUDGE_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "timeout_seconds": 90,
+    "max_attempts": 3
+  }
+}

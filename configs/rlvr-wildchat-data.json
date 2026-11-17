@@ -1,0 +1,27 @@
+{
+  "repo_id": "allenai/Dolci-Think-RL-7B",
+  "repo_type": "dataset",
+  "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+  "files": [
+    {
+      "rfilename": "data/train-00007-of-00009.parquet",
+      "blobId": "ed9aec1baf454d26e34886d2177ad066bad436e2",
+      "size": 53221941,
+      "lfs": {
+        "sha256": "33e1ee5646f283f3bcce6f64bc4aeb1e1461f1fac25b895651d410f39350c290",
+        "size": 53221941,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "data/train-00008-of-00009.parquet",
+      "blobId": "75cd0a5e88f88b2237c913a74b9c7cad4e3f28f4",
+      "size": 37077528,
+      "lfs": {
+        "sha256": "c41094a76784c9812512ae1ab4d602456b7fa4c304713233e35aa565897a9364",
+        "size": 37077528,
+        "pointerSize": 133
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "generation-only; no reward or training",
+  "examples": 4,
+  "truncated": 2,
+  "closed_thinking": 2,
+  "tokens": [
+    3072,
+    3072,
+    2380,
+    2365
+  ],
+  "by_budget": {
+    "3072": {
+      "examples": 4,
+      "truncated": 2,
+      "closed_thinking": 2
+    }
+  },
+  "by_condition": {
+    "original": {
+      "examples": 2,
+      "truncated": 1,
+      "closed_thinking": 1
+    },
+    "brief": {
+      "examples": 2,
+      "truncated": 1,
+      "closed_thinking": 1
+    }
+  },
+  "paired_prefix_checks": [],
+  "runtime_seconds": 314.39178109448403,
+  "peak_allocated_gib": 6.457949638366699,
+  "parent_unchanged": true
+}

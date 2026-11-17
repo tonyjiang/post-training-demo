@@ -1,0 +1,89 @@
+{
+  "utc": "2026-11-02T04:04:53.535560+00:00",
+  "status": "completed; stopped after ten additional updates for review",
+  "global_step": 31,
+  "new_updates": 10,
+  "rollouts_per_prompt": 3,
+  "new_rollouts": 30,
+  "token_cutoffs": 3,
+  "missing_final_answers": 1,
+  "nonzero_finite_gradient_updates": 10,
+  "mean_step_seconds": 200.53529796963556,
+  "recent_four_generation_mean_seconds": 234.43725280533545,
+  "observed_time_reduction_percent": 14.460993050387906,
+  "timing_caveat": "Different prompts and completion lengths; includes interactive judging; not a controlled same-prompt 4-versus-3 benchmark.",
+  "training_runtime_seconds": 2008.982,
+  "total_runtime_seconds": 2795.36778618861,
+  "remaining_full_epoch_updates": 993,
+  "projected_remaining_active_hours": 55.314319689957806,
+  "peak_allocated_gib": 10.87652587890625,
+  "before": {
+    "examples": 4,
+    "mean_reward": 0.175,
+    "truncated": 3
+  },
+  "after": {
+    "examples": 4,
+    "mean_reward": 0.225,
+    "truncated": 2
+  },
+  "paired_cases": [
+    {
+      "id": "new-wildchat-english-general_filtered-request-84-86",
+      "prompt_preview": "Assume you are holding a business meeting with five people, each from a different continent (North America, South Americ",
+      "before_reward": 0.0,
+      "after_reward": 0.4,
+      "before_tokens": 3072,
+      "after_tokens": 2668,
+      "before_cutoff": true,
+      "after_cutoff": false
+    },
+    {
+      "id": "new-wildchat-english-general_filtered-request-96-50",
+      "prompt_preview": "Naruto all Characters react to Lilac: \u201cYeah um in fact we were talking a bit about his world for a second. Speaking of i",
+      "before_reward": 0.0,
+      "after_reward": 0.0,
+      "before_tokens": 3072,
+      "after_tokens": 3072,
+      "before_cutoff": true,
+      "after_cutoff": true
+    },
+    {
+      "id": "new-wildchat-english-general_filtered-request-100-52",
+      "prompt_preview": "(In the school literature clubroom...)\n\nMonika: \"Natsuki, there you are! Jeez, we were so worried! What took you so long",
+      "before_reward": 0.7,
+      "after_reward": 0.5,
+      "before_tokens": 840,
+      "after_tokens": 1450,
+      "before_cutoff": false,
+      "after_cutoff": false
+    },
+    {
+      "id": "new-wildchat-english-general_filtered-request-194-5",
+      "prompt_preview": "Write a bullet list of loot and equipment (including name, description, effects, level and rarity) for a diaper-centric ",
+      "before_reward": 0.0,
+      "after_reward": 0.0,
+      "before_tokens": 3072,
+      "after_tokens": 3072,
+      "before_cutoff": true,
+      "after_cutoff": true
+    }
+  ],
+  "quality_conclusion": "Completion coverage improved on four cases, but the previously completed answer degraded (7/10 to 5/10); no reliable general quality gain is established.",
+  "verified_judgment_bindings": 29,
+  "optimizer_step": 31,
+  "prompt_order_verified": true,
+  "starting_checkpoint_unchanged": true,
+  "dpo_parent_unchanged": true,
+  "final_matches_checkpoint": true,
+  "final_adapter_sha256": "1daca977cf1c9143ba3855cda7f6e6caba090d256bb6535a89aeb3debce9b13b",
+  "checkpoint_files": {
+    "adapter_model.safetensors": "1daca977cf1c9143ba3855cda7f6e6caba090d256bb6535a89aeb3debce9b13b",
+    "adapter_config.json": "00718510197211524a3eb49c08b80536065231bea77d986added064bf82f2688",
+    "optimizer.pt": "be2cf58d9bcf29ad29e71993fc44ec5305e931c995a86874e2cc063b631bd693",
+    "scheduler.pt": "5f39226461f9510954791de2d316cc65e6d417f26551119fd5f2439a4e9e0483",
+    "rng_state.pth": "24ad5a8c027547452a86fad3c50b67bf5d784602a3cb933938a7238967e9740c",
+    "trainer_state.json": "2b68b9f63f7e32258eb407d65d759b12c280cf0ec351191724baceaba14a977f"
+  },
+  "resume_command": "bash scripts/start_rlvr.sh rlvr-3gen-full --config configs/rlvr-wildchat-short-3gen.json --judge-backend file --max-steps -1 --eval-size 4 --save-steps 1 --judge-timeout-seconds 3600 --resume-from-checkpoint outputs/rlvr-3gen-10/checkpoint-31"
+}

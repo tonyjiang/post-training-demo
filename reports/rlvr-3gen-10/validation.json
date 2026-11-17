@@ -1,0 +1,19 @@
+{
+  "tests": 39,
+  "result": "passed",
+  "command": "uv run --locked --group rlvr python -m unittest discover -s tests -t . -q",
+  "checks": [
+    "four-to-three CPU checkpoint continuation",
+    "policy restored before baseline evaluation",
+    "optimizer state restored at saved step",
+    "same logical prompt permutation and next unused prompt",
+    "explicit generation-count change and committed-history guards"
+  ],
+  "start_checkpoint": "outputs/rlvr-full-resumed/checkpoint-21",
+  "target_global_step": 31,
+  "new_updates": 10,
+  "rollouts_per_prompt": 3,
+  "gradient_accumulation_steps": 3,
+  "heldout_examples_before_and_after": 4,
+  "baseline_fix": "Prior resumed-run before evaluations used the DPO parent; this run loads the resume adapter before evaluation and uses BF16 autocast on both passes."
+}

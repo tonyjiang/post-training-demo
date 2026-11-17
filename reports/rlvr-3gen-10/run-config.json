@@ -1,0 +1,300 @@
+{
+  "arguments": {
+    "config": "configs/rlvr-wildchat-short-3gen.json",
+    "data": "data/dolci-rlvr-wildchat-short",
+    "judge_backend": "file",
+    "judge_timeout_seconds": 3600,
+    "save_steps": 1,
+    "resume_from_checkpoint": "outputs/rlvr-full-resumed/checkpoint-21",
+    "allow_generation_count_change": true,
+    "model": "/root/models/Olmo-3-1025-7B",
+    "output_dir": "/root/post-training-demo/outputs/rlvr-3gen-10",
+    "max_steps": 31,
+    "max_completion_length": 3072,
+    "eval_size": 4,
+    "check_only": false
+  },
+  "recipe": {
+    "upstream": {
+      "repo": "https://github.com/allenai/open-instruct",
+      "revision": "5db7f11bf7f34596ba9af4cfe5ade1e2dbff8cce",
+      "files": {
+        "scripts/train/olmo3/7b_think_rl.sh": "63339c58c65ff168838fbbbe684e318e46472d094fa6564919f6764bc3e1f2bc",
+        "open_instruct/math_utils.py": "8d341b58106c7e782197165b04a3e1ee2c3e7c0debc7eeb54478269630223573",
+        "open_instruct/logger_utils.py": "f8d0bb3be3fc51cd98a9be681bdd55a657cef44b5d5dcb3741a789b18bc1106d",
+        "open_instruct/__init__.py": "c4f5a8e0e50e0800f35f712f3f63897b9bd5b7b83197a81860d0bd4142c78b04",
+        "open_instruct/judge_utils.py": "e80c53db0a9d56dc0c0c22dd2bb5cc7fbc7144105f6e5369ea877a1505f06ca6"
+      }
+    },
+    "reference_checkpoint": {
+      "repo_id": "allenai/Olmo-3-7B-Think",
+      "revision": "d97e442d7cc678210054dbcc9b440894d62c89a4"
+    },
+    "official_recipe": {
+      "learning_rate": 1e-06,
+      "lr_scheduler_type": "constant",
+      "beta": 0.0,
+      "num_generations": 8,
+      "temperature": 1.0,
+      "response_length": 32768
+    },
+    "experiment": {
+      "train_size": 1024,
+      "eval_size": 128,
+      "seed": 42,
+      "max_prompt_length": 512,
+      "max_completion_length": 3072,
+      "num_generations": 3,
+      "gradient_accumulation_steps": 3,
+      "learning_rate": 1e-06,
+      "epochs": 1,
+      "loss_type": "grpo",
+      "beta": 0.0,
+      "init_adapter": "outputs/dpo/final-adapter",
+      "pilot_max_steps": 10,
+      "data": "data/dolci-rlvr-wildchat-short",
+      "shards": "data/dolci-wildchat-inspection",
+      "max_reference_tokens": 768,
+      "max_requested_words": 600
+    },
+    "deviations": [
+      "WildChat English only; 1024 train / 128 held-out records from the pinned Dolci release.",
+      "Continue our NF4 QLoRA DPO adapter with TRL GRPO and three sequential rollouts.",
+      "Drop malformed conversations and prompts over 512 tokens; never truncate prompts.",
+      "Completion budget 3072 tokens with at most 512 prompt tokens (3584 combined); preserve the short-output dataset.",
+      "Use the pinned Ai2 general-quality judge prompt and normalized 1-to-10 score. Endpoint failures and malformed judgments raise errors, never substitute zero.",
+      "In API mode the judge endpoint/model must be configured explicitly; no self-judging or lexical reference-match reward substitution.",
+      "Original GRPO loss instead of exact grpo_fast loss; constant LR 1e-6 and beta zero retained.",
+      "Judge endpoint is configurable instead of Ai2 private hosted endpoint; model choice is pending and will be recorded in run metadata.",
+      "Score only final answers following closed thinking; unfinished answers receive zero, and token-truncated rollouts are masked from loss.",
+      "The earlier 3072-token feasibility and short-output pilot established memory fit; generation-only probes are separate from backpropagation memory measurements.",
+      "Short-output resample from the same pinned WildChat source: drop prompts over 512 tokens, user numeric word-count mentions over 600, and references over 768 tokens. These are conservative budget proxies, not guarantees of short model reasoning. Original data and interrupted/pilot runs are preserved.",
+      "User-approved three-generation continuation from checkpoint-21, with accumulation 3 to retain one prompt per optimizer update. Run ten additional updates (global target 31), preserve optimizer state and committed prompt position; this is a recipe change, not an identical replay."
+    ],
+    "reward_type": "general-quality",
+    "data_source_config": "configs/rlvr-wildchat-data.json",
+    "dataset_filter": "hamishivi/new-wildchat-english-general_filtered",
+    "judge": {
+      "base_url_env": "RLVR_JUDGE_BASE_URL",
+      "model_env": "RLVR_JUDGE_MODEL",
+      "api_key_env": "RLVR_JUDGE_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 512,
+      "timeout_seconds": 90,
+      "max_attempts": 3
+    }
+  },
+  "data_manifest": {
+    "source_manifest": {
+      "repo_id": "allenai/Dolci-Think-RL-7B",
+      "repo_type": "dataset",
+      "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+      "files": [
+        {
+          "rfilename": "data/train-00007-of-00009.parquet",
+          "blobId": "ed9aec1baf454d26e34886d2177ad066bad436e2",
+          "size": 53221941,
+          "lfs": {
+            "sha256": "33e1ee5646f283f3bcce6f64bc4aeb1e1461f1fac25b895651d410f39350c290",
+            "size": 53221941,
+            "pointerSize": 133
+          }
+        },
+        {
+          "rfilename": "data/train-00008-of-00009.parquet",
+          "blobId": "75cd0a5e88f88b2237c913a74b9c7cad4e3f28f4",
+          "size": 37077528,
+          "lfs": {
+            "sha256": "c41094a76784c9812512ae1ab4d602456b7fa4c304713233e35aa565897a9364",
+            "size": 37077528,
+            "pointerSize": 133
+          }
+        }
+      ]
+    },
+    "seed": 42,
+    "reward_type": "general-quality",
+    "max_prompt_length": 512,
+    "length_filters": {
+      "max_requested_words": 600,
+      "max_reference_tokens": 768
+    },
+    "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+    "benchmark_cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+    "excluded": {
+      "overlong_prompt": 1438,
+      "wrong_reward_type": 1905,
+      "overlong_requested_word_count": 35,
+      "overlong_reference": 178,
+      "duplicate_id_or_conversation": 238,
+      "Empty conversation turn": 35
+    },
+    "sampling": "Seed-shuffled WildChat English; valid conversations; drop overlong prompts and apply numeric requested-word and reference-token filters recorded in length_filters",
+    "splits": {
+      "train": {
+        "rows": 1024,
+        "sha256": "f13724ea78b187d5b011969193db0b5a5a4f9b1d73ee52f0b6ed3ce5b75ba352",
+        "sources": {
+          "hamishivi/new-wildchat-english-general_filtered": 1024
+        }
+      },
+      "eval": {
+        "rows": 128,
+        "sha256": "2ab721f0d9dff24a88930fdad3f462d4180d412a70f477391a391bf954d45101",
+        "sources": {
+          "hamishivi/new-wildchat-english-general_filtered": 128
+        }
+      }
+    }
+  },
+  "base_manifest": {
+    "repo_id": "allenai/Olmo-3-1025-7B",
+    "revision": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+    "files": [
+      {
+        "rfilename": "README.md",
+        "blobId": "15fe2e8b8b0fbf49416d3943ca6cf0174d0f2c07",
+        "size": 12222
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "5e1778fbc278e8f47217ba485e9a075689207f0f",
+        "size": 1620
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "33b71a9c3ddf78cfa1c6721826775ae02d06d64d",
+        "size": 69
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "354558edcdbd64ca7abd407b8be3d5d09d39d781",
+        "size": 916646
+      },
+      {
+        "rfilename": "model-00001-of-00003.safetensors",
+        "blobId": "a04aa765e30d6c14c059c0d511ffc68bd807c8a0",
+        "size": 4969984976,
+        "lfs": {
+          "sha256": "0490d6668e613a29b23367e3a7aa9cc6aced3d162694445bb969ed7622b3c4e2",
+          "size": 4969984976,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00002-of-00003.safetensors",
+        "blobId": "f17156e68ed4a2366ec7decc8b5394c251b1d6f0",
+        "size": 4981161496,
+        "lfs": {
+          "sha256": "e127ea479fb6e208fe9d48d23b11212b5722f4873f6eef9c009b7a855866c641",
+          "size": 4981161496,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model-00003-of-00003.safetensors",
+        "blobId": "4254e20e90dbc3154b93a8098bf0a2530dc62cfa",
+        "size": 4644917240,
+        "lfs": {
+          "sha256": "f3ddff10052ffe5de5c6b4cad45c422c0d898acc6beb21b1b8531244adfb3c70",
+          "size": 4644917240,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "model.safetensors.index.json",
+        "blobId": "421a80b181a130ccbc579a328fb349d8792a32ce",
+        "size": 29630
+      },
+      {
+        "rfilename": "special_tokens_map.json",
+        "blobId": "48f174b441a37b588e40d794c437adad1624a311",
+        "size": 207
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "5fe172127988c3709a49d8d2ce20e11bb266cd57",
+        "size": 7137177
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "5599723dac37d9f0b7e496de66d15e0a762babe9",
+        "size": 4308
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "51135344eec01a62fc4deaca39c72ac08f5b9709",
+        "size": 1611056
+      }
+    ]
+  },
+  "parent_adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+  "resume_checkpoint": {
+    "path": "/root/post-training-demo/outputs/rlvr-full-resumed/checkpoint-21",
+    "step": 21,
+    "files": {
+      "adapter_model.safetensors": "58627e252c153c22271ebf8869393e3491882712bebbbb9c1d4964ae8a3efac0",
+      "adapter_config.json": "dd25c0f4b2888f4adc7e86212216ab9dadfb4405304f2a838a26c526489dddf8",
+      "trainer_state.json": "0341df12e928761f3dd1e457da368d43c6d83128310dfe0a83088a1b59aebfe2",
+      "optimizer.pt": "f92675a84149800402644f8f072906f5ae6c97c813c36145d255138f008aa3b9",
+      "scheduler.pt": "44a5bf6ebf1cfb047938fad01b5bea507626f4fc08686b7d8d03ef053c5f78bc",
+      "rng_state.pth": "4fc0a6f0e5e1187da1bf4af9fd2cb1b9eeb9436ff8ea082519748ef3b0a3fecc"
+    },
+    "prior_completion_length": 3072,
+    "generation_count_change": {
+      "from": 4,
+      "to": 3,
+      "prompt_position": 21,
+      "note": "Explicit recipe change; optimizer state retained, sampling trajectory changes"
+    },
+    "consumed_prompt_ids": [
+      "new-wildchat-english-general_filtered-request-125-70",
+      "new-wildchat-english-general_filtered-request-16-11",
+      "new-wildchat-english-general_filtered-request-168-55",
+      "new-wildchat-english-general_filtered-request-147-82",
+      "new-wildchat-english-general_filtered-request-23-67",
+      "new-wildchat-english-general_filtered-request-151-75",
+      "new-wildchat-english-general_filtered-request-64-64",
+      "new-wildchat-english-general_filtered-request-155-64",
+      "new-wildchat-english-general_filtered-request-47-15",
+      "new-wildchat-english-general_filtered-request-125-89",
+      "new-wildchat-english-general_filtered-request-18-49",
+      "new-wildchat-english-general_filtered-request-150-47",
+      "new-wildchat-english-general_filtered-request-100-78",
+      "new-wildchat-english-general_filtered-request-103-81",
+      "new-wildchat-english-general_filtered-request-162-78",
+      "new-wildchat-english-general_filtered-request-84-94",
+      "new-wildchat-english-general_filtered-request-140-90",
+      "new-wildchat-english-general_filtered-request-76-68",
+      "new-wildchat-english-general_filtered-request-167-76",
+      "new-wildchat-english-general_filtered-request-58-93",
+      "new-wildchat-english-general_filtered-request-96-96"
+    ]
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "judge": {
+    "backend": "file",
+    "judge": "Codex interactive session",
+    "rubric": "Ai2 general-quality",
+    "queue": "/root/post-training-demo/outputs/rlvr-3gen-10/judge-queue",
+    "timeout_seconds": 3600,
+    "batch_requests": true,
+    "limitation": "Requires an active interactive agent; exact model version is not pinned"
+  },
+  "source_hashes": {
+    "rlvr/train.py": "f4b10a0147cf12b484444638d801c49835b0eee1cb1f04a385870c1b68cfc9a5",
+    "rlvr/data.py": "748e8e49560e2f121c07049ed249f5b79c88d8c70915150d5ce328a5c9688d5d",
+    "rlvr/rewards.py": "d0e2183c0070414d8314de0b287d67b0356776a3ae0b9a37ec13e321975d1c60",
+    "rlvr/quality.py": "be60973d5987720641bdd919bd27ea6c33dc09d2a2978738c6f06209a814069b",
+    "rlvr/file_judge.py": "3ef2e5e527ee2f3cdd74e5973d0327100ca1e8371fb52134285c05874bb80956",
+    "rlvr/resume.py": "47237ba18d8c099aed2ab8d532168ac63d0100ae819eea1547f8ea3ae2f8d15e",
+    "rlvr/reward_batch.py": "2dab0cce5728ad0e6b9aa5a2b875a1b46ae2c6cd122a172c266d7278bbb4bac5"
+  },
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "trl": "1.17.1",
+    "bitsandbytes": "0.50.2"
+  }
+}

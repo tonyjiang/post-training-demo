@@ -1,0 +1,106 @@
+{
+  "dataset": "allenai/Dolci-Think-RL-7B",
+  "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+  "source": "hamishivi/new-wildchat-english-general_filtered",
+  "seed": 20261101,
+  "sampling": "Uniform random sample of 3 from all 6421 WildChat English records; no length filtering",
+  "token_counts": "Olmo tokenizer; raw text without added chat-template overhead; released outputs are not our model generations",
+  "source_manifest": {
+    "repo_id": "allenai/Dolci-Think-RL-7B",
+    "repo_type": "dataset",
+    "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+    "files": [
+      {
+        "rfilename": "data/train-00007-of-00009.parquet",
+        "blobId": "ed9aec1baf454d26e34886d2177ad066bad436e2",
+        "size": 53221941,
+        "lfs": {
+          "sha256": "33e1ee5646f283f3bcce6f64bc4aeb1e1461f1fac25b895651d410f39350c290",
+          "size": 53221941,
+          "pointerSize": 133
+        }
+      },
+      {
+        "rfilename": "data/train-00008-of-00009.parquet",
+        "blobId": "75cd0a5e88f88b2237c913a74b9c7cad4e3f28f4",
+        "size": 37077528,
+        "lfs": {
+          "sha256": "c41094a76784c9812512ae1ab4d602456b7fa4c304713233e35aa565897a9364",
+          "size": 37077528,
+          "pointerSize": 133
+        }
+      }
+    ]
+  },
+  "samples": [
+    {
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "prompt": "user: \nassistant: As an AI language model, I do not have personal preferences or opinions as I am programmed to provide informational responses based on factual data and analysis. However, if you have any questions or inquiries regarding a particular topic, I am ready to assist you to the best of my ability.\nuser: compared to traditional way UHPLC-Q-TOF/MS and DIAAA derivatization method and your advice, we summarize 3 main advantages of DIAAA derivatization was supplemented in Page 4, Line 43, \n\nwhich was more CCCs be detected, reduction in detection limits, and the ability to analyze compounds with large polar differences at once.\n",
+      "ground_truth": [
+        "That is correct. In summary, the advantages of using DIAAA derivatization method over traditional UHPLC-Q-TOF/MS include the ability to detect more CCCs, a reduction in detection limits, and the ability to analyze compounds with large polar differences at once. These advantages make the DIAAA derivatization method a more efficient and effective way to analyze complex samples with high sensitivity and accuracy."
+      ],
+      "outputs": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-63-73",
+      "dataset": [
+        "general-quality"
+      ],
+      "id": null,
+      "constraint": null,
+      "constraint_type": null,
+      "wildchat_row_index": 6032,
+      "lengths": {
+        "prompt_tokens": 140,
+        "released_output_tokens": [],
+        "reference_answer_tokens": [
+          85
+        ]
+      }
+    },
+    {
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "prompt": "user: one student provide me reference for drch course fees from different institution but my fees for the same course is different. draft me a message to notify about different fees.",
+      "ground_truth": [
+        "Certainly! Here's a draft message you can use:\n\n---\n\nSubject: Clarification on DRCH Course Fees\n\nDear [Student's Name],\n\nI hope this message finds you well. I wanted to express my gratitude for providing the references regarding the DRCH course fees from different institutions. \n\nUpon reviewing the information, I noticed that our institution’s fees for the DRCH course differ from those mentioned in the references you provided. This variation could be due to several factors, including curriculum differences, additional benefits, or institutional policies.\n\nIf you have any questions or need further clarification regarding our course fees, please feel free to reach out. I'm here to help ensure you have all the information you need.\n\nThank you once again for your attention and diligence.\n\nBest regards,\n\n[Your Name]  \n[Your Position]  \n[Institution's Name]  \n[Contact Information]  \n\n--- \n\nFeel free to adjust the message as necessary to fit your specific situation."
+      ],
+      "outputs": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-19-43",
+      "dataset": [
+        "general-quality"
+      ],
+      "id": null,
+      "constraint": null,
+      "constraint_type": null,
+      "wildchat_row_index": 745,
+      "lengths": {
+        "prompt_tokens": 35,
+        "released_output_tokens": [],
+        "reference_answer_tokens": [
+          190
+        ]
+      }
+    },
+    {
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "prompt": "user: Write a fictional Disney Channel EMEA blog post for January 2024, where Big City Greens loses 3 slots to some older Disney Channel cartoons Miraculous loses 1 slot to The Owl House",
+      "ground_truth": [
+        "**Disney Channel EMEA Blog Post - January 2024: Schedule Shake-Up with Retro Returns!**\n\nHello Disney Dynamos, \n\nHappy New Year! We're kicking off January 2024 with a magical mix-up in our programming that will certainly put a spring in your step and a sparkle in your eye. While we've seen some sensational shenanigans with the Greens in Big City Greens and witnessed the heroic deeds of Ladybug and Cat Noir in Miraculous, it's time to clear the stage as we bring back some of your beloved classics along with the ongoing enchanting episodes of The Owl House!\n\n**What's Changing on Disney Channel EMEA?**\n\n*Big City Greens* - We're all about balance here at Disney Channel, and as much as we adore Cricket and Tilly's wild adventures, we're making room for more variety in our schedules. Therefore, Big City Greens will give up three of its slots for a splash of nostalgic fun. But don't worry, our favorite country family will still be around for their usual rural-urban escapades on other time slots!\n\n*Miraculous: Tales of Ladybug & Cat Noir* - The city of Paris may never sleep, but even superheroes need a break. Miraculous will be stepping back by one slot, making way for some spellbinding stories from another realm that is sure to captivate your imaginations.\n\n*The Owl House* - Creeping into the slot surrendered by Miraculous, The Owl House will be casting more spells and unraveling more mysteries in the demon realm. Join Luz, Eda, and King for more magical misadventures and fantastical quests as they embrace the weird and the wacky in true Owl House fashion!\n\n**Which Old-School Disney Channel Cartoons Are Making a Comeback?**\n\nDrum roll, please! As part of our throwback thrill, we are reviving some of the Disney Channel classics that you've been craving. The best part? You voted for them on our social media polls, so prepare for the ultimate retro rewind.\n\n*Kim Possible* - What's the sitch? Kim Possible is! Yes, the cheerleader by day and hero by night returns to our screens with Ron Stoppable, Rufus, and the undeniably quirky Wade. Relive their daring missions and unbeatable teamwork, because who doesn't love that signature \"beep beep beep\" (Call me, beep me!).\n\n*Recess* - School's back in session with our favorite bunch from Third Street School. T.J., Spinelli, Vince, Gretchen, Mikey, and Gus are reclaiming the playground. Get ready to watch The Recess Gang outwit Miss Finster and uphold the spirit of playtime in their escapades that never get old.\n\n*Phineas and Ferb* - There are 104 days of summer vacation, and Phineas and Ferb are here to make the most of it again! The stepbrothers know how to make each day count, so tag along for some wildly inventive fun, and of course, keep an eye out for Perry the Platypus, because \"Agent P\" is always on the move.\n\nThank you for your continued support and enthusiasm, Disney Fanatics. We're excited to blend the contemporary with the classics and give you a taste of both new horizons and trails once trekked. Be sure to check out our updated schedule on the Disney Channel EMEA app and set those reminders!\n\nIn the meantime, stay animated and keep dreaming, Disney Style!\n\nWith enchantment and excitement,\nYour Disney Channel EMEA Blog Team"
+      ],
+      "outputs": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-159-7",
+      "dataset": [
+        "general-quality"
+      ],
+      "id": null,
+      "constraint": null,
+      "constraint_type": null,
+      "wildchat_row_index": 948,
+      "lengths": {
+        "prompt_tokens": 42,
+        "released_output_tokens": [],
+        "reference_answer_tokens": [
+          731
+        ]
+      }
+    }
+  ]
+}

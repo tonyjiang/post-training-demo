@@ -1,0 +1,63 @@
+{
+  "source_manifest": {
+    "repo_id": "allenai/Dolci-Think-RL-7B",
+    "repo_type": "dataset",
+    "revision": "0fb6466d31ef3a9dd16985ef635e6429e05a6491",
+    "files": [
+      {
+        "rfilename": "data/train-00007-of-00009.parquet",
+        "blobId": "ed9aec1baf454d26e34886d2177ad066bad436e2",
+        "size": 53221941,
+        "lfs": {
+          "sha256": "33e1ee5646f283f3bcce6f64bc4aeb1e1461f1fac25b895651d410f39350c290",
+          "size": 53221941,
+          "pointerSize": 133
+        }
+      },
+      {
+        "rfilename": "data/train-00008-of-00009.parquet",
+        "blobId": "75cd0a5e88f88b2237c913a74b9c7cad4e3f28f4",
+        "size": 37077528,
+        "lfs": {
+          "sha256": "c41094a76784c9812512ae1ab4d602456b7fa4c304713233e35aa565897a9364",
+          "size": 37077528,
+          "pointerSize": 133
+        }
+      }
+    ]
+  },
+  "seed": 42,
+  "reward_type": "general-quality",
+  "max_prompt_length": 512,
+  "length_filters": {
+    "max_requested_words": 600,
+    "max_reference_tokens": 768
+  },
+  "chat_template_sha256": "fb2b8736121ab4001112a9ccfb33c0081230536c861c706bf24b1b390964c1cd",
+  "benchmark_cases_sha256": "d9b6933b95fff511e087ccbc72a219b13490ec09dcbaa9fe6853c2fa597733e1",
+  "excluded": {
+    "overlong_prompt": 1438,
+    "wrong_reward_type": 1905,
+    "overlong_requested_word_count": 35,
+    "overlong_reference": 178,
+    "duplicate_id_or_conversation": 238,
+    "Empty conversation turn": 35
+  },
+  "sampling": "Seed-shuffled WildChat English; valid conversations; drop overlong prompts and apply numeric requested-word and reference-token filters recorded in length_filters",
+  "splits": {
+    "train": {
+      "rows": 1024,
+      "sha256": "f13724ea78b187d5b011969193db0b5a5a4f9b1d73ee52f0b6ed3ce5b75ba352",
+      "sources": {
+        "hamishivi/new-wildchat-english-general_filtered": 1024
+      }
+    },
+    "eval": {
+      "rows": 128,
+      "sha256": "2ab721f0d9dff24a88930fdad3f462d4180d412a70f477391a391bf954d45101",
+      "sources": {
+        "hamishivi/new-wildchat-english-general_filtered": 128
+      }
+    }
+  }
+}

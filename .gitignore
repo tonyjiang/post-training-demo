@@ -4,3 +4,20 @@ logs/
 outputs/
 data/
 third_party/
+
+# Keep curated report metrics, configs, manifests, audits, and selected examples.
+# Raw run artifacts and backups remain local.
+reports/**/judge-queue/
+reports/**/*.jsonl
+reports/**/*.log
+reports/**/exit_code
+reports/**/*.exit_code
+reports/**/pid
+reports/**/trainer_state.json
+reports/**/sources/
+reports/**/starting-sources/
+
+# Generated model cards containing placeholder model names.
+reports/rlvr-full-prefix/README.md
+reports/rlvr-prefix-unbatched/README.md
+reports/rlvr-3gen-10/README.md

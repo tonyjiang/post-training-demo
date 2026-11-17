@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T21:05:10.392767+00:00",
+  "global_step": 16,
+  "target_steps": 1024,
+  "committed_rollouts": 64,
+  "token_cutoffs": 10,
+  "judged_finals": 52,
+  "no_final_marker": 2,
+  "nonzero_gradient_updates": 14,
+  "all_gradients_finite": true,
+  "judge_bindings_verified": true,
+  "parent_unchanged": true,
+  "parent_adapter_sha256": "ac5e85d158ba5a377bb849c99f9f6773fce7d93b380df691f44eacadaf1119fa",
+  "checkpoint_files": {
+    "adapter_model.safetensors": "278dbefe56f1bda4498cf0d802c1f8813897a6134bce49297975b8fc103d137c",
+    "adapter_config.json": "dd25c0f4b2888f4adc7e86212216ab9dadfb4405304f2a838a26c526489dddf8",
+    "optimizer.pt": "439fd6d18d3dad9cea5c0d80026fc58bf1f962e0f0a80465051031c320dab555",
+    "scheduler.pt": "70b139e09c0e9ae63ca6f6547f8e9309afb5e51ca26ff71e9e98fadcf30d79d9",
+    "rng_state.pth": "0d5d2f45d48dd032aa93378aefbc849aab4287e054e905c7f4e6525cc0eb4792",
+    "trainer_state.json": "95e3c875b02580a0442f5a1f75a25b40dc8aca2f6d3d0ea72d2c71d06dccfdaf"
+  },
+  "source_runs": [
+    "outputs/rlvr-wildchat-short-pilot",
+    "outputs/rlvr",
+    "outputs/rlvr-full",
+    "outputs/rlvr-full-resumed"
+  ],
+  "scope": "Training execution snapshot; no demonstrated held-out quality gain."
+}

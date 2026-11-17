@@ -1,0 +1,8 @@
+{
+  "command": "uv run --locked --group rlvr python -m unittest discover -s tests -t . -q",
+  "tests": 37,
+  "result": "passed",
+  "scope": "All SFT, DPO and RLVR tests, including batched publication, ordered reward dispatch and optimizer/RNG checkpoint restoration.",
+  "active_output": "outputs/rlvr-full",
+  "resume_checkpoint": "outputs/rlvr/checkpoint-5"
+}

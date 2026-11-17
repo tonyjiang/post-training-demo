@@ -26,7 +26,7 @@
     "eval_size": 128,
     "seed": 42,
     "max_prompt_length": 512,
-    "max_completion_length": 2048,
+    "max_completion_length": 4096,
     "num_generations": 4,
     "gradient_accumulation_steps": 4,
     "learning_rate": 1e-06,
@@ -39,7 +39,7 @@
   "deviations": [
     "TRL GRPO on NF4 QLoRA instead of distributed open-instruct GRPO with vLLM/Beaker.",
     "First-shard math-only 1024/128 pilot instead of the full math/code/IF/chat mixture.",
-    "512-token prompt ceiling (drop, never truncate); 2048-token completion cap, four sequential rollouts per prompt.",
+    "512-token prompt ceiling (drop, never truncate); 4096-token completion cap, four sequential rollouts per prompt.",
     "Original GRPO loss rather than claiming exact grpo_fast loss equivalence; constant LR 1e-6 and beta zero retained.",
     "Boxed final-answer reward using pinned Ai2 math equivalence functions; incomplete thinking and token-truncated completions receive zero reward.",
     "Append an explicit boxed-final-answer instruction; reward requires closed thinking and a boxed final answer."
